@@ -1,0 +1,29 @@
+# Rsd_qwen_seq: = Rsd_seq on Qwen/Qwen2.5-1.5B (multilingual byte-level BPE, ~4.7 tokens per Hindi word vs ganga's 1.12).
+# Same recipe: frozen backbone, sequential heads, self-distilled text (gen_selfdistill --model_name Qwen/Qwen2.5-1.5B
+# --max_new_tokens 256). Budgets are TEXT-matched to Rsd_seq, not token-matched (docs/plan/SECOND_MODEL.md §2):
+#   max_new_tokens 256 (~55 words, as ganga's 64 tokens) and max_length 320 (prompt ~56 + 256 tokens).
+# Fields that differ from Rsd_seq and why:
+#   data.cache_dir null   the boundary cache holds ganga token ids (train.py would refuse it: tokenizer mismatch)
+#   data.max_length 320   text-matched (see above)
+#   optim.batch_size 2 + grad_accum 4   same 8 texts per step. Head logits are 320 tokens x 152k vocab: measured 1.33 GiB
+#                         of activations per text (laptop, bf16); fp32 weights 5.75 GiB -> ~9.7 GiB at 2 on a T4, ~12.4 at 4
+run_name: Rsd_qwen_hi_k4_frozen_sd_seq
+lang: hi
+model_name: Qwen/Qwen2.5-1.5B
+num_heads: 4
+head_type: seq
+head_layers: 1
+freeze_backbone: true   # Medusa-1: LoRA frozen, head 0 = base model exactly
+head_backbone_grad: 0.1
+lora: {r: 8, alpha: 16, dropout: 0.05, targets: [q_proj, v_proj]}   # Qwen2 has q_proj / v_proj (with bias); unused when frozen
+optim: {lr: 2.0e-4, batch_size: 2, grad_clip: 1.0, max_steps: 12500, grad_accum: 4, weight_decay: 0.01}
+data: {cache_dir: null, grouper: hi_rules_v0, max_length: 320, eval_split: eval, eval_n: 1000, train_file: /kaggle/working/sd/qwen_hi_sd.jsonl}  # grouper only labels the logged eval split
+losses:
+  structural: {enabled: false, variant: null, weight: 1.0}
+  contrastive: {enabled: false, weight: 0.05, temperature: 0.1}
+weighting: {scheme: fixed, head_decay: 0.8}
+log_every: 20
+eval_every: 1000
+save_every: 500
+seed: 42
+dtype: auto

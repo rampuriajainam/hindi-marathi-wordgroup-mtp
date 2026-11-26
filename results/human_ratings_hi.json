@@ -1,0 +1,100 @@
+{
+ "systems": {
+  "greedy": {
+   "fluency": {
+    "mean": 2.73,
+    "lo": 2.44,
+    "hi": 3.03
+   },
+   "coherence": {
+    "mean": 2.98,
+    "lo": 2.75,
+    "hi": 3.21
+   },
+   "rank": {
+    "mean": 2.12,
+    "lo": 1.89,
+    "hi": 2.36
+   },
+   "n": 50
+  },
+  "lossy_chain": {
+   "fluency": {
+    "mean": 2.44,
+    "lo": 2.24,
+    "hi": 2.64
+   },
+   "coherence": {
+    "mean": 2.55,
+    "lo": 2.34,
+    "hi": 2.78
+   },
+   "rank": {
+    "mean": 2.99,
+    "lo": 2.67,
+    "hi": 3.27
+   },
+   "n": 50
+  },
+  "lossy_tree": {
+   "fluency": {
+    "mean": 2.52,
+    "lo": 2.24,
+    "hi": 2.79
+   },
+   "coherence": {
+    "mean": 2.83,
+    "lo": 2.56,
+    "hi": 3.1
+   },
+   "rank": {
+    "mean": 2.56,
+    "lo": 2.29,
+    "hi": 2.83
+   },
+   "n": 50
+  },
+  "sampled_T0.7": {
+   "fluency": {
+    "mean": 3.35,
+    "lo": 3.11,
+    "hi": 3.57
+   },
+   "coherence": {
+    "mean": 2.56,
+    "lo": 2.3,
+    "hi": 2.82
+   },
+   "rank": {
+    "mean": 2.33,
+    "lo": 1.98,
+    "hi": 2.69
+   },
+   "n": 50
+  }
+ },
+ "pairwise_win_rate": {
+  "greedy > lossy_chain": 0.78,
+  "greedy > lossy_tree": 0.65,
+  "greedy > sampled_T0.7": 0.46,
+  "lossy_chain > lossy_tree": 0.36,
+  "lossy_chain > sampled_T0.7": 0.42,
+  "lossy_tree > sampled_T0.7": 0.44
+ },
+ "rater_agreement_fluency": {
+  "hi_sheet_items01-30_jainam.csv vs hi_sheet_items21-50_om.csv": {
+   "spearman": 0.8590971358356789,
+   "n_continuations": 40
+  }
+ },
+ "rater_agreement_coherence": {
+  "hi_sheet_items01-30_jainam.csv vs hi_sheet_items21-50_om.csv": {
+   "spearman": 0.9137041296676626,
+   "n_continuations": 40
+  }
+ },
+ "items_per_rater": {
+  "hi_sheet_items01-30_jainam.csv": 30,
+  "hi_sheet_items21-50_om.csv": 30
+ }
+}

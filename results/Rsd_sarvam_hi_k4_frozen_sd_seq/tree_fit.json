@@ -1,0 +1,26 @@
+{
+ "run_name": "Rsd_sarvam_hi_k4_frozen_sd_seq",
+ "step": 12500,
+ "n_calib_positions": 14055,
+ "n_eval_positions": 9566,
+ "chain": 1.1980974283922226,
+ "rows": [
+  {
+   "max_nodes": 25,
+   "static": 1.890131716495923,
+   "entropy": 1.9290194438636838,
+   "product(5, 2, 1)": 1.742943759146979
+  },
+  {
+   "max_nodes": 40,
+   "static": 2.0040769391595235,
+   "entropy": 2.0371106000418147
+  },
+  {
+   "max_nodes": 64,
+   "static": 2.098891908843822,
+   "entropy": 2.125653355634539
+  }
+ ],
+ "note": "oracle accepted drafts per step on IndicCorp eval greedy text (teacher-forced)"
+}

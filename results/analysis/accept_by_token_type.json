@@ -1,0 +1,1660 @@
+{
+ "description": "KT-2 (b): draft acceptance by the true token's type (word-initial vs word-internal), exact fixed_k chain, see scripts/accept_by_token_type.py docstring.",
+ "limitations": "Targets are the verifier's own greedy tokens. Only evaluated slots count: slots after the first miss of a step are censored, so slot d>1 is conditioned on the earlier drafts of that step being accepted. With ~1.1-1.2 tokens/word (ganga-1b, Misal-1B) the word-internal class is small. Class membership correlates with token frequency, slot mix and repetitive greedy output; this is descriptive, not causal.",
+ "n_boot": 2000,
+ "seed": 0,
+ "max_new_tokens": 64,
+ "skipped": {},
+ "results": [
+  {
+   "run": "Rsd_hi_k4_frozen_sd_seq",
+   "dataset": "flores_hi",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_hi_k4_frozen_sd_seq\\eval_flores_hi.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd_seq.yaml",
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "lang": "hi",
+   "head_type": "seq",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.893211063452152,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.491212257773772,
+     0.2651849596590044,
+     0.1587816944959802
+    ],
+    "recomputed": [
+     0.491212257773772,
+     0.2651849596590044,
+     0.1587816944959802
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 11586,
+   "n_censored_slots": 8108,
+   "classes_pooled": {
+    "initial": {
+     "n": 10678,
+     "acc": 0.5436411312979958,
+     "share": 0.9216295529086829
+    },
+    "internal": {
+     "n": 583,
+     "acc": 0.13893653516295026,
+     "share": 0.05031935094079061
+    },
+    "punct": {
+     "n": 175,
+     "acc": 0.42857142857142855,
+     "share": 0.015104436388745037
+    },
+    "digit": {
+     "n": 50,
+     "acc": 0.26,
+     "share": 0.004315553253927153
+    },
+    "other": {
+     "n": 100,
+     "acc": 0.65,
+     "share": 0.008631106507854307
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 5949,
+     "n_internal": 523,
+     "acc_initial": 0.5306774247772735,
+     "acc_internal": 0.07074569789674952,
+     "internal_share": 0.0808096415327565,
+     "diff_internal_minus_initial": -0.459931726880524,
+     "diff_ci95": [
+      -0.49903724597232674,
+      -0.4192437017998431
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 3101,
+     "n_internal": 39,
+     "acc_initial": 0.5366010964205095,
+     "acc_internal": 0.7435897435897436,
+     "internal_share": 0.012420382165605096,
+     "diff_internal_minus_initial": 0.20698864716923415,
+     "diff_ci95": [
+      -0.03598508361000225,
+      0.35001951699640943
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1628,
+     "n_internal": 21,
+     "acc_initial": 0.6044226044226044,
+     "acc_internal": 0.7142857142857143,
+     "internal_share": 0.012734990903577926,
+     "diff_internal_minus_initial": 0.10986310986310988,
+     "diff_ci95": [
+      -0.16251744527756784,
+      0.2933519359356493
+     ],
+     "boot_valid": 2000
+    }
+   },
+   "pooled": {
+    "n_initial": 10678,
+    "n_internal": 583,
+    "acc_initial": 0.5436411312979958,
+    "acc_internal": 0.13893653516295026,
+    "internal_share": 0.051771601101145544,
+    "diff_internal_minus_initial": -0.4047045961350456,
+    "diff_ci95": [
+     -0.47339927931878717,
+     -0.3322628372353933
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.1905309933482895,
+    "slot_standardized_ci95": [
+     -0.29510688414312725,
+     -0.12919784758843264
+    ],
+    "slot_standardized_weights": {
+     "1": 0.574726933664861,
+     "2": 0.278838469052482,
+     "3": 0.14643459728265695
+    },
+    "by_word_position": {
+     "1": {
+      "n": 10678,
+      "acc": 0.5436411312979958
+     },
+     "2": {
+      "n": 364,
+      "acc": 0.09340659340659341
+     },
+     "3+": {
+      "n": 219,
+      "acc": 0.2146118721461187
+     }
+    }
+   }
+  },
+  {
+   "run": "Rsd_hi_k4_frozen_sd_seq",
+   "dataset": "indiccorp_eval",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_hi_k4_frozen_sd_seq\\eval_indiccorp_eval.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd_seq.yaml",
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "lang": "hi",
+   "head_type": "seq",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 2.0021898951978727,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.5334392374900715,
+     0.304978250362494,
+     0.1890742558063461
+    ],
+    "recomputed": [
+     0.5334392374900715,
+     0.304978250362494,
+     0.1890742558063461
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 11467,
+   "n_censored_slots": 7149,
+   "classes_pooled": {
+    "initial": {
+     "n": 10645,
+     "acc": 0.5718177548144668,
+     "share": 0.9283160373244964
+    },
+    "internal": {
+     "n": 409,
+     "acc": 0.3765281173594132,
+     "share": 0.03566756780326153
+    },
+    "punct": {
+     "n": 119,
+     "acc": 0.37815126050420167,
+     "share": 0.01037760530217145
+    },
+    "digit": {
+     "n": 161,
+     "acc": 0.16149068322981366,
+     "share": 0.014040289526467254
+    },
+    "other": {
+     "n": 133,
+     "acc": 0.7142857142857143,
+     "share": 0.011598500043603384
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 5765,
+     "n_internal": 289,
+     "acc_initial": 0.5573287077189939,
+     "acc_internal": 0.20761245674740483,
+     "internal_share": 0.04773703336636934,
+     "diff_internal_minus_initial": -0.3497162509715891,
+     "diff_ci95": [
+      -0.43441153485254064,
+      -0.25960341357261263
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 3136,
+     "n_internal": 69,
+     "acc_initial": 0.5714285714285714,
+     "acc_internal": 0.7391304347826086,
+     "internal_share": 0.021528861154446178,
+     "diff_internal_minus_initial": 0.16770186335403725,
+     "diff_ci95": [
+      -0.023790964863059833,
+      0.29421519856174255
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1744,
+     "n_internal": 51,
+     "acc_initial": 0.6204128440366973,
+     "acc_internal": 0.8431372549019608,
+     "internal_share": 0.02841225626740947,
+     "diff_internal_minus_initial": 0.2227244108652635,
+     "diff_ci95": [
+      0.07988130393183428,
+      0.33219270627158276
+     ],
+     "boot_valid": 2000
+    }
+   },
+   "pooled": {
+    "n_initial": 10645,
+    "n_internal": 409,
+    "acc_initial": 0.5718177548144668,
+    "acc_internal": 0.3765281173594132,
+    "internal_share": 0.0370001809299801,
+    "diff_internal_minus_initial": -0.19528963745505362,
+    "diff_ci95": [
+     -0.3186012336287503,
+     -0.08406294594738864
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.10674031064132106,
+    "slot_standardized_ci95": [
+     -0.20839375731808393,
+     -0.03034392656740667
+    ],
+    "slot_standardized_weights": {
+     "1": 0.5476750497557445,
+     "2": 0.28994029310656777,
+     "3": 0.1623846571376877
+    },
+    "by_word_position": {
+     "1": {
+      "n": 10645,
+      "acc": 0.5718177548144668
+     },
+     "2": {
+      "n": 267,
+      "acc": 0.2696629213483146
+     },
+     "3+": {
+      "n": 142,
+      "acc": 0.5774647887323944
+     }
+    }
+   }
+  },
+  {
+   "run": "Rsd_hi_k4_frozen_sd_seq_s43",
+   "dataset": "flores_hi",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_hi_k4_frozen_sd_seq_s43\\eval_flores_hi.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd_seq_s43.yaml",
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "lang": "hi",
+   "head_type": "seq",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.911589008363202,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.49515591886164095,
+     0.27369067731531255,
+     0.16398814167576845
+    ],
+    "recomputed": [
+     0.49515591886164095,
+     0.27369067731531255,
+     0.16398814167576845
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 11565,
+   "n_censored_slots": 7961,
+   "classes_pooled": {
+    "initial": {
+     "n": 10667,
+     "acc": 0.548795350145308,
+     "share": 0.9223519239083442
+    },
+    "internal": {
+     "n": 587,
+     "acc": 0.14821124361158433,
+     "share": 0.05075659316904453
+    },
+    "punct": {
+     "n": 177,
+     "acc": 0.4406779661016949,
+     "share": 0.01530479896238651
+    },
+    "digit": {
+     "n": 50,
+     "acc": 0.28,
+     "share": 0.00432338953739732
+    },
+    "other": {
+     "n": 84,
+     "acc": 0.8452380952380952,
+     "share": 0.007263294422827497
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 5902,
+     "n_internal": 528,
+     "acc_initial": 0.5337173839376482,
+     "acc_internal": 0.08901515151515152,
+     "internal_share": 0.08211508553654744,
+     "diff_internal_minus_initial": -0.44470223242249673,
+     "diff_ci95": [
+      -0.4885493345988512,
+      -0.3959641164410824
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 3096,
+     "n_internal": 44,
+     "acc_initial": 0.5529715762273901,
+     "acc_internal": 0.6363636363636364,
+     "internal_share": 0.014012738853503185,
+     "diff_internal_minus_initial": 0.08339206013624623,
+     "diff_ci95": [
+      -0.16499629079271647,
+      0.2624438294621254
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1669,
+     "n_internal": 15,
+     "acc_initial": 0.5943678849610545,
+     "acc_internal": 0.8,
+     "internal_share": 0.008907363420427554,
+     "diff_internal_minus_initial": 0.20563211503894552,
+     "diff_ci95": [
+      -0.09069567363789868,
+      0.41210529328338746
+     ],
+     "boot_valid": 1999
+    }
+   },
+   "pooled": {
+    "n_initial": 10667,
+    "n_internal": 587,
+    "acc_initial": 0.548795350145308,
+    "acc_internal": 0.14821124361158433,
+    "internal_share": 0.05215923227296961,
+    "diff_internal_minus_initial": -0.40058410653372367,
+    "diff_ci95": [
+     -0.4742466144339656,
+     -0.3261921004210188
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.2000444112247429,
+    "slot_standardized_ci95": [
+     -0.30469132467495724,
+     -0.12805931384029434
+    ],
+    "slot_standardized_weights": {
+     "1": 0.5713524080326995,
+     "2": 0.27901190687755467,
+     "3": 0.14963568508974587
+    },
+    "by_word_position": {
+     "1": {
+      "n": 10667,
+      "acc": 0.548795350145308
+     },
+     "2": {
+      "n": 364,
+      "acc": 0.0989010989010989
+     },
+     "3+": {
+      "n": 223,
+      "acc": 0.22869955156950672
+     }
+    }
+   }
+  },
+  {
+   "run": "Rsd_hi_k4_frozen_sd_seq_s43",
+   "dataset": "indiccorp_eval",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_hi_k4_frozen_sd_seq_s43\\eval_indiccorp_eval.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd_seq_s43.yaml",
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "lang": "hi",
+   "head_type": "seq",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.9854195749961223,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.5259760705289672,
+     0.29800159872102316,
+     0.1861219195849546
+    ],
+    "recomputed": [
+     0.5259760705289672,
+     0.29800159872102316,
+     0.1861219195849546
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 11474,
+   "n_censored_slots": 7301,
+   "classes_pooled": {
+    "initial": {
+     "n": 10668,
+     "acc": 0.5645856767904012,
+     "share": 0.9297542269478821
+    },
+    "internal": {
+     "n": 405,
+     "acc": 0.37037037037037035,
+     "share": 0.0352971936552205
+    },
+    "punct": {
+     "n": 120,
+     "acc": 0.4166666666666667,
+     "share": 0.010458427749694962
+    },
+    "digit": {
+     "n": 159,
+     "acc": 0.18238993710691823,
+     "share": 0.013857416768345825
+    },
+    "other": {
+     "n": 122,
+     "acc": 0.8278688524590164,
+     "share": 0.010632734878856544
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 5820,
+     "n_internal": 298,
+     "acc_initial": 0.5487972508591066,
+     "acc_internal": 0.20469798657718122,
+     "internal_share": 0.04870872834259562,
+     "diff_internal_minus_initial": -0.3440992642819254,
+     "diff_ci95": [
+      -0.4251041216212551,
+      -0.262808436170844
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 3130,
+     "n_internal": 64,
+     "acc_initial": 0.5651757188498403,
+     "acc_internal": 0.78125,
+     "internal_share": 0.020037570444583593,
+     "diff_internal_minus_initial": 0.2160742811501597,
+     "diff_ci95": [
+      0.044114532914276965,
+      0.3476427248890414
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1718,
+     "n_internal": 43,
+     "acc_initial": 0.6169965075669382,
+     "acc_internal": 0.9069767441860465,
+     "internal_share": 0.02441794434980125,
+     "diff_internal_minus_initial": 0.2899802366191082,
+     "diff_ci95": [
+      0.15573698807096256,
+      0.38825399173111713
+     ],
+     "boot_valid": 2000
+    }
+   },
+   "pooled": {
+    "n_initial": 10668,
+    "n_internal": 405,
+    "acc_initial": 0.5645856767904012,
+    "acc_internal": 0.37037037037037035,
+    "internal_share": 0.03657545380655649,
+    "diff_internal_minus_initial": -0.19421530642003082,
+    "diff_ci95": [
+     -0.3130744492796264,
+     -0.0860937966830127
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.08167640641171861,
+    "slot_standardized_ci95": [
+     -0.17190675173979625,
+     -0.010623756812202734
+    ],
+    "slot_standardized_weights": {
+     "1": 0.5525151268852163,
+     "2": 0.288449381378127,
+     "3": 0.15903549173665674
+    },
+    "by_word_position": {
+     "1": {
+      "n": 10668,
+      "acc": 0.5645856767904012
+     },
+     "2": {
+      "n": 264,
+      "acc": 0.26136363636363635
+     },
+     "3+": {
+      "n": 141,
+      "acc": 0.574468085106383
+     }
+    }
+   }
+  },
+  {
+   "run": "Rsd_hi_k4_frozen_sd",
+   "dataset": "flores_hi",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_hi_k4_frozen_sd\\eval_flores_hi.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd.yaml",
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "lang": "hi",
+   "head_type": "resblock",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.6032064128256514,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.3901943350692239,
+     0.1550257731958763,
+     0.07068199634178207
+    ],
+    "recomputed": [
+     0.3901943350692239,
+     0.1550257731958763,
+     0.07068199634178207
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 12069,
+   "n_censored_slots": 11218,
+   "classes_pooled": {
+    "initial": {
+     "n": 11165,
+     "acc": 0.4097626511419615,
+     "share": 0.9250973568646946
+    },
+    "internal": {
+     "n": 587,
+     "acc": 0.12776831345826234,
+     "share": 0.04863700389427459
+    },
+    "punct": {
+     "n": 182,
+     "acc": 0.42857142857142855,
+     "share": 0.015079956914408816
+    },
+    "digit": {
+     "n": 51,
+     "acc": 0.27450980392156865,
+     "share": 0.004225702212279393
+    },
+    "other": {
+     "n": 84,
+     "acc": 0.8809523809523809,
+     "share": 0.00695998011434253
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 7148,
+     "n_internal": 533,
+     "acc_initial": 0.41368214885282595,
+     "acc_internal": 0.0675422138836773,
+     "internal_share": 0.0693920062491863,
+     "diff_internal_minus_initial": -0.34613993496914863,
+     "diff_ci95": [
+      -0.38062518939637346,
+      -0.30752448399822574
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 2914,
+     "n_internal": 38,
+     "acc_initial": 0.38984214138641043,
+     "acc_internal": 0.6578947368421053,
+     "internal_share": 0.012872628726287264,
+     "diff_internal_minus_initial": 0.2680525954556949,
+     "diff_ci95": [
+      -0.011902124845830479,
+      0.4347298488692663
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1103,
+     "n_internal": 16,
+     "acc_initial": 0.4369900271985494,
+     "acc_internal": 0.875,
+     "internal_share": 0.014298480786416443,
+     "diff_internal_minus_initial": 0.4380099728014506,
+     "diff_ci95": [
+      0.2850786102067638,
+      0.5876123984647644
+     ],
+     "boot_valid": 2000
+    }
+   },
+   "pooled": {
+    "n_initial": 11165,
+    "n_internal": 587,
+    "acc_initial": 0.4097626511419615,
+    "acc_internal": 0.12776831345826234,
+    "internal_share": 0.04994894486044928,
+    "diff_internal_minus_initial": -0.28199433768369914,
+    "diff_ci95": [
+     -0.3451667472012396,
+     -0.2126020775952894
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.11719506629918276,
+    "slot_standardized_ci95": [
+     -0.20331801011012887,
+     -0.05887136701350502
+    ],
+    "slot_standardized_weights": {
+     "1": 0.6535908781484002,
+     "2": 0.25119128658951667,
+     "3": 0.09521783526208305
+    },
+    "by_word_position": {
+     "1": {
+      "n": 11165,
+      "acc": 0.4097626511419615
+     },
+     "2": {
+      "n": 368,
+      "acc": 0.07065217391304347
+     },
+     "3+": {
+      "n": 219,
+      "acc": 0.2237442922374429
+     }
+    }
+   }
+  },
+  {
+   "run": "Rsd_hi_k4_frozen_sd",
+   "dataset": "indiccorp_eval",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_hi_k4_frozen_sd\\eval_indiccorp_eval.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd.yaml",
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "lang": "hi",
+   "head_type": "resblock",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.6666666666666667,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.41699709225482423,
+     0.17424547283702213,
+     0.09059991837845191
+    ],
+    "recomputed": [
+     0.41699709225482423,
+     0.17424547283702213,
+     0.09059991837845191
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 11947,
+   "n_censored_slots": 10425,
+   "classes_pooled": {
+    "initial": {
+     "n": 11122,
+     "acc": 0.4345441467361985,
+     "share": 0.9309450071147568
+    },
+    "internal": {
+     "n": 408,
+     "acc": 0.34068627450980393,
+     "share": 0.034150832845065704
+    },
+    "punct": {
+     "n": 120,
+     "acc": 0.3416666666666667,
+     "share": 0.010044362601489915
+    },
+    "digit": {
+     "n": 165,
+     "acc": 0.17575757575757575,
+     "share": 0.01381099857704863
+    },
+    "other": {
+     "n": 132,
+     "acc": 0.5909090909090909,
+     "share": 0.011048798861638905
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 6984,
+     "n_internal": 306,
+     "acc_initial": 0.4309851088201604,
+     "acc_internal": 0.23529411764705882,
+     "internal_share": 0.04197530864197531,
+     "diff_internal_minus_initial": -0.19569099117310157,
+     "diff_ci95": [
+      -0.27826091787042034,
+      -0.10567581425256643
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 2947,
+     "n_internal": 65,
+     "acc_initial": 0.4149983033593485,
+     "acc_internal": 0.6,
+     "internal_share": 0.02158034528552457,
+     "diff_internal_minus_initial": 0.18500169664065147,
+     "diff_ci95": [
+      0.004679312088490772,
+      0.3274921774285998
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1191,
+     "n_internal": 37,
+     "acc_initial": 0.5037783375314862,
+     "acc_internal": 0.7567567567567568,
+     "internal_share": 0.03013029315960912,
+     "diff_internal_minus_initial": 0.25297841922527065,
+     "diff_ci95": [
+      0.02705127046117497,
+      0.4202203330941291
+     ],
+     "boot_valid": 2000
+    }
+   },
+   "pooled": {
+    "n_initial": 11122,
+    "n_internal": 408,
+    "acc_initial": 0.4345441467361985,
+    "acc_internal": 0.34068627450980393,
+    "internal_share": 0.03538594969644406,
+    "diff_internal_minus_initial": -0.09385787222639458,
+    "diff_ci95": [
+     -0.19784402719689403,
+     0.008768064813977846
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.04845661028288256,
+    "slot_standardized_ci95": [
+     -0.14305815701081095,
+     0.03553547133481566
+    ],
+    "slot_standardized_weights": {
+     "1": 0.632263660017346,
+     "2": 0.26123156981786644,
+     "3": 0.10650477016478752
+    },
+    "by_word_position": {
+     "1": {
+      "n": 11122,
+      "acc": 0.4345441467361985
+     },
+     "2": {
+      "n": 261,
+      "acc": 0.20689655172413793
+     },
+     "3+": {
+      "n": 147,
+      "acc": 0.5782312925170068
+     }
+    }
+   }
+  },
+  {
+   "run": "Rsd_r8_mr_k4_frozen_sd_seq",
+   "dataset": "flores_mr",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_r8_mr_k4_frozen_sd_seq\\eval_flores_mr.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd_r8_seq.yaml",
+   "tokenizer": "smallstepai/Misal-1B-instruct-v0.1",
+   "lang": "mr",
+   "head_type": "seq",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.7657455463599383,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.4214641080312722,
+     0.22459276344241028,
+     0.13686211434420237
+    ],
+    "recomputed": [
+     0.4214641080312722,
+     0.22459276344241028,
+     0.13686211434420237
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 11469,
+   "n_censored_slots": 9342,
+   "classes_pooled": {
+    "initial": {
+     "n": 7585,
+     "acc": 0.47119314436387605,
+     "share": 0.6613479815153893
+    },
+    "internal": {
+     "n": 2239,
+     "acc": 0.2652970075926753,
+     "share": 0.1952219025198361
+    },
+    "punct": {
+     "n": 1547,
+     "acc": 0.8151260504201681,
+     "share": 0.13488534309878802
+    },
+    "digit": {
+     "n": 78,
+     "acc": 0.20512820512820512,
+     "share": 0.006800941668846455
+    },
+    "other": {
+     "n": 20,
+     "acc": 0.7,
+     "share": 0.0017438311971401169
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 4400,
+     "n_internal": 1846,
+     "acc_initial": 0.445,
+     "acc_internal": 0.24106175514626219,
+     "internal_share": 0.29554915145693245,
+     "diff_internal_minus_initial": -0.20393824485373782,
+     "diff_ci95": [
+      -0.2432834814337745,
+      -0.16502418000325883
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 2118,
+     "n_internal": 279,
+     "acc_initial": 0.48111425873465535,
+     "acc_internal": 0.34408602150537637,
+     "internal_share": 0.11639549436795996,
+     "diff_internal_minus_initial": -0.13702823722927898,
+     "diff_ci95": [
+      -0.26076002447465396,
+      -0.02136051876242276
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1067,
+     "n_internal": 114,
+     "acc_initial": 0.5595126522961574,
+     "acc_internal": 0.4649122807017544,
+     "internal_share": 0.09652836579170194,
+     "diff_internal_minus_initial": -0.09460037159440304,
+     "diff_ci95": [
+      -0.2536397305501704,
+      0.06267298115348835
+     ],
+     "boot_valid": 2000
+    }
+   },
+   "pooled": {
+    "n_initial": 7585,
+    "n_internal": 2239,
+    "acc_initial": 0.47119314436387605,
+    "acc_internal": 0.2652970075926753,
+    "internal_share": 0.2279112377850163,
+    "diff_internal_minus_initial": -0.20589613677120072,
+    "diff_ci95": [
+     -0.24719194217746437,
+     -0.16613842069266116
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.17446844471172823,
+    "slot_standardized_ci95": [
+     -0.22277702727669296,
+     -0.12773765994890188
+    ],
+    "slot_standardized_weights": {
+     "1": 0.6357899022801303,
+     "2": 0.2439942996742671,
+     "3": 0.1202157980456026
+    },
+    "by_word_position": {
+     "1": {
+      "n": 7585,
+      "acc": 0.47119314436387605
+     },
+     "2": {
+      "n": 1575,
+      "acc": 0.27555555555555555
+     },
+     "3+": {
+      "n": 664,
+      "acc": 0.24096385542168675
+     }
+    }
+   }
+  },
+  {
+   "run": "Rsd_r8_mr_k4_frozen_sd_seq",
+   "dataset": "indiccorp_eval",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_r8_mr_k4_frozen_sd_seq\\eval_indiccorp_eval.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd_r8_seq.yaml",
+   "tokenizer": "smallstepai/Misal-1B-instruct-v0.1",
+   "lang": "mr",
+   "head_type": "seq",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.8049298767530813,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.438119879258301,
+     0.2451452766827274,
+     0.1415443900993034
+    ],
+    "recomputed": [
+     0.438119879258301,
+     0.2451452766827274,
+     0.1415443900993034
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 11604,
+   "n_censored_slots": 8949,
+   "classes_pooled": {
+    "initial": {
+     "n": 7769,
+     "acc": 0.4771527867164371,
+     "share": 0.6695105136159945
+    },
+    "internal": {
+     "n": 2162,
+     "acc": 0.28307123034227566,
+     "share": 0.1863150637711134
+    },
+    "punct": {
+     "n": 1496,
+     "acc": 0.8770053475935828,
+     "share": 0.12892106170286108
+    },
+    "digit": {
+     "n": 145,
+     "acc": 0.22758620689655173,
+     "share": 0.012495691140985867
+    },
+    "other": {
+     "n": 32,
+     "acc": 0.5625,
+     "share": 0.002757669769045157
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 4348,
+     "n_internal": 1749,
+     "acc_initial": 0.4441122355105796,
+     "acc_internal": 0.26357918810749,
+     "internal_share": 0.2868623913400033,
+     "diff_internal_minus_initial": -0.18053304740308962,
+     "diff_ci95": [
+      -0.22948098966018252,
+      -0.1312178223242175
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 2224,
+     "n_internal": 267,
+     "acc_initial": 0.5238309352517986,
+     "acc_internal": 0.3258426966292135,
+     "internal_share": 0.10718586912886391,
+     "diff_internal_minus_initial": -0.19798823862258508,
+     "diff_ci95": [
+      -0.2984291321301493,
+      -0.0915306659988732
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1197,
+     "n_internal": 146,
+     "acc_initial": 0.5104427736006684,
+     "acc_internal": 0.4383561643835616,
+     "internal_share": 0.10871183916604617,
+     "diff_internal_minus_initial": -0.07208660921710675,
+     "diff_ci95": [
+      -0.2468363599200592,
+      0.11079358966961375
+     ],
+     "boot_valid": 2000
+    }
+   },
+   "pooled": {
+    "n_initial": 7769,
+    "n_internal": 2162,
+    "acc_initial": 0.4771527867164371,
+    "acc_internal": 0.28307123034227566,
+    "internal_share": 0.21770214479911387,
+    "diff_internal_minus_initial": -0.19408155637416147,
+    "diff_ci95": [
+     -0.23472579259933238,
+     -0.1481128549216126
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.17024579685873237,
+    "slot_standardized_ci95": [
+     -0.215860695601199,
+     -0.11634058524707719
+    ],
+    "slot_standardized_weights": {
+     "1": 0.6139361595005538,
+     "2": 0.25083073205115297,
+     "3": 0.13523310844829323
+    },
+    "by_word_position": {
+     "1": {
+      "n": 7769,
+      "acc": 0.4771527867164371
+     },
+     "2": {
+      "n": 1575,
+      "acc": 0.28888888888888886
+     },
+     "3+": {
+      "n": 587,
+      "acc": 0.2674616695059625
+     }
+    }
+   }
+  },
+  {
+   "run": "Rsd_r8_mr_k4_frozen_sd_seq_s43",
+   "dataset": "flores_mr",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_r8_mr_k4_frozen_sd_seq_s43\\eval_flores_mr.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd_r8_seq_s43.yaml",
+   "tokenizer": "smallstepai/Misal-1B-instruct-v0.1",
+   "lang": "mr",
+   "head_type": "seq",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.7913761206773873,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.436030578393192,
+     0.2338992974238876,
+     0.13954869358669833
+    ],
+    "recomputed": [
+     0.436030578393192,
+     0.2338992974238876,
+     0.13954869358669833
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 11466,
+   "n_censored_slots": 9035,
+   "classes_pooled": {
+    "initial": {
+     "n": 7568,
+     "acc": 0.47106236786469347,
+     "share": 0.6600383743240886
+    },
+    "internal": {
+     "n": 2258,
+     "acc": 0.30070859167404784,
+     "share": 0.19693005407291123
+    },
+    "punct": {
+     "n": 1542,
+     "acc": 0.8320363164721142,
+     "share": 0.13448456305599163
+    },
+    "digit": {
+     "n": 78,
+     "acc": 0.2564102564102564,
+     "share": 0.006802721088435374
+    },
+    "other": {
+     "n": 20,
+     "acc": 0.7,
+     "share": 0.0017442874585731729
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 4233,
+     "n_internal": 1878,
+     "acc_initial": 0.44790928419560594,
+     "acc_internal": 0.2774227902023429,
+     "internal_share": 0.3073146784486991,
+     "diff_internal_minus_initial": -0.17048649399326304,
+     "diff_ci95": [
+      -0.21583763752440016,
+      -0.12393576589840434
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 2169,
+     "n_internal": 288,
+     "acc_initial": 0.47994467496542187,
+     "acc_internal": 0.4097222222222222,
+     "internal_share": 0.11721611721611722,
+     "diff_internal_minus_initial": -0.07022245274319966,
+     "diff_ci95": [
+      -0.17460620579956826,
+      0.03282883233537088
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1166,
+     "n_internal": 92,
+     "acc_initial": 0.5385934819897084,
+     "acc_internal": 0.43478260869565216,
+     "internal_share": 0.07313195548489666,
+     "diff_internal_minus_initial": -0.1038108732940562,
+     "diff_ci95": [
+      -0.2715157099235994,
+      0.07020287641218573
+     ],
+     "boot_valid": 2000
+    }
+   },
+   "pooled": {
+    "n_initial": 7568,
+    "n_internal": 2258,
+    "acc_initial": 0.47106236786469347,
+    "acc_internal": 0.30070859167404784,
+    "internal_share": 0.22979849379198047,
+    "diff_internal_minus_initial": -0.17035377619064562,
+    "diff_ci95": [
+     -0.21690413746749176,
+     -0.1241050986957133
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.13687905656287347,
+    "slot_standardized_ci95": [
+     -0.19019408324513315,
+     -0.08671740004498962
+    ],
+    "slot_standardized_weights": {
+     "1": 0.6219214329330348,
+     "2": 0.2500508854060655,
+     "3": 0.12802768166089964
+    },
+    "by_word_position": {
+     "1": {
+      "n": 7568,
+      "acc": 0.47106236786469347
+     },
+     "2": {
+      "n": 1595,
+      "acc": 0.3128526645768025
+     },
+     "3+": {
+      "n": 663,
+      "acc": 0.27149321266968324
+     }
+    }
+   }
+  },
+  {
+   "run": "Rsd_r8_mr_k4_frozen_sd_seq_s43",
+   "dataset": "indiccorp_eval",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\Rsd_r8_mr_k4_frozen_sd_seq_s43\\eval_indiccorp_eval.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\Rsd_r8_seq_s43.yaml",
+   "tokenizer": "smallstepai/Misal-1B-instruct-v0.1",
+   "lang": "mr",
+   "head_type": "seq",
+   "num_heads": 4,
+   "policy_entry": "fixed_k+fast",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.8039076879512954,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.4384604337210972,
+     0.2429674974493514,
+     0.14188388625592416
+    ],
+    "recomputed": [
+     0.4384604337210972,
+     0.2429674974493514,
+     0.14188388625592416
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 11603,
+   "n_censored_slots": 8973,
+   "classes_pooled": {
+    "initial": {
+     "n": 7775,
+     "acc": 0.47434083601286176,
+     "share": 0.6700853227613548
+    },
+    "internal": {
+     "n": 2149,
+     "acc": 0.28664495114006516,
+     "share": 0.18521072136516417
+    },
+    "punct": {
+     "n": 1494,
+     "acc": 0.8788487282463187,
+     "share": 0.12875980349909505
+    },
+    "digit": {
+     "n": 154,
+     "acc": 0.2792207792207792,
+     "share": 0.013272429544083426
+    },
+    "other": {
+     "n": 31,
+     "acc": 0.5806451612903226,
+     "share": 0.002671722830302508
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 4372,
+     "n_internal": 1701,
+     "acc_initial": 0.4393870082342177,
+     "acc_internal": 0.26631393298059963,
+     "internal_share": 0.2800922114276305,
+     "diff_internal_minus_initial": -0.1730730752536181,
+     "diff_ci95": [
+      -0.2205850093663447,
+      -0.12232206724732639
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 2211,
+     "n_internal": 293,
+     "acc_initial": 0.5097241067390321,
+     "acc_internal": 0.3003412969283277,
+     "internal_share": 0.11701277955271565,
+     "diff_internal_minus_initial": -0.20938280981070445,
+     "diff_ci95": [
+      -0.3014894928038541,
+      -0.11175031463194389
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 1192,
+     "n_internal": 155,
+     "acc_initial": 0.5369127516778524,
+     "acc_internal": 0.4838709677419355,
+     "internal_share": 0.11507052709725316,
+     "diff_internal_minus_initial": -0.05304178393591685,
+     "diff_ci95": [
+      -0.22859345446249174,
+      0.11453820271563715
+     ],
+     "boot_valid": 2000
+    }
+   },
+   "pooled": {
+    "n_initial": 7775,
+    "n_internal": 2149,
+    "acc_initial": 0.47434083601286176,
+    "acc_internal": 0.28664495114006516,
+    "internal_share": 0.21654574768238613,
+    "diff_internal_minus_initial": -0.1876958848727966,
+    "diff_ci95": [
+     -0.22992172822986406,
+     -0.138995421620262
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.16594262643519817,
+    "slot_standardized_ci95": [
+     -0.21344774483458656,
+     -0.11546893122637583
+    ],
+    "slot_standardized_weights": {
+     "1": 0.611950826279726,
+     "2": 0.2523176138653769,
+     "3": 0.1357315598548972
+    },
+    "by_word_position": {
+     "1": {
+      "n": 7775,
+      "acc": 0.47434083601286176
+     },
+     "2": {
+      "n": 1566,
+      "acc": 0.28991060025542786
+     },
+     "3+": {
+      "n": 583,
+      "acc": 0.27787307032590053
+     }
+    }
+   }
+  },
+  {
+   "run": "R2_hi_mtp_k4_resblock",
+   "dataset": "flores_hi",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\lossy\\R2_hi_mtp_k4_resblock\\eval_flores_hi.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\R2.yaml",
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "lang": "hi",
+   "head_type": "resblock",
+   "num_heads": 4,
+   "policy_entry": "fixed_k",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.3638785295684603,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.2951085195983155,
+     0.06200614574187884,
+     0.01305075292805354
+    ],
+    "recomputed": [
+     0.2951085195983155,
+     0.06200614574187884,
+     0.01305075292805354
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 12487,
+   "n_censored_slots": 14851,
+   "classes_pooled": {
+    "initial": {
+     "n": 11662,
+     "acc": 0.27490996398559425,
+     "share": 0.9339312885400817
+    },
+    "internal": {
+     "n": 469,
+     "acc": 0.04477611940298507,
+     "share": 0.03755906142388084
+    },
+    "punct": {
+     "n": 202,
+     "acc": 0.47029702970297027,
+     "share": 0.016176823896852727
+    },
+    "digit": {
+     "n": 55,
+     "acc": 0.01818181818181818,
+     "share": 0.004404580763994554
+    },
+    "other": {
+     "n": 99,
+     "acc": 0.9292929292929293,
+     "share": 0.007928245375190197
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 8589,
+     "n_internal": 451,
+     "acc_initial": 0.304575619979043,
+     "acc_internal": 0.04434589800443459,
+     "internal_share": 0.04988938053097345,
+     "diff_internal_minus_initial": -0.26022972197460836,
+     "diff_ci95": [
+      -0.28929678409677867,
+      -0.22890807767871293
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 2570,
+     "n_internal": 18,
+     "acc_initial": 0.20116731517509728,
+     "acc_internal": 0.05555555555555555,
+     "internal_share": 0.006955177743431221,
+     "diff_internal_minus_initial": -0.14561175961954173,
+     "diff_ci95": [
+      -0.2170821220880895,
+      -0.03330675599129553
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 503,
+     "n_internal": 0,
+     "acc_initial": 0.14512922465208747,
+     "acc_internal": null,
+     "internal_share": 0.0,
+     "diff_internal_minus_initial": null,
+     "diff_ci95": null,
+     "boot_valid": 0
+    }
+   },
+   "pooled": {
+    "n_initial": 11662,
+    "n_internal": 469,
+    "acc_initial": 0.27490996398559425,
+    "acc_internal": 0.04477611940298507,
+    "internal_share": 0.03866128101557992,
+    "diff_internal_minus_initial": -0.2301338445826092,
+    "diff_ci95": [
+     -0.2590281289789054,
+     -0.19888912040600737
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.2347196354098584,
+    "slot_standardized_ci95": [
+     -0.2689504766592754,
+     -0.19625208233315958
+    ],
+    "slot_standardized_weights": {
+     "1": 0.7774337805297558,
+     "2": 0.22256621947024424,
+     "3": 0.0
+    },
+    "by_word_position": {
+     "1": {
+      "n": 11662,
+      "acc": 0.27490996398559425
+     },
+     "2": {
+      "n": 306,
+      "acc": 0.0196078431372549
+     },
+     "3+": {
+      "n": 163,
+      "acc": 0.09202453987730061
+     }
+    }
+   }
+  },
+  {
+   "run": "R2_hi_mtp_k4_resblock",
+   "dataset": "indiccorp_eval",
+   "file": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\results\\lossy\\R2_hi_mtp_k4_resblock\\eval_indiccorp_eval.json",
+   "config": "C:\\Users\\JAINAM RAMPURIA\\Documents\\mtp-indic-research-lossy\\configs\\R2.yaml",
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "lang": "hi",
+   "head_type": "resblock",
+   "num_heads": 4,
+   "policy_entry": "fixed_k",
+   "ignore_eos": false,
+   "mean_accepted_len": 1.389944619394071,
+   "check_accept_rate_per_head": {
+    "stored": [
+     0.3011131929901907,
+     0.07203579418344519,
+     0.02446239617703948
+    ],
+    "recomputed": [
+     0.3011131929901907,
+     0.07203579418344519,
+     0.02446239617703948
+    ]
+   },
+   "prefix_vs_text_agreement": {
+    "agreement": 1.0,
+    "tokens_checked": 1280,
+    "prompts": 20
+   },
+   "n_prompts": 200,
+   "n_evaluated_slots": 12387,
+   "n_censored_slots": 14415,
+   "classes_pooled": {
+    "initial": {
+     "n": 11293,
+     "acc": 0.27574603736828124,
+     "share": 0.9116816016791798
+    },
+    "internal": {
+     "n": 341,
+     "acc": 0.05571847507331378,
+     "share": 0.027528860902559134
+    },
+    "punct": {
+     "n": 177,
+     "acc": 0.192090395480226,
+     "share": 0.014289174134172923
+    },
+    "digit": {
+     "n": 123,
+     "acc": 0.024390243902439025,
+     "share": 0.009929765076289659
+    },
+    "other": {
+     "n": 453,
+     "acc": 0.9293598233995585,
+     "share": 0.036570598207798496
+    }
+   },
+   "per_slot": {
+    "1": {
+     "n_initial": 8334,
+     "n_internal": 316,
+     "acc_initial": 0.3040556755459563,
+     "acc_internal": 0.056962025316455694,
+     "internal_share": 0.03653179190751445,
+     "diff_internal_minus_initial": -0.2470936502295006,
+     "diff_ci95": [
+      -0.29105334473719874,
+      -0.19516131253201877
+     ],
+     "boot_valid": 2000
+    },
+    "2": {
+     "n_initial": 2475,
+     "n_internal": 25,
+     "acc_initial": 0.2016161616161616,
+     "acc_internal": 0.04,
+     "internal_share": 0.01,
+     "diff_internal_minus_initial": -0.1616161616161616,
+     "diff_ci95": [
+      -0.21739263967524836,
+      -0.025580556924821602
+     ],
+     "boot_valid": 2000
+    },
+    "3": {
+     "n_initial": 484,
+     "n_internal": 0,
+     "acc_initial": 0.16735537190082644,
+     "acc_internal": null,
+     "internal_share": 0.0,
+     "diff_internal_minus_initial": null,
+     "diff_ci95": null,
+     "boot_valid": 0
+    }
+   },
+   "pooled": {
+    "n_initial": 11293,
+    "n_internal": 341,
+    "acc_initial": 0.27574603736828124,
+    "acc_internal": 0.05571847507331378,
+    "internal_share": 0.029310641223998624,
+    "diff_internal_minus_initial": -0.22002756229496745,
+    "diff_ci95": [
+     -0.25993445922797886,
+     -0.17115322598991456
+    ],
+    "boot_valid": 2000,
+    "slot_standardized_diff": -0.227928294038169,
+    "slot_standardized_ci95": [
+     -0.2668579998138405,
+     -0.1793584270548015
+    ],
+    "slot_standardized_weights": {
+     "1": 0.7757847533632287,
+     "2": 0.2242152466367713,
+     "3": 0.0
+    },
+    "by_word_position": {
+     "1": {
+      "n": 11293,
+      "acc": 0.27574603736828124
+     },
+     "2": {
+      "n": 240,
+      "acc": 0.020833333333333332
+     },
+     "3+": {
+      "n": 101,
+      "acc": 0.13861386138613863
+     }
+    }
+   }
+  }
+ ]
+}

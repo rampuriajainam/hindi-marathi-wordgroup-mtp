@@ -1,0 +1,580 @@
+{
+  "reviewed_row_count": 100,
+  "reviewed_ids": [
+    "hi_0101",
+    "hi_0102",
+    "hi_0103",
+    "hi_0104",
+    "hi_0105",
+    "hi_0106",
+    "hi_0107",
+    "hi_0108",
+    "hi_0109",
+    "hi_0110",
+    "hi_0111",
+    "hi_0112",
+    "hi_0113",
+    "hi_0114",
+    "hi_0115",
+    "hi_0116",
+    "hi_0117",
+    "hi_0118",
+    "hi_0119",
+    "hi_0120",
+    "hi_0121",
+    "hi_0122",
+    "hi_0123",
+    "hi_0124",
+    "hi_0125",
+    "hi_0126",
+    "hi_0127",
+    "hi_0128",
+    "hi_0129",
+    "hi_0130",
+    "hi_0131",
+    "hi_0132",
+    "hi_0133",
+    "hi_0134",
+    "hi_0135",
+    "hi_0136",
+    "hi_0137",
+    "hi_0138",
+    "hi_0139",
+    "hi_0140",
+    "hi_0141",
+    "hi_0142",
+    "hi_0143",
+    "hi_0144",
+    "hi_0145",
+    "hi_0146",
+    "hi_0147",
+    "hi_0148",
+    "hi_0149",
+    "hi_0150",
+    "hi_0151",
+    "hi_0152",
+    "hi_0153",
+    "hi_0154",
+    "hi_0155",
+    "hi_0156",
+    "hi_0157",
+    "hi_0158",
+    "hi_0159",
+    "hi_0160",
+    "hi_0161",
+    "hi_0162",
+    "hi_0163",
+    "hi_0164",
+    "hi_0165",
+    "hi_0166",
+    "hi_0167",
+    "hi_0168",
+    "hi_0169",
+    "hi_0170",
+    "hi_0171",
+    "hi_0172",
+    "hi_0173",
+    "hi_0174",
+    "hi_0175",
+    "hi_0176",
+    "hi_0177",
+    "hi_0178",
+    "hi_0179",
+    "hi_0180",
+    "hi_0181",
+    "hi_0182",
+    "hi_0183",
+    "hi_0184",
+    "hi_0185",
+    "hi_0186",
+    "hi_0187",
+    "hi_0188",
+    "hi_0189",
+    "hi_0190",
+    "hi_0191",
+    "hi_0192",
+    "hi_0193",
+    "hi_0194",
+    "hi_0195",
+    "hi_0196",
+    "hi_0197",
+    "hi_0198",
+    "hi_0199",
+    "hi_0200"
+  ],
+  "reviewer": "independent_ai_second_pass",
+  "authority": "docs/annotation_guide.md",
+  "review_scope": "Every source sentence and candidate group reviewed manually for meaning, syntax, attachment, punctuation, label precedence, singleton typing, and unchanged source metadata. No other annotation files, gold, rules, models, parsers, or downloads were used.",
+  "corrected_ids": [
+    "hi_0168"
+  ],
+  "grouping_or_type_corrections": [
+    {
+      "id": "hi_0168",
+      "before": {
+        "groups": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "types": [
+          "single",
+          "aux_chain",
+          "single",
+          "single",
+          "aux_chain",
+          "single",
+          "single",
+          "postposition",
+          "postposition"
+        ],
+        "spans": [
+          {
+            "indices": [
+              0
+            ],
+            "text": "आवाजाही",
+            "type": "single"
+          },
+          {
+            "indices": [
+              1,
+              2,
+              3
+            ],
+            "text": "देखी गई है।",
+            "type": "aux_chain"
+          },
+          {
+            "indices": [
+              4
+            ],
+            "text": "ऐसा",
+            "type": "single"
+          },
+          {
+            "indices": [
+              5
+            ],
+            "text": "प्रतीत",
+            "type": "single"
+          },
+          {
+            "indices": [
+              6,
+              7
+            ],
+            "text": "होता है",
+            "type": "aux_chain"
+          },
+          {
+            "indices": [
+              8
+            ],
+            "text": "कि",
+            "type": "single"
+          },
+          {
+            "indices": [
+              9
+            ],
+            "text": "शायद",
+            "type": "single"
+          },
+          {
+            "indices": [
+              10,
+              11
+            ],
+            "text": "सेना के",
+            "type": "postposition"
+          },
+          {
+            "indices": [
+              12,
+              13
+            ],
+            "text": "जवानो की",
+            "type": "postposition"
+          }
+        ]
+      },
+      "after": {
+        "groups": [
+          [
+            0
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5,
+            6,
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            12,
+            13
+          ]
+        ],
+        "types": [
+          "single",
+          "aux_chain",
+          "single",
+          "aux_chain",
+          "single",
+          "single",
+          "postposition",
+          "postposition"
+        ],
+        "spans": [
+          {
+            "indices": [
+              0
+            ],
+            "text": "आवाजाही",
+            "type": "single"
+          },
+          {
+            "indices": [
+              1,
+              2,
+              3
+            ],
+            "text": "देखी गई है।",
+            "type": "aux_chain"
+          },
+          {
+            "indices": [
+              4
+            ],
+            "text": "ऐसा",
+            "type": "single"
+          },
+          {
+            "indices": [
+              5,
+              6,
+              7
+            ],
+            "text": "प्रतीत होता है",
+            "type": "aux_chain"
+          },
+          {
+            "indices": [
+              8
+            ],
+            "text": "कि",
+            "type": "single"
+          },
+          {
+            "indices": [
+              9
+            ],
+            "text": "शायद",
+            "type": "single"
+          },
+          {
+            "indices": [
+              10,
+              11
+            ],
+            "text": "सेना के",
+            "type": "postposition"
+          },
+          {
+            "indices": [
+              12,
+              13
+            ],
+            "text": "जवानो की",
+            "type": "postposition"
+          }
+        ]
+      },
+      "reason": "The adjective meaning apparent is the head of a copular predicate. Join token 5 to the following copula-plus-auxiliary at 6-7, consistent with the nearest-predicate-head convention. No noun plus main verb is merged."
+    }
+  ],
+  "note_cleanup": {
+    "rewritten_note_count": 63,
+    "note_only_ids": [
+      "hi_0101",
+      "hi_0105",
+      "hi_0106",
+      "hi_0109",
+      "hi_0110",
+      "hi_0111",
+      "hi_0112",
+      "hi_0113",
+      "hi_0114",
+      "hi_0115",
+      "hi_0116",
+      "hi_0117",
+      "hi_0118",
+      "hi_0119",
+      "hi_0122",
+      "hi_0123",
+      "hi_0124",
+      "hi_0127",
+      "hi_0130",
+      "hi_0131",
+      "hi_0133",
+      "hi_0135",
+      "hi_0138",
+      "hi_0139",
+      "hi_0140",
+      "hi_0142",
+      "hi_0144",
+      "hi_0146",
+      "hi_0149",
+      "hi_0151",
+      "hi_0152",
+      "hi_0153",
+      "hi_0154",
+      "hi_0155",
+      "hi_0156",
+      "hi_0157",
+      "hi_0158",
+      "hi_0159",
+      "hi_0162",
+      "hi_0163",
+      "hi_0165",
+      "hi_0166",
+      "hi_0170",
+      "hi_0171",
+      "hi_0173",
+      "hi_0174",
+      "hi_0175",
+      "hi_0176",
+      "hi_0177",
+      "hi_0178",
+      "hi_0180",
+      "hi_0184",
+      "hi_0185",
+      "hi_0186",
+      "hi_0187",
+      "hi_0188",
+      "hi_0189",
+      "hi_0191",
+      "hi_0192",
+      "hi_0193",
+      "hi_0195",
+      "hi_0198",
+      "hi_0199"
+    ],
+    "reason": "Replaced literal question-mark substitutions for Hindi examples with clear English explanations. Preserved focus particle, negation, and wala subtype notes. Clarified the postposed copular uncertainty in hi_0153 and documented source truncation in hi_0173.",
+    "changed_note_count": 64,
+    "added_note_ids": [
+      "hi_0173"
+    ],
+    "changed_note_ids": [
+      "hi_0101",
+      "hi_0105",
+      "hi_0106",
+      "hi_0109",
+      "hi_0110",
+      "hi_0111",
+      "hi_0112",
+      "hi_0113",
+      "hi_0114",
+      "hi_0115",
+      "hi_0116",
+      "hi_0117",
+      "hi_0118",
+      "hi_0119",
+      "hi_0122",
+      "hi_0123",
+      "hi_0124",
+      "hi_0127",
+      "hi_0130",
+      "hi_0131",
+      "hi_0133",
+      "hi_0135",
+      "hi_0138",
+      "hi_0139",
+      "hi_0140",
+      "hi_0142",
+      "hi_0144",
+      "hi_0146",
+      "hi_0149",
+      "hi_0151",
+      "hi_0152",
+      "hi_0153",
+      "hi_0154",
+      "hi_0155",
+      "hi_0156",
+      "hi_0157",
+      "hi_0158",
+      "hi_0159",
+      "hi_0162",
+      "hi_0163",
+      "hi_0165",
+      "hi_0166",
+      "hi_0168",
+      "hi_0170",
+      "hi_0171",
+      "hi_0173",
+      "hi_0174",
+      "hi_0175",
+      "hi_0176",
+      "hi_0177",
+      "hi_0178",
+      "hi_0180",
+      "hi_0184",
+      "hi_0185",
+      "hi_0186",
+      "hi_0187",
+      "hi_0188",
+      "hi_0189",
+      "hi_0191",
+      "hi_0192",
+      "hi_0193",
+      "hi_0195",
+      "hi_0198",
+      "hi_0199"
+    ]
+  },
+  "remaining_uncertain_ids": [
+    "hi_0106",
+    "hi_0109",
+    "hi_0115",
+    "hi_0135",
+    "hi_0144",
+    "hi_0146",
+    "hi_0153",
+    "hi_0155",
+    "hi_0158",
+    "hi_0175",
+    "hi_0176",
+    "hi_0184",
+    "hi_0187"
+  ],
+  "remaining_uncertainties": [
+    {
+      "id": "hi_0106",
+      "reason": "Temporal compound versus literal possessive day noun.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0109",
+      "reason": "Relational leadership compound versus literal possessive noun.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0115",
+      "reason": "Borrowed out predicate: copular versus lexical conjunct analysis.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0135",
+      "reason": "Incomplete inverse infinitive phase predicate.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0144",
+      "reason": "Borrowed sanitize stem with Hindi support verb.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0146",
+      "reason": "Relational opposition compound versus literal noun analysis.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0153",
+      "reason": "Whether postposed adjective joins an immediately preceding copular chain.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0155",
+      "reason": "Adjectival transformed predicate versus nominal conjunct predicate.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0158",
+      "reason": "Participle plus temporal time word: compound, simple postposition, or literal noun.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0175",
+      "reason": "Borrowed produce stem with Hindi support verb.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0176",
+      "reason": "Relational matter compound versus literal noun analysis.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0184",
+      "reason": "Relational name compound versus literal name noun analysis.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    },
+    {
+      "id": "hi_0187",
+      "reason": "Elliptical temporal postposition without the source genitive marker.",
+      "action": "Retained candidate grouping and recorded uncertainty for human adjudication."
+    }
+  ],
+  "source_quality_notes": [
+    {
+      "id": "hi_0173",
+      "issue": "Existing U+FFFD in canonical truncated source text is preserved exactly."
+    }
+  ],
+  "validation": {
+    "rows_match_source_metadata_and_exact_text": true,
+    "all_whitespace_tokens_covered_once_in_order": true,
+    "all_groups_contiguous": true,
+    "all_singletons_type_single": true,
+    "all_labels_in_contract": true,
+    "ai_draft_needs_review_provenance_preserved": true,
+    "no_replacement_characters_or_question_mark_corruption_in_notes": true
+  },
+  "annotation_status": "needs_review",
+  "human_review_claimed": false
+}

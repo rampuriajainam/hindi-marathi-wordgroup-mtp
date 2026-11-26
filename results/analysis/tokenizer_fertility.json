@@ -1,0 +1,1060 @@
+{
+ "description": "KT-2 (a): tokens per word on the eval sentences; word-initial from character offsets (see scripts/tokenizer_fertility.py docstring).",
+ "datasets": {
+  "hi/indiccorp_eval": 500,
+  "hi/flores": 1012,
+  "mr/indiccorp_eval": 500,
+  "mr/flores": 1012
+ },
+ "datasets_skipped": {},
+ "unavailable": {
+  "google/gemma-3-1b-pt": "OSError: You are trying to access a gated repo.",
+  "meta-llama/Llama-3.2-1B": "OSError: You are trying to access a gated repo."
+ },
+ "results": [
+  {
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 30000,
+   "lang": "hi",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 30927,
+   "chars": 157456,
+   "tokens": 34585,
+   "tokens_per_word": 1.1182785268535584,
+   "tokens_per_char": 0.21964866375368358,
+   "single_token_word_share": 0.9229799204578524,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.9229799204578524,
+    "2": 0.04940666731335079,
+    "3": 0.01839816341707893,
+    "4+": 0.009215248811717916
+   },
+   "word_initial_token_share": 0.8942316032962266,
+   "diagnostics": {
+    "whitespace_tokens": 118,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 0,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9968194303888969
+   }
+  },
+  {
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 30000,
+   "lang": "hi",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 25643,
+   "chars": 131079,
+   "tokens": 30163,
+   "tokens_per_word": 1.1762664274850836,
+   "tokens_per_char": 0.23011313787868384,
+   "single_token_word_share": 0.8896774948328978,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.8896774948328978,
+    "2": 0.06504699138166362,
+    "3": 0.030768630815427214,
+    "4+": 0.01450688297001131
+   },
+   "word_initial_token_share": 0.8501475317441899,
+   "diagnostics": {
+    "whitespace_tokens": 26,
+    "unassigned_tokens": 16,
+    "tokens_sharing_offsets": 5,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9998009752214151
+   }
+  },
+  {
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 30000,
+   "lang": "mr",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 18837,
+   "chars": 129664,
+   "tokens": 46451,
+   "tokens_per_word": 2.4659446833359877,
+   "tokens_per_char": 0.3582413005923001,
+   "single_token_word_share": 0.28730689600254816,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.28730689600254816,
+    "2": 0.26516961299569997,
+    "3": 0.25752508361204013,
+    "4+": 0.18999840738971174
+   },
+   "word_initial_token_share": 0.4055241006652171,
+   "diagnostics": {
+    "whitespace_tokens": 79,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 10,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9986006759811414
+   }
+  },
+  {
+   "tokenizer": "LingoIITGN/ganga-1b",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 30000,
+   "lang": "mr",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 19046,
+   "chars": 133051,
+   "tokens": 47672,
+   "tokens_per_word": 2.5029927543841226,
+   "tokens_per_char": 0.35829869749193916,
+   "single_token_word_share": 0.2690853722566418,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.2690853722566418,
+    "2": 0.2874094298015331,
+    "3": 0.24052294445027828,
+    "4+": 0.20298225349154678
+   },
+   "word_initial_token_share": 0.39952173183420037,
+   "diagnostics": {
+    "whitespace_tokens": 88,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 0,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.998300889410975
+   }
+  },
+  {
+   "tokenizer": "smallstepai/Misal-1B-instruct-v0.1",
+   "tokenizer_class": "LlamaTokenizer",
+   "vocab_size": 47049,
+   "lang": "hi",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 30927,
+   "chars": 157456,
+   "tokens": 56546,
+   "tokens_per_word": 1.8283700326575485,
+   "tokens_per_char": 0.3591225485214917,
+   "single_token_word_share": 0.4873088240049148,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.4873088240049148,
+    "2": 0.3031978530086979,
+    "3": 0.1372263717787047,
+    "4+": 0.0722669512076826
+   },
+   "word_initial_token_share": 0.5469352385668306,
+   "diagnostics": {
+    "whitespace_tokens": 86,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 374,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9986382768011884
+   }
+  },
+  {
+   "tokenizer": "smallstepai/Misal-1B-instruct-v0.1",
+   "tokenizer_class": "LlamaTokenizer",
+   "vocab_size": 47049,
+   "lang": "hi",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 25643,
+   "chars": 131079,
+   "tokens": 49268,
+   "tokens_per_word": 1.9213040595874118,
+   "tokens_per_char": 0.37586493641239255,
+   "single_token_word_share": 0.4541200327574777,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.4541200327574777,
+    "2": 0.3026166985142144,
+    "3": 0.15559801895254066,
+    "4+": 0.08766524977576727
+   },
+   "word_initial_token_share": 0.5204798246326215,
+   "diagnostics": {
+    "whitespace_tokens": 48,
+    "unassigned_tokens": 16,
+    "tokens_sharing_offsets": 248,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9998984812799481
+   }
+  },
+  {
+   "tokenizer": "smallstepai/Misal-1B-instruct-v0.1",
+   "tokenizer_class": "LlamaTokenizer",
+   "vocab_size": 47049,
+   "lang": "mr",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 18837,
+   "chars": 129664,
+   "tokens": 29854,
+   "tokens_per_word": 1.5848595848595848,
+   "tokens_per_char": 0.23024123889437315,
+   "single_token_word_share": 0.6102882624621755,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.6102882624621755,
+    "2": 0.2651165259860912,
+    "3": 0.08053299357647184,
+    "4+": 0.044062217975261456
+   },
+   "word_initial_token_share": 0.6309707241910631,
+   "diagnostics": {
+    "whitespace_tokens": 67,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 20,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9979567227172238
+   }
+  },
+  {
+   "tokenizer": "smallstepai/Misal-1B-instruct-v0.1",
+   "tokenizer_class": "LlamaTokenizer",
+   "vocab_size": 47049,
+   "lang": "mr",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 19046,
+   "chars": 133051,
+   "tokens": 31043,
+   "tokens_per_word": 1.6298960411634988,
+   "tokens_per_char": 0.2333165477899452,
+   "single_token_word_share": 0.5968182295495117,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.5968182295495117,
+    "2": 0.2634148902656726,
+    "3": 0.08258952010920928,
+    "4+": 0.05717736007560643
+   },
+   "word_initial_token_share": 0.6135360628805205,
+   "diagnostics": {
+    "whitespace_tokens": 82,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 0,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9974873562477853
+   }
+  },
+  {
+   "tokenizer": "sarvamai/sarvam-1",
+   "tokenizer_class": "LlamaTokenizer",
+   "vocab_size": 68096,
+   "lang": "hi",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 30927,
+   "chars": 157456,
+   "tokens": 43850,
+   "tokens_per_word": 1.417854948750283,
+   "tokens_per_char": 0.27849049893303524,
+   "single_token_word_share": 0.748213535098781,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.748213535098781,
+    "2": 0.15332880654444336,
+    "3": 0.05907459501406538,
+    "4+": 0.03938306334271025
+   },
+   "word_initial_token_share": 0.705290763968073,
+   "diagnostics": {
+    "whitespace_tokens": 572,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 433,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9995895096921322
+   }
+  },
+  {
+   "tokenizer": "sarvamai/sarvam-1",
+   "tokenizer_class": "LlamaTokenizer",
+   "vocab_size": 68096,
+   "lang": "hi",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 25643,
+   "chars": 131079,
+   "tokens": 35954,
+   "tokens_per_word": 1.4020980384510393,
+   "tokens_per_char": 0.2742926021712097,
+   "single_token_word_share": 0.7540459384627384,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.7540459384627384,
+    "2": 0.1560659829193152,
+    "3": 0.05167102133135749,
+    "4+": 0.03821705728658893
+   },
+   "word_initial_token_share": 0.7132168882460922,
+   "diagnostics": {
+    "whitespace_tokens": 281,
+    "unassigned_tokens": 16,
+    "tokens_sharing_offsets": 304,
+    "words_without_token_start": 0,
+    "prefix_agreement": 1.0
+   }
+  },
+  {
+   "tokenizer": "sarvamai/sarvam-1",
+   "tokenizer_class": "LlamaTokenizer",
+   "vocab_size": 68096,
+   "lang": "mr",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 18837,
+   "chars": 129664,
+   "tokens": 36249,
+   "tokens_per_word": 1.924351011307533,
+   "tokens_per_char": 0.2795610192497532,
+   "single_token_word_share": 0.45729150076976166,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.45729150076976166,
+    "2": 0.3072676116154377,
+    "3": 0.13977809629983542,
+    "4+": 0.09566279131496523
+   },
+   "word_initial_token_share": 0.5196557146404038,
+   "diagnostics": {
+    "whitespace_tokens": 260,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 82,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9996965433529201
+   }
+  },
+  {
+   "tokenizer": "sarvamai/sarvam-1",
+   "tokenizer_class": "LlamaTokenizer",
+   "vocab_size": 68096,
+   "lang": "mr",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 19046,
+   "chars": 133051,
+   "tokens": 33666,
+   "tokens_per_word": 1.7676152472960203,
+   "tokens_per_char": 0.2530307927035498,
+   "single_token_word_share": 0.5329202982253491,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.5329202982253491,
+    "2": 0.2806363540900977,
+    "3": 0.11419720676257482,
+    "4+": 0.07224614092197837
+   },
+   "word_initial_token_share": 0.5657339749301966,
+   "diagnostics": {
+    "whitespace_tokens": 296,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 57,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9997920750905959
+   }
+  },
+  {
+   "tokenizer": "Qwen/Qwen2.5-1.5B",
+   "tokenizer_class": "Qwen2Tokenizer",
+   "vocab_size": 151665,
+   "lang": "hi",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 30927,
+   "chars": 157456,
+   "tokens": 144464,
+   "tokens_per_word": 4.671128787143919,
+   "tokens_per_char": 0.9174880601564882,
+   "single_token_word_share": 0.006660846509522424,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.006660846509522424,
+    "2": 0.1691725676593268,
+    "3": 0.1723413198823035,
+    "4+": 0.6518252659488473
+   },
+   "word_initial_token_share": 0.21408101672388968,
+   "diagnostics": {
+    "whitespace_tokens": 568,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 37008,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9960128474914165
+   }
+  },
+  {
+   "tokenizer": "Qwen/Qwen2.5-1.5B",
+   "tokenizer_class": "Qwen2Tokenizer",
+   "vocab_size": 151665,
+   "lang": "hi",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 25643,
+   "chars": 131079,
+   "tokens": 121973,
+   "tokens_per_word": 4.756580743282767,
+   "tokens_per_char": 0.93053044347302,
+   "single_token_word_share": 0.0026907928089537105,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.0026907928089537105,
+    "2": 0.16597122021604335,
+    "3": 0.17973716023866163,
+    "4+": 0.6516008267363413
+   },
+   "word_initial_token_share": 0.21023505201970927,
+   "diagnostics": {
+    "whitespace_tokens": 268,
+    "unassigned_tokens": 16,
+    "tokens_sharing_offsets": 31480,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.991693793714178
+   }
+  },
+  {
+   "tokenizer": "Qwen/Qwen2.5-1.5B",
+   "tokenizer_class": "Qwen2Tokenizer",
+   "vocab_size": 151665,
+   "lang": "mr",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 18837,
+   "chars": 129664,
+   "tokens": 124126,
+   "tokens_per_word": 6.589478154695546,
+   "tokens_per_char": 0.9572896100691016,
+   "single_token_word_share": 0.01013961883527101,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.01013961883527101,
+    "2": 0.026808939852418112,
+    "3": 0.06221797526145352,
+    "4+": 0.9008334660508573
+   },
+   "word_initial_token_share": 0.15175708554211043,
+   "diagnostics": {
+    "whitespace_tokens": 488,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 35613,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9954803989494546
+   }
+  },
+  {
+   "tokenizer": "Qwen/Qwen2.5-1.5B",
+   "tokenizer_class": "Qwen2Tokenizer",
+   "vocab_size": 151665,
+   "lang": "mr",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 19046,
+   "chars": 133051,
+   "tokens": 127476,
+   "tokens_per_word": 6.693058910007351,
+   "tokens_per_char": 0.9580987741542717,
+   "single_token_word_share": 0.0037278168644334767,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.0037278168644334767,
+    "2": 0.03502047674052294,
+    "3": 0.05124435577024047,
+    "4+": 0.9100073506248031
+   },
+   "word_initial_token_share": 0.14940851611283693,
+   "diagnostics": {
+    "whitespace_tokens": 379,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 36756,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9914493708619662
+   }
+  },
+  {
+   "tokenizer": "Qwen/Qwen3-4B-Base",
+   "tokenizer_class": "Qwen2Tokenizer",
+   "vocab_size": 151669,
+   "lang": "hi",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 30927,
+   "chars": 157456,
+   "tokens": 144464,
+   "tokens_per_word": 4.671128787143919,
+   "tokens_per_char": 0.9174880601564882,
+   "single_token_word_share": 0.006660846509522424,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.006660846509522424,
+    "2": 0.1691725676593268,
+    "3": 0.1723413198823035,
+    "4+": 0.6518252659488473
+   },
+   "word_initial_token_share": 0.21408101672388968,
+   "diagnostics": {
+    "whitespace_tokens": 568,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 37008,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9960128474914165
+   }
+  },
+  {
+   "tokenizer": "Qwen/Qwen3-4B-Base",
+   "tokenizer_class": "Qwen2Tokenizer",
+   "vocab_size": 151669,
+   "lang": "hi",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 25643,
+   "chars": 131079,
+   "tokens": 121973,
+   "tokens_per_word": 4.756580743282767,
+   "tokens_per_char": 0.93053044347302,
+   "single_token_word_share": 0.0026907928089537105,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.0026907928089537105,
+    "2": 0.16597122021604335,
+    "3": 0.17973716023866163,
+    "4+": 0.6516008267363413
+   },
+   "word_initial_token_share": 0.21023505201970927,
+   "diagnostics": {
+    "whitespace_tokens": 268,
+    "unassigned_tokens": 16,
+    "tokens_sharing_offsets": 31480,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.991693793714178
+   }
+  },
+  {
+   "tokenizer": "Qwen/Qwen3-4B-Base",
+   "tokenizer_class": "Qwen2Tokenizer",
+   "vocab_size": 151669,
+   "lang": "mr",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 18837,
+   "chars": 129664,
+   "tokens": 124126,
+   "tokens_per_word": 6.589478154695546,
+   "tokens_per_char": 0.9572896100691016,
+   "single_token_word_share": 0.01013961883527101,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.01013961883527101,
+    "2": 0.026808939852418112,
+    "3": 0.06221797526145352,
+    "4+": 0.9008334660508573
+   },
+   "word_initial_token_share": 0.15175708554211043,
+   "diagnostics": {
+    "whitespace_tokens": 488,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 35613,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9954803989494546
+   }
+  },
+  {
+   "tokenizer": "Qwen/Qwen3-4B-Base",
+   "tokenizer_class": "Qwen2Tokenizer",
+   "vocab_size": 151669,
+   "lang": "mr",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 19046,
+   "chars": 133051,
+   "tokens": 127476,
+   "tokens_per_word": 6.693058910007351,
+   "tokens_per_char": 0.9580987741542717,
+   "single_token_word_share": 0.0037278168644334767,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.0037278168644334767,
+    "2": 0.03502047674052294,
+    "3": 0.05124435577024047,
+    "4+": 0.9100073506248031
+   },
+   "word_initial_token_share": 0.14940851611283693,
+   "diagnostics": {
+    "whitespace_tokens": 379,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 36756,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9914493708619662
+   }
+  },
+  {
+   "tokenizer": "bigscience/bloom-1b7",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 250680,
+   "lang": "hi",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 30927,
+   "chars": 157456,
+   "tokens": 40886,
+   "tokens_per_word": 1.3220163611084166,
+   "tokens_per_char": 0.25966619246011585,
+   "single_token_word_share": 0.7736928897080221,
+   "tokens_per_word_dist": {
+    "0": 3.233420635690497e-05,
+    "1": 0.7736928897080221,
+    "2": 0.15979564781582437,
+    "3": 0.04526788889966696,
+    "4+": 0.02121123937012966
+   },
+   "word_initial_token_share": 0.7563958323142396,
+   "diagnostics": {
+    "whitespace_tokens": 47,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 11,
+    "words_without_token_start": 1,
+    "prefix_agreement": 0.9866213373770973
+   }
+  },
+  {
+   "tokenizer": "bigscience/bloom-1b7",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 250680,
+   "lang": "hi",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 25643,
+   "chars": 131079,
+   "tokens": 35151,
+   "tokens_per_word": 1.3707834496743752,
+   "tokens_per_char": 0.2681665255304053,
+   "single_token_word_share": 0.7502242327340795,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.7502242327340795,
+    "2": 0.16749210310806067,
+    "3": 0.055648715048941234,
+    "4+": 0.026634949108918612
+   },
+   "word_initial_token_share": 0.7295098290233564,
+   "diagnostics": {
+    "whitespace_tokens": 21,
+    "unassigned_tokens": 16,
+    "tokens_sharing_offsets": 6,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9711114273516437
+   }
+  },
+  {
+   "tokenizer": "bigscience/bloom-1b7",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 250680,
+   "lang": "mr",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 18837,
+   "chars": 129664,
+   "tokens": 32786,
+   "tokens_per_word": 1.7405106970324362,
+   "tokens_per_char": 0.2528535291214215,
+   "single_token_word_share": 0.5125019907628603,
+   "tokens_per_word_dist": {
+    "0": 0.00047778308647873863,
+    "1": 0.5125019907628603,
+    "2": 0.31788501353718746,
+    "3": 0.11217285130328608,
+    "4+": 0.0569623613101874
+   },
+   "word_initial_token_share": 0.5742695052766424,
+   "diagnostics": {
+    "whitespace_tokens": 43,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 13,
+    "words_without_token_start": 9,
+    "prefix_agreement": 0.9831635454157263
+   }
+  },
+  {
+   "tokenizer": "bigscience/bloom-1b7",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 250680,
+   "lang": "mr",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 19046,
+   "chars": 133051,
+   "tokens": 33415,
+   "tokens_per_word": 1.7544366271133047,
+   "tokens_per_char": 0.25114429805112326,
+   "single_token_word_share": 0.5183765620077707,
+   "tokens_per_word_dist": {
+    "0": 5.250446287934474e-05,
+    "1": 0.5183765620077707,
+    "2": 0.30368581329413,
+    "3": 0.11283209072771186,
+    "4+": 0.06505302950750814
+   },
+   "word_initial_token_share": 0.5699536136465659,
+   "diagnostics": {
+    "whitespace_tokens": 73,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 11,
+    "words_without_token_start": 1,
+    "prefix_agreement": 0.9674696992368697
+   }
+  },
+  {
+   "tokenizer": "ai-forever/mGPT",
+   "tokenizer_class": "GPT2Tokenizer",
+   "vocab_size": 100000,
+   "lang": "hi",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 30927,
+   "chars": 157456,
+   "tokens": 107373,
+   "tokens_per_word": 3.4718207391599574,
+   "tokens_per_char": 0.6819238390407479,
+   "single_token_word_share": 0.08927474375141461,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.08927474375141461,
+    "2": 0.3467520289714489,
+    "3": 0.14514825233614642,
+    "4+": 0.4188249749409901
+   },
+   "word_initial_token_share": 0.2880333044620156,
+   "diagnostics": {
+    "whitespace_tokens": 115,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 212,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.994318869734477
+   }
+  },
+  {
+   "tokenizer": "ai-forever/mGPT",
+   "tokenizer_class": "GPT2Tokenizer",
+   "vocab_size": 100000,
+   "lang": "hi",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 25643,
+   "chars": 131079,
+   "tokens": 89912,
+   "tokens_per_word": 3.506298015052841,
+   "tokens_per_char": 0.6859374880797077,
+   "single_token_word_share": 0.09573762820262839,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.09573762820262839,
+    "2": 0.34110673478142184,
+    "3": 0.14931950239831532,
+    "4+": 0.41383613461763447
+   },
+   "word_initial_token_share": 0.2852010855058279,
+   "diagnostics": {
+    "whitespace_tokens": 22,
+    "unassigned_tokens": 16,
+    "tokens_sharing_offsets": 173,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.988731422977663
+   }
+  },
+  {
+   "tokenizer": "ai-forever/mGPT",
+   "tokenizer_class": "GPT2Tokenizer",
+   "vocab_size": 100000,
+   "lang": "mr",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 18837,
+   "chars": 129664,
+   "tokens": 97811,
+   "tokens_per_word": 5.1924934968413226,
+   "tokens_per_char": 0.7543419916090819,
+   "single_token_word_share": 0.036311514572384136,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.036311514572384136,
+    "2": 0.1283113022243457,
+    "3": 0.10675797632319371,
+    "4+": 0.7286192068800764
+   },
+   "word_initial_token_share": 0.19258570099477565,
+   "diagnostics": {
+    "whitespace_tokens": 70,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 220,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9941826583922053
+   }
+  },
+  {
+   "tokenizer": "ai-forever/mGPT",
+   "tokenizer_class": "GPT2Tokenizer",
+   "vocab_size": 100000,
+   "lang": "mr",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 19046,
+   "chars": 133051,
+   "tokens": 100383,
+   "tokens_per_word": 5.270555497217264,
+   "tokens_per_char": 0.7544700904164569,
+   "single_token_word_share": 0.026882284994224508,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.026882284994224508,
+    "2": 0.14338968812349048,
+    "3": 0.10579649270187966,
+    "4+": 0.7239315341804053
+   },
+   "word_initial_token_share": 0.18973332137911797,
+   "diagnostics": {
+    "whitespace_tokens": 81,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 128,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9891117021806481
+   }
+  },
+  {
+   "tokenizer": "facebook/xglm-1.7B",
+   "tokenizer_class": "XGLMTokenizer",
+   "vocab_size": 256008,
+   "lang": "hi",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 30927,
+   "chars": 157456,
+   "tokens": 46676,
+   "tokens_per_word": 1.5092314159148963,
+   "tokens_per_char": 0.29643837008434104,
+   "single_token_word_share": 0.6592621334109354,
+   "tokens_per_word_dist": {
+    "0": 6.466841271380994e-05,
+    "1": 0.6592621334109354,
+    "2": 0.22210366346558025,
+    "3": 0.08403660232159602,
+    "4+": 0.03453293238917451
+   },
+   "word_initial_token_share": 0.6625460622161282,
+   "diagnostics": {
+    "whitespace_tokens": 647,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 22,
+    "words_without_token_start": 2,
+    "prefix_agreement": 0.9962721741366013
+   }
+  },
+  {
+   "tokenizer": "facebook/xglm-1.7B",
+   "tokenizer_class": "XGLMTokenizer",
+   "vocab_size": 256008,
+   "lang": "hi",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 25643,
+   "chars": 131079,
+   "tokens": 40412,
+   "tokens_per_word": 1.5759466521077876,
+   "tokens_per_char": 0.3083026266602583,
+   "single_token_word_share": 0.6302304722536365,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.6302304722536365,
+    "2": 0.23043325663923878,
+    "3": 0.09292984440198104,
+    "4+": 0.0464064267051437
+   },
+   "word_initial_token_share": 0.6345392457685836,
+   "diagnostics": {
+    "whitespace_tokens": 520,
+    "unassigned_tokens": 16,
+    "tokens_sharing_offsets": 44,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9999504901475393
+   }
+  },
+  {
+   "tokenizer": "facebook/xglm-1.7B",
+   "tokenizer_class": "XGLMTokenizer",
+   "vocab_size": 256008,
+   "lang": "mr",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 18837,
+   "chars": 129664,
+   "tokens": 39580,
+   "tokens_per_word": 2.1011838403142753,
+   "tokens_per_char": 0.3052504935834156,
+   "single_token_word_share": 0.35377183203270157,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.35377183203270157,
+    "2": 0.3540903540903541,
+    "3": 0.18187609491957318,
+    "4+": 0.11026171895737114
+   },
+   "word_initial_token_share": 0.475922182920667,
+   "diagnostics": {
+    "whitespace_tokens": 744,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 37,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9986356745831227
+   }
+  },
+  {
+   "tokenizer": "facebook/xglm-1.7B",
+   "tokenizer_class": "XGLMTokenizer",
+   "vocab_size": 256008,
+   "lang": "mr",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 19046,
+   "chars": 133051,
+   "tokens": 39839,
+   "tokens_per_word": 2.0917252966502153,
+   "tokens_per_char": 0.29942653568932215,
+   "single_token_word_share": 0.3745668381812454,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.3745668381812454,
+    "2": 0.32705029927543844,
+    "3": 0.18555077181560434,
+    "4+": 0.11283209072771186
+   },
+   "word_initial_token_share": 0.4780742488516278,
+   "diagnostics": {
+    "whitespace_tokens": 724,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 58,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9993222721453852
+   }
+  },
+  {
+   "tokenizer": "mistralai/Mistral-7B-v0.3",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 32768,
+   "lang": "hi",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 30927,
+   "chars": 157456,
+   "tokens": 161071,
+   "tokens_per_word": 5.20810295211304,
+   "tokens_per_char": 1.022958794837923,
+   "single_token_word_share": 0.00514113881074789,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.00514113881074789,
+    "2": 0.008212888414653863,
+    "3": 0.253823519901704,
+    "4+": 0.7328224528728943
+   },
+   "word_initial_token_share": 0.192008493148984,
+   "diagnostics": {
+    "whitespace_tokens": 30045,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 4900,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.999975166231041
+   }
+  },
+  {
+   "tokenizer": "mistralai/Mistral-7B-v0.3",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 32768,
+   "lang": "hi",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 25643,
+   "chars": 131079,
+   "tokens": 136616,
+   "tokens_per_word": 5.327613773739422,
+   "tokens_per_char": 1.0422417015692826,
+   "single_token_word_share": 0.0019108528643294465,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.0019108528643294465,
+    "2": 0.003743711734196467,
+    "3": 0.24841087236282805,
+    "4+": 0.745934563038646
+   },
+   "word_initial_token_share": 0.18770129413831468,
+   "diagnostics": {
+    "whitespace_tokens": 24380,
+    "unassigned_tokens": 16,
+    "tokens_sharing_offsets": 5945,
+    "words_without_token_start": 0,
+    "prefix_agreement": 1.0
+   }
+  },
+  {
+   "tokenizer": "mistralai/Mistral-7B-v0.3",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 32768,
+   "lang": "mr",
+   "dataset": "indiccorp_eval",
+   "sentences": 500,
+   "words": 18837,
+   "chars": 129664,
+   "tokens": 136293,
+   "tokens_per_word": 7.235387800605192,
+   "tokens_per_char": 1.0511244447186574,
+   "single_token_word_share": 0.009608748739183522,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.009608748739183522,
+    "2": 0.008759356585443542,
+    "3": 0.05298083558953124,
+    "4+": 0.9286510590858417
+   },
+   "word_initial_token_share": 0.1382095925689507,
+   "diagnostics": {
+    "whitespace_tokens": 17967,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 7521,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9999559771961877
+   }
+  },
+  {
+   "tokenizer": "mistralai/Mistral-7B-v0.3",
+   "tokenizer_class": "TokenizersBackend",
+   "vocab_size": 32768,
+   "lang": "mr",
+   "dataset": "flores",
+   "sentences": 1012,
+   "words": 19046,
+   "chars": 133051,
+   "tokens": 139824,
+   "tokens_per_word": 7.3413840176414995,
+   "tokens_per_char": 1.0509052919557162,
+   "single_token_word_share": 0.002677727606846582,
+   "tokens_per_word_dist": {
+    "0": 0.0,
+    "1": 0.002677727606846582,
+    "2": 0.008085687283419091,
+    "3": 0.0604326367741258,
+    "4+": 0.9288039483356085
+   },
+   "word_initial_token_share": 0.1362140977228516,
+   "diagnostics": {
+    "whitespace_tokens": 17774,
+    "unassigned_tokens": 0,
+    "tokens_sharing_offsets": 7437,
+    "words_without_token_start": 0,
+    "prefix_agreement": 0.9999713926078498
+   }
+  }
+ ]
+}

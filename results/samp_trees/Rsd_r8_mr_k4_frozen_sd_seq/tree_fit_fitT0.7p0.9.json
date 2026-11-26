@@ -1,0 +1,63 @@
+{
+ "run_name": "Rsd_r8_mr_k4_frozen_sd_seq",
+ "step": 12500,
+ "n_calib_positions": 18300,
+ "n_eval_positions": 6100,
+ "chain": 0.41442622950819674,
+ "rows": [
+  {
+   "max_nodes": 16,
+   "static": 0.7555737704918033,
+   "entropy": 0.7888524590163934,
+   "ceiling": 1.8614754098360655,
+   "widths": [
+    10,
+    5,
+    1
+   ]
+  },
+  {
+   "max_nodes": 32,
+   "static": 0.8947540983606558,
+   "entropy": 0.9242622950819672,
+   "ceiling": 2.0562295081967212,
+   "widths": [
+    20,
+    8,
+    4
+   ]
+  },
+  {
+   "max_nodes": 64,
+   "static": 1.0250819672131148,
+   "entropy": 1.0463934426229509,
+   "ceiling": 2.2214754098360654,
+   "widths": [
+    39,
+    18,
+    7
+   ]
+  },
+  {
+   "max_nodes": 128,
+   "static": 1.140327868852459,
+   "entropy": 1.1342622950819672,
+   "ceiling": 2.3737704918032785,
+   "widths": [
+    50,
+    53,
+    25
+   ]
+  }
+ ],
+ "note": "oracle accepted drafts per step on IndicCorp eval text SAMPLED from head 0 (teacher-forced); ceiling = same fit with head 0's own ranks (a drafter equal to the verifier)",
+ "sample": [
+  0.7,
+  0.9
+ ],
+ "ignore_eos": true,
+ "chain_ceiling": 1.2534426229508198,
+ "compare": {
+  "static_n64": 0.991639344262295
+ }
+}

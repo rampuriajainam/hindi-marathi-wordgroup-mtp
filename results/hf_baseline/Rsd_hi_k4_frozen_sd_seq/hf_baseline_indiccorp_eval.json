@@ -1,0 +1,25 @@
+{
+ "run_name": "Rsd_hi_k4_frozen_sd_seq",
+ "dataset": "indiccorp_eval",
+ "n_prompts": 200,
+ "max_new_tokens": 64,
+ "lookup": 10,
+ "configs": {
+  "hf_greedy_autocast": {
+   "tokens_per_sec": 28.420445553538546
+  },
+  "hf_pld_autocast": {
+   "tokens_per_sec": 42.720449215503514
+  },
+  "hf_greedy_fp16": {
+   "tokens_per_sec": 44.68120174140451
+  },
+  "hf_pld_fp16": {
+   "tokens_per_sec": 63.88376991692594
+  }
+ },
+ "pld_speedup_autocast": 1.503159024548949,
+ "pld_speedup_fp16": 1.4297683908919372,
+ "pld_match_greedy_autocast": 0.98,
+ "pld_match_greedy_fp16": 0.975
+}

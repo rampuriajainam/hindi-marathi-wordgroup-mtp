@@ -1,0 +1,24 @@
+# Rsd_qwen_struct: = Rsd_qwen_seq + the structural group loss of Rsd_seq_struct, groups = word groups (hi_rules_v0).
+# Word groups on a high-fertility tokenizer (~4.9 Qwen tokens per Hindi word, ~6.2 per group vs ganga's 1.5):
+# does the group loss help where the 4-token draft window sits inside a group? Paired with the other of
+# Rsd_qwen_struct / Rsd_qwen_struct_rand; same SD data (qwen_hi_sd.jsonl), steps (3000), seed as Rsd_qwen_seq.
+run_name: Rsd_qwen_hi_k4_frozen_sd_seq_struct
+lang: hi
+model_name: Qwen/Qwen2.5-1.5B
+num_heads: 4
+head_type: seq
+head_layers: 1
+freeze_backbone: true   # Medusa-1: LoRA frozen, head 0 = base model exactly
+head_backbone_grad: 0.1
+lora: {r: 8, alpha: 16, dropout: 0.05, targets: [q_proj, v_proj]}   # Qwen2 has q_proj / v_proj (with bias); unused when frozen
+optim: {lr: 2.0e-4, batch_size: 2, grad_clip: 1.0, max_steps: 12500, grad_accum: 4, weight_decay: 0.01}
+data: {cache_dir: null, grouper: hi_rules_v0, max_length: 320, eval_split: eval, eval_n: 1000, train_file: /kaggle/working/sd/qwen_hi_sd.jsonl}
+losses:
+  structural: {enabled: true, variant: S23_mix, weight: 1.0, lambda_s2: 0.1, lambda_s3: 0.25, lambda_s3_all: 0.25, s3_teacher: chain}  # = Rsd_seq_struct
+  contrastive: {enabled: false, weight: 0.05, temperature: 0.1}
+weighting: {scheme: fixed, head_decay: 0.8}
+log_every: 20
+eval_every: 1000
+save_every: 500
+seed: 42
+dtype: auto

@@ -1,0 +1,203 @@
+{
+  "official_gold": true,
+  "complete_gold": true,
+  "n_sentences": 150,
+  "n_human_reviewed": 150,
+  "expected_sentences": 150,
+  "scores": {
+    "mr_rules_v1": {
+      "boundary": {
+        "precision": 0.9173553719008265,
+        "recall": 0.5091743119266054,
+        "f1": 0.6548672566371682,
+        "tp": 111,
+        "fp": 10,
+        "fn": 107
+      },
+      "exact_group_accuracy": 0.9387229660144182,
+      "sentence_exact_accuracy": 0.5333333333333333,
+      "n_sentences": 150,
+      "n_gold_groups": 1942,
+      "per_type": {
+        "aux_chain": {
+          "precision": 0.8478260869565217,
+          "recall": 0.582089552238806,
+          "f1": 0.6902654867256638,
+          "tp": 78,
+          "fp": 14,
+          "fn": 56
+        },
+        "single": {
+          "precision": 0.8978634705575821,
+          "recall": 0.9885255306942053,
+          "f1": 0.941015838339705,
+          "tp": 1723,
+          "fp": 196,
+          "fn": 20
+        },
+        "postposition": {
+          "precision": 0.5925925925925926,
+          "recall": 0.47058823529411764,
+          "f1": 0.5245901639344261,
+          "tp": 16,
+          "fp": 11,
+          "fn": 18
+        },
+        "light_verb": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 1,
+          "fn": 11
+        },
+        "other": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 17
+        },
+        "compound_postposition": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 3
+        }
+      }
+    },
+    "stanza": {
+      "boundary": {
+        "precision": 0.6616161616161617,
+        "recall": 0.6009174311926605,
+        "f1": 0.6298076923076923,
+        "tp": 131,
+        "fp": 67,
+        "fn": 87
+      },
+      "exact_group_accuracy": 0.8877445932028837,
+      "sentence_exact_accuracy": 0.38,
+      "n_sentences": 150,
+      "n_gold_groups": 1942,
+      "per_type": {
+        "aux_chain": {
+          "precision": 0.7107438016528925,
+          "recall": 0.6417910447761194,
+          "f1": 0.6745098039215686,
+          "tp": 86,
+          "fp": 35,
+          "fn": 48
+        },
+        "single": {
+          "precision": 0.9113495200451722,
+          "recall": 0.9259896729776248,
+          "f1": 0.9186112692088788,
+          "tp": 1614,
+          "fp": 157,
+          "fn": 129
+        },
+        "postposition": {
+          "precision": 0.22058823529411764,
+          "recall": 0.4411764705882353,
+          "f1": 0.29411764705882354,
+          "tp": 15,
+          "fp": 53,
+          "fn": 19
+        },
+        "light_verb": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 11
+        },
+        "other": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 17
+        },
+        "compound_postposition": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 3
+        }
+      }
+    },
+    "random_mr_v1": {
+      "boundary": {
+        "precision": 0.058823529411764705,
+        "recall": 0.027522935779816515,
+        "f1": 0.0375,
+        "tp": 6,
+        "fp": 96,
+        "fn": 212
+      },
+      "exact_group_accuracy": 0.8079299691040165,
+      "sentence_exact_accuracy": 0.20666666666666667,
+      "n_sentences": 150,
+      "n_gold_groups": 1942,
+      "per_type": {
+        "aux_chain": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 134
+        },
+        "single": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1743
+        },
+        "other": {
+          "precision": 0.00048590864917395527,
+          "recall": 0.058823529411764705,
+          "f1": 0.0009638554216867469,
+          "tp": 1,
+          "fp": 2057,
+          "fn": 16
+        },
+        "postposition": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 34
+        },
+        "light_verb": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 11
+        },
+        "compound_postposition": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 3
+        }
+      }
+    }
+  },
+  "agreement": null,
+  "best_by_boundary_f1": "mr_rules_v1"
+}

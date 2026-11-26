@@ -1,0 +1,124 @@
+"""
+Word-group structural losses (JN-5). Design and evidence: docs/design_structural_loss.md.
+
+Notation: head d at position t predicts u = t+d+1; g = group_id (-1 = special/pad),
+s = group_start. A position is valid if t and u are real tokens (attention_mask)
+with g >= 0.
+
+S2  boundary probe, every head d:
+      struct/boundary_bce/h{d} = mean_valid BCE(boundary_logits[d][t], s[u])
+    The probes live in MTPModel (boundary_probes=True); this only scores them.
+
+S3  consistency, every extra head d >= 1:
+      struct/consistency/h{d} = mean_mask KL( sg[p_teacher] || p_d(.|t) )
+    teacher "h0":    head 0 at u-1 (the LM, which has seen every token up to u-1)
+    teacher "chain": head d-1 at t+1
+    mask "in_group": g(t+1) == g(u)  (the extra context the teacher saw lies in u's group)
+    mask "all":      every valid pair (control: plain self-distillation)
+
+S3_mix (JN-5 pilots 2): both masks at once, same teacher (s3_teacher, default chain):
+      struct/consistency/h{d}     in-group pairs   (weight lambda_s3)
+      struct/consistency_all/h{d} every valid pair (weight lambda_s3_all)
+    Pilots 1: in-group S3 lifts in-group top-1 but costs at boundaries; S3_all lifts overall
+    top-1 but not in-group. S3_mix tests whether the two gains add up.
+
+Variants: S2 | S3_h0 | S3_chain | S3_all | S23 (S2 + S3 with s3_teacher, default h0)
+          | S3_mix | S23_mix (S2 + S3_mix).
+Terms are returned unweighted; train.py passes lambda_s2 / lambda_s3 / lambda_s3_all to
+LossWeighting under the prefixes "struct/boundary_bce", "struct/consistency" and
+"struct/consistency_all".
+"""
+
+import torch.nn.functional as F
+
+VARIANTS = {
+    "S2": {"s2": True, "s3": None},
+    "S3_h0": {"s2": False, "s3": ("h0", "in_group")},
+    "S3_chain": {"s2": False, "s3": ("chain", "in_group")},
+    "S3_all": {"s2": False, "s3": ("h0", "all")},
+    "S23": {"s2": True, "s3": ("h0", "in_group")},
+    "S3_mix": {"s2": False, "s3": ("chain", "in_group"), "s3_all": True},
+    "S23_mix": {"s2": True, "s3": ("chain", "in_group"), "s3_all": True},
+}
+TEACHER_SETTABLE = ("S23", "S3_mix", "S23_mix")  # s3_teacher overrides the default teacher
+
+
+def needs_boundary_probes(variant) -> bool:
+    return variant in VARIANTS and VARIANTS[variant]["s2"]
+
+
+def _zero(like):
+    """0 that stays attached to the graph, so a batch with no valid position never gives NaN.
+    Built from one element: like.sum() of fp16 logits overflows to inf, and inf * 0 = NaN
+    (crashed every in-group S3 pilot on T4 at the first batch with no in-group pair for head 3)."""
+    return like.reshape(-1)[:1].float().sum() * 0.0
+
+
+class StructuralLoss:
+    def __init__(self, variant: str, num_heads: int, s3_teacher: str | None = None, **kw):
+        if variant not in VARIANTS:
+            raise ValueError(f"unknown structural variant {variant!r}; one of {sorted(VARIANTS)}")
+        spec = VARIANTS[variant]
+        self.variant = variant
+        self.num_heads = num_heads
+        self.use_s2 = spec["s2"]
+        self.s3 = spec["s3"]
+        self.s3_all = spec.get("s3_all", False)
+        if variant in TEACHER_SETTABLE and s3_teacher is not None:
+            if s3_teacher not in ("h0", "chain"):
+                raise ValueError(f"s3_teacher must be 'h0' or 'chain', got {s3_teacher!r}")
+            self.s3 = (s3_teacher, "in_group")
+        self.term_names = (
+            [f"struct/boundary_bce/h{d}" for d in range(num_heads)] if self.use_s2 else []
+        ) + (
+            [f"struct/consistency/h{d}" for d in range(1, num_heads)] if self.s3 else []
+        ) + (
+            [f"struct/consistency_all/h{d}" for d in range(1, num_heads)] if self.s3_all else []
+        )
+
+    def __call__(self, out, batch) -> dict:
+        ids = batch["input_ids"]
+        real = batch["attention_mask"] != 0
+        gid = batch["group_id"]
+        ok = real & (gid >= 0)
+        T = ids.shape[1]
+        terms = {}
+
+        if self.use_s2:
+            if "boundary_logits" not in out.aux:
+                raise KeyError("S2 needs MTPModel(boundary_probes=True)")
+            start = batch["group_start"].float()
+            for d, logit in enumerate(out.aux["boundary_logits"]):
+                s = d + 1
+                if T <= s:
+                    terms[f"struct/boundary_bce/h{d}"] = _zero(logit)
+                    continue
+                valid = ok[:, :-s] & ok[:, s:]
+                bce = F.binary_cross_entropy_with_logits(logit[:, :-s].float(), start[:, s:], reduction="none")
+                terms[f"struct/boundary_bce/h{d}"] = (bce * valid).sum() / valid.sum().clamp(min=1)
+
+        if self.s3:
+            teacher, mask_kind = self.s3
+            for d in range(1, self.num_heads):
+                terms[f"struct/consistency/h{d}"] = _consistency(out, ok, gid, d, teacher, mask_kind)
+                if self.s3_all:
+                    terms[f"struct/consistency_all/h{d}"] = _consistency(out, ok, gid, d, teacher, "all")
+        return terms
+
+
+def _consistency(out, ok, gid, d, teacher, mask_kind):
+    """mean_mask KL( sg[p_teacher] || p_d(.|t) ) for head d (see module docstring)."""
+    T = ok.shape[1]
+    n = T - d - 1                       # student positions t = 0..T-d-2
+    if n <= 0:
+        return _zero(out.logits[d])
+    stu = out.logits[d][:, :n]
+    tea = out.logits[0][:, d:T - 1] if teacher == "h0" else out.logits[d - 1][:, 1:T - d]
+    mask = ok[:, :n] & ok[:, 1:n + 1] & ok[:, d + 1:]
+    if mask_kind == "in_group":
+        mask = mask & (gid[:, 1:n + 1] == gid[:, d + 1:])
+    if not mask.any():
+        return _zero(stu)
+    log_s = F.log_softmax(stu[mask].float(), dim=-1)
+    log_t = F.log_softmax(tea[mask].detach().float(), dim=-1)
+    return (log_t.exp() * (log_t - log_s)).sum(-1).mean()

@@ -1,0 +1,15 @@
+{
+ "run_name": "Rsd_qwen_hi_k4_frozen_sd_seq_struct",
+ "step": 3000,
+ "n_calib_positions": 18300,
+ "n_eval_positions": 12200,
+ "chain": 1.9154918032786885,
+ "rows": [
+  {
+   "max_nodes": 64,
+   "static": 2.714918032786885,
+   "entropy": 2.7285245901639343
+  }
+ ],
+ "note": "oracle accepted drafts per step on IndicCorp eval greedy text (teacher-forced)"
+}

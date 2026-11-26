@@ -1,0 +1,1777 @@
+{
+  "grouper": "hi_rules_v1",
+  "tokenizer": "LingoIITGN/ganga-1b",
+  "max_length": 128,
+  "baseline": "R2",
+  "inputs": {
+    "R2": {
+      "filename": "tokens_flores_hi.jsonl",
+      "sha256": "5c9f8efe0444c34b69dadcd3cbb897089630b7f4cd5e5f8e840d76af21c28b9f"
+    },
+    "R3": {
+      "filename": "tokens_flores_hi.jsonl",
+      "sha256": "581f72adbc020085d0b4881ba665b15af510cb96aba8516fdd2aa5fab411ec97"
+    },
+    "R6a": {
+      "filename": "tokens_flores_hi.jsonl",
+      "sha256": "0681e3cc951d5549fa2811fbc522364def03450bdaa82c1ec4a10fb3d2d3cb26"
+    }
+  },
+  "runs": {
+    "R2": [
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1792,
+        "top1": 0.37723214285714285
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1797,
+        "top1": 0.34056761268781305
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 873,
+        "top1": 0.6254295532646048
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 470,
+        "top1": 0.17446808510638298
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 494,
+        "top1": 0.5991902834008097
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 703,
+        "top1": 0.5547652916073968
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.5652173913043478
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.30434782608695654
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.8421052631578947
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3828,
+        "top1": 0.15752351097178682
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 4082,
+        "top1": 0.42650661440470355
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1420,
+        "top1": 0.476056338028169
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "first",
+        "n": 1632,
+        "top1": 0.06556372549019608
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "last",
+        "n": 1782,
+        "top1": 0.4820426487093154
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "middle",
+        "n": 1056,
+        "top1": 0.3456439393939394
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "single",
+        "n": 9092,
+        "top1": 0.19841619005719313
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1786,
+        "top1": 0.12038073908174692
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1794,
+        "top1": 0.19732441471571907
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 871,
+        "top1": 0.22502870264064295
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 452,
+        "top1": 0.03982300884955752
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 494,
+        "top1": 0.36639676113360325
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 679,
+        "top1": 0.27982326951399117
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.2391304347826087
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.17391304347826086
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.34210526315789475
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3657,
+        "top1": 0.02461033634126333
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3915,
+        "top1": 0.19923371647509577
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1333,
+        "top1": 0.03900975243810953
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "first",
+        "n": 1564,
+        "top1": 0.008951406649616368
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "last",
+        "n": 1707,
+        "top1": 0.053309900410076154
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "middle",
+        "n": 981,
+        "top1": 0.004077471967380225
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "single",
+        "n": 8776,
+        "top1": 0.07645852324521422
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1769,
+        "top1": 0.053702656868287166
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1789,
+        "top1": 0.1291224147568474
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 868,
+        "top1": 0.08870967741935484
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 425,
+        "top1": 0.018823529411764704
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 475,
+        "top1": 0.12210526315789473
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 656,
+        "top1": 0.31097560975609756
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.043478260869565216
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.10869565217391304
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.15789473684210525
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3503,
+        "top1": 0.004567513559805881
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3725,
+        "top1": 0.15624161073825504
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1265,
+        "top1": 0.018972332015810278
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "first",
+        "n": 1486,
+        "top1": 0.0026917900403768506
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "last",
+        "n": 1619,
+        "top1": 0.029030265596046944
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "middle",
+        "n": 926,
+        "top1": 0.004319654427645789
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "single",
+        "n": 8491,
+        "top1": 0.03038511364974679
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1741,
+        "top1": 0.028144744399770247
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1773,
+        "top1": 0.08855047941342357
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 864,
+        "top1": 0.04976851851851852
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 407,
+        "top1": 0.004914004914004914
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 456,
+        "top1": 0.06798245614035088
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 625,
+        "top1": 0.3248
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.043478260869565216
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.02631578947368421
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3359,
+        "top1": 0.002977076510866329
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3560,
+        "top1": 0.12415730337078652
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1208,
+        "top1": 0.013245033112582781
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "first",
+        "n": 1412,
+        "top1": 0.00141643059490085
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "last",
+        "n": 1537,
+        "top1": 0.01756668835393624
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "middle",
+        "n": 875,
+        "top1": 0.001142857142857143
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "single",
+        "n": 8168,
+        "top1": 0.02179236043095005
+      }
+    ],
+    "R3": [
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1792,
+        "top1": 0.3783482142857143
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1797,
+        "top1": 0.33889816360601
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 873,
+        "top1": 0.6231386025200458
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 470,
+        "top1": 0.17446808510638298
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 494,
+        "top1": 0.6012145748987854
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 703,
+        "top1": 0.5476529160739687
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.5434782608695652
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.2608695652173913
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.8421052631578947
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3828,
+        "top1": 0.1562173458725183
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 4082,
+        "top1": 0.42822146006859385
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1420,
+        "top1": 0.47676056338028167
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "first",
+        "n": 1632,
+        "top1": 0.06433823529411764
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "last",
+        "n": 1782,
+        "top1": 0.48484848484848486
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "middle",
+        "n": 1056,
+        "top1": 0.3456439393939394
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "single",
+        "n": 9092,
+        "top1": 0.19632644082710074
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1786,
+        "top1": 0.11702127659574468
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1794,
+        "top1": 0.2068004459308807
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 871,
+        "top1": 0.24339839265212398
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 452,
+        "top1": 0.035398230088495575
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 494,
+        "top1": 0.3643724696356275
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 679,
+        "top1": 0.31075110456553756
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.2391304347826087
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.15217391304347827
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.3684210526315789
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3657,
+        "top1": 0.020782061799289035
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3915,
+        "top1": 0.2140485312899106
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1333,
+        "top1": 0.046511627906976744
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "first",
+        "n": 1564,
+        "top1": 0.00959079283887468
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "last",
+        "n": 1707,
+        "top1": 0.06092560046865846
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "middle",
+        "n": 981,
+        "top1": 0.007135575942915392
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "single",
+        "n": 8776,
+        "top1": 0.07133090246125798
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1769,
+        "top1": 0.04918032786885246
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1789,
+        "top1": 0.1475684740078256
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 868,
+        "top1": 0.09101382488479262
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 425,
+        "top1": 0.01647058823529412
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 475,
+        "top1": 0.09052631578947369
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 656,
+        "top1": 0.3399390243902439
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.043478260869565216
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.13043478260869565
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.15789473684210525
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3503,
+        "top1": 0.003140165572366543
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3725,
+        "top1": 0.16134228187919464
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1265,
+        "top1": 0.019762845849802372
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "first",
+        "n": 1486,
+        "top1": 0.0013458950201884253
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "last",
+        "n": 1619,
+        "top1": 0.045089561457689935
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "middle",
+        "n": 926,
+        "top1": 0.004319654427645789
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "single",
+        "n": 8491,
+        "top1": 0.028736309033093863
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1741,
+        "top1": 0.018954623779437105
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1773,
+        "top1": 0.1065989847715736
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 864,
+        "top1": 0.041666666666666664
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 407,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 456,
+        "top1": 0.046052631578947366
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 625,
+        "top1": 0.3776
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.08695652173913043
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.02631578947368421
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3359,
+        "top1": 0.002977076510866329
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3560,
+        "top1": 0.12724719101123597
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1208,
+        "top1": 0.012417218543046357
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "first",
+        "n": 1412,
+        "top1": 0.00141643059490085
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "last",
+        "n": 1537,
+        "top1": 0.026675341574495772
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "middle",
+        "n": 875,
+        "top1": 0.0034285714285714284
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "single",
+        "n": 8168,
+        "top1": 0.015548481880509304
+      }
+    ],
+    "R6a": [
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1792,
+        "top1": 0.37332589285714285
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1797,
+        "top1": 0.34168057874234836
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 873,
+        "top1": 0.6231386025200458
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 470,
+        "top1": 0.17446808510638298
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 494,
+        "top1": 0.6032388663967612
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 703,
+        "top1": 0.5490753911806543
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.5434782608695652
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.2826086956521739
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.8421052631578947
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3828,
+        "top1": 0.15778474399164055
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 4082,
+        "top1": 0.42895639392454676
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1420,
+        "top1": 0.478169014084507
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "first",
+        "n": 1632,
+        "top1": 0.06372549019607843
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "last",
+        "n": 1782,
+        "top1": 0.48653198653198654
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "middle",
+        "n": 1056,
+        "top1": 0.34375
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "single",
+        "n": 9092,
+        "top1": 0.19742630884293885
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1786,
+        "top1": 0.12877939529675253
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1794,
+        "top1": 0.20122630992196208
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 871,
+        "top1": 0.2399540757749713
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 452,
+        "top1": 0.03982300884955752
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 494,
+        "top1": 0.3765182186234818
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 679,
+        "top1": 0.2916053019145803
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.2608695652173913
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.13043478260869565
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.3684210526315789
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3657,
+        "top1": 0.02461033634126333
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3915,
+        "top1": 0.19821200510855683
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1333,
+        "top1": 0.04801200300075019
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "first",
+        "n": 1564,
+        "top1": 0.010230179028132993
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "last",
+        "n": 1707,
+        "top1": 0.06502636203866433
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "middle",
+        "n": 981,
+        "top1": 0.007135575942915392
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "single",
+        "n": 8776,
+        "top1": 0.07782588878760255
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1769,
+        "top1": 0.05596382136800452
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1789,
+        "top1": 0.12353269983230855
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 868,
+        "top1": 0.09907834101382489
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 425,
+        "top1": 0.021176470588235293
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 475,
+        "top1": 0.10736842105263159
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 656,
+        "top1": 0.32621951219512196
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.043478260869565216
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.08695652173913043
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.18421052631578946
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3503,
+        "top1": 0.003711104767342278
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3725,
+        "top1": 0.15758389261744968
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1265,
+        "top1": 0.02608695652173913
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "first",
+        "n": 1486,
+        "top1": 0.002018842530282638
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "last",
+        "n": 1619,
+        "top1": 0.0426189005558987
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "middle",
+        "n": 926,
+        "top1": 0.004319654427645789
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "single",
+        "n": 8491,
+        "top1": 0.03368272288305264
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1741,
+        "top1": 0.026421596783457783
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1773,
+        "top1": 0.09080654258319233
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 864,
+        "top1": 0.052083333333333336
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 407,
+        "top1": 0.002457002457002457
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 456,
+        "top1": 0.05701754385964912
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 625,
+        "top1": 0.3472
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 46,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 46,
+        "top1": 0.043478260869565216
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 38,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3359,
+        "top1": 0.003572491813039595
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3560,
+        "top1": 0.12443820224719102
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 1208,
+        "top1": 0.018211920529801324
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "first",
+        "n": 1412,
+        "top1": 0.002124645892351275
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "last",
+        "n": 1537,
+        "top1": 0.02342225113858165
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "middle",
+        "n": 875,
+        "top1": 0.002285714285714286
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "single",
+        "n": 8168,
+        "top1": 0.02044564152791381
+      }
+    ]
+  },
+  "comparisons": {
+    "R3": {
+      "improved": [
+        {
+          "sent_id": 1,
+          "text": "डॉ. एहुड उर, नोवा स्कोटिया के हैलिफ़ैक्स में डलहौज़ी विश्वविद्यालय में चिकित्सा के प्रोफ़ेसर और कनाडाई डायबिटीज़ एसोसिएशन के नैदानिक ​​और वैज्ञानिक विभाग के अध्यक्ष ने आगाह किया कि शोध अभी भी अपने शुरुआती दिनों में है.",
+          "token_idx": 31,
+          "token": "ज़",
+          "head": 1,
+          "target_idx": 33,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 12,
+          "target_group_id": 13
+        },
+        {
+          "sent_id": 2,
+          "text": "कुछ अन्य विशेषज्ञों की तरह, उन्हें इस बात पर संदेह है कि क्या मधुमेह को ठीक किया जा सकता है, यह देखते हुए कि इन निष्कर्षों की उन लोगों के लिए कोई प्रासंगिकता नहीं है जिन्हें पहले से ही टाइप 1 मधुमेह है.",
+          "token_idx": 27,
+          "token": "▁की",
+          "head": 2,
+          "target_idx": 30,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 18,
+          "target_group_id": 20
+        },
+        {
+          "sent_id": 3,
+          "text": "सोमवार को स्वीडिश अकादमी में साहित्य के लिए नोबेल समिति के स्थायी सचिव, सारा डेनियस, स्वीडन समिति में सेवरिज रेडियो पर एक रेडियो कार्यक्रम के दौरान सार्वजनिक रूप से घोषणा की, कि साहित्य में 2016 के नोबेल पुरस्कार जीतने को लेकर सीधे बॉब डायलन तक पहुँचने में असमर्थ होकर, अपने प्रयासों को छोड़ चुके थे.",
+          "token_idx": 27,
+          "token": "▁एक",
+          "head": 2,
+          "target_idx": 30,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 14,
+          "target_group_id": 16
+        },
+        {
+          "sent_id": 2,
+          "text": "कुछ अन्य विशेषज्ञों की तरह, उन्हें इस बात पर संदेह है कि क्या मधुमेह को ठीक किया जा सकता है, यह देखते हुए कि इन निष्कर्षों की उन लोगों के लिए कोई प्रासंगिकता नहीं है जिन्हें पहले से ही टाइप 1 मधुमेह है.",
+          "token_idx": 26,
+          "token": "ों",
+          "head": 3,
+          "target_idx": 30,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 18,
+          "target_group_id": 20
+        },
+        {
+          "sent_id": 2,
+          "text": "कुछ अन्य विशेषज्ञों की तरह, उन्हें इस बात पर संदेह है कि क्या मधुमेह को ठीक किया जा सकता है, यह देखते हुए कि इन निष्कर्षों की उन लोगों के लिए कोई प्रासंगिकता नहीं है जिन्हें पहले से ही टाइप 1 मधुमेह है.",
+          "token_idx": 32,
+          "token": "▁कोई",
+          "head": 3,
+          "target_idx": 36,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 21,
+          "target_group_id": 23
+        },
+        {
+          "sent_id": 6,
+          "text": "उन्होंने (जेमी सिमिनॉफ़) कहा, कि उन्होंने एक वाईफ़ाई डोर बेल बनाई है.",
+          "token_idx": 3,
+          "token": "▁सिम",
+          "head": 3,
+          "target_idx": 7,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 2,
+          "target_group_id": 2
+        },
+        {
+          "sent_id": 7,
+          "text": "सिमिनॉफ़ ने कहा कि 2013 में शार्क टैंक एपिसोड में उनके दिखने के बाद बिक्री में बढ़ोतरी हुई, जहाँ शो पैनल ने स्टार्टअप को पूँजी लगाने से मना कर दिया.",
+          "token_idx": 30,
+          "token": "▁लगाने",
+          "head": 3,
+          "target_idx": 34,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 17,
+          "target_group_id": 19
+        },
+        {
+          "sent_id": 10,
+          "text": "जबकि एक प्रायोगिक वैक्सीन इबोला से मृत्यु दर में कमी हो सकती है, अब तक, कोई भी ड्रग्स स्पष्ट रूप से संक्रमण का इलाज करने के लिए प्रमाणितनहीं हुआ है.",
+          "token_idx": 4,
+          "token": "▁इ",
+          "head": 1,
+          "target_idx": 6,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 4,
+          "target_group_id": 4
+        },
+        {
+          "sent_id": 10,
+          "text": "जबकि एक प्रायोगिक वैक्सीन इबोला से मृत्यु दर में कमी हो सकती है, अब तक, कोई भी ड्रग्स स्पष्ट रूप से संक्रमण का इलाज करने के लिए प्रमाणितनहीं हुआ है.",
+          "token_idx": 20,
+          "token": "▁स्पष्ट",
+          "head": 1,
+          "target_idx": 22,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 11,
+          "target_group_id": 12
+        },
+        {
+          "sent_id": 12,
+          "text": "PALM परीक्षण में, ZMapp ने एक नियंत्रण के रूप में कार्य किया, जिसका अर्थ है कि वैज्ञानिकों ने इसे बेसलाइन के रूप में इस्तेमाल किया और इसके साथ तीन अन्य उपचारों की तुलना की.",
+          "token_idx": 25,
+          "token": "▁के",
+          "head": 1,
+          "target_idx": 27,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 13,
+          "target_group_id": 14
+        }
+      ],
+      "worse": [
+        {
+          "sent_id": 1,
+          "text": "डॉ. एहुड उर, नोवा स्कोटिया के हैलिफ़ैक्स में डलहौज़ी विश्वविद्यालय में चिकित्सा के प्रोफ़ेसर और कनाडाई डायबिटीज़ एसोसिएशन के नैदानिक ​​और वैज्ञानिक विभाग के अध्यक्ष ने आगाह किया कि शोध अभी भी अपने शुरुआती दिनों में है.",
+          "token_idx": 30,
+          "token": "िटी",
+          "head": 1,
+          "target_idx": 32,
+          "correct": false,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 12,
+          "target_group_id": 13
+        },
+        {
+          "sent_id": 3,
+          "text": "सोमवार को स्वीडिश अकादमी में साहित्य के लिए नोबेल समिति के स्थायी सचिव, सारा डेनियस, स्वीडन समिति में सेवरिज रेडियो पर एक रेडियो कार्यक्रम के दौरान सार्वजनिक रूप से घोषणा की, कि साहित्य में 2016 के नोबेल पुरस्कार जीतने को लेकर सीधे बॉब डायलन तक पहुँचने में असमर्थ होकर, अपने प्रयासों को छोड़ चुके थे.",
+          "token_idx": 8,
+          "token": "▁के",
+          "head": 1,
+          "target_idx": 10,
+          "correct": false,
+          "rank": 3,
+          "group_start": 0,
+          "group_id": 3,
+          "target_group_id": 4
+        },
+        {
+          "sent_id": 1,
+          "text": "डॉ. एहुड उर, नोवा स्कोटिया के हैलिफ़ैक्स में डलहौज़ी विश्वविद्यालय में चिकित्सा के प्रोफ़ेसर और कनाडाई डायबिटीज़ एसोसिएशन के नैदानिक ​​और वैज्ञानिक विभाग के अध्यक्ष ने आगाह किया कि शोध अभी भी अपने शुरुआती दिनों में है.",
+          "token_idx": 19,
+          "token": "▁विश्वविद्यालय",
+          "head": 2,
+          "target_idx": 22,
+          "correct": false,
+          "rank": 2,
+          "group_start": 1,
+          "group_id": 7,
+          "target_group_id": 8
+        },
+        {
+          "sent_id": 3,
+          "text": "सोमवार को स्वीडिश अकादमी में साहित्य के लिए नोबेल समिति के स्थायी सचिव, सारा डेनियस, स्वीडन समिति में सेवरिज रेडियो पर एक रेडियो कार्यक्रम के दौरान सार्वजनिक रूप से घोषणा की, कि साहित्य में 2016 के नोबेल पुरस्कार जीतने को लेकर सीधे बॉब डायलन तक पहुँचने में असमर्थ होकर, अपने प्रयासों को छोड़ चुके थे.",
+          "token_idx": 5,
+          "token": "▁अकादमी",
+          "head": 2,
+          "target_idx": 8,
+          "correct": false,
+          "rank": 2,
+          "group_start": 1,
+          "group_id": 2,
+          "target_group_id": 3
+        },
+        {
+          "sent_id": 4,
+          "text": "डेनियस ने कहा, “फ़िलहाल हम कुछ नहीं कर रहे हैं. मैंने अपने साथ काम करने वाले लोगों को ईमेल भेजे हैं और उसने उनके फ्रेंडली जवाब भेजे हैं. अभी के लिए, बस इतना ही बताना चाहूँगा.” ",
+          "token_idx": 10,
+          "token": "▁नहीं",
+          "head": 2,
+          "target_idx": 13,
+          "correct": false,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 5,
+          "target_group_id": 5
+        }
+      ]
+    },
+    "R6a": {
+      "improved": [
+        {
+          "sent_id": 3,
+          "text": "सोमवार को स्वीडिश अकादमी में साहित्य के लिए नोबेल समिति के स्थायी सचिव, सारा डेनियस, स्वीडन समिति में सेवरिज रेडियो पर एक रेडियो कार्यक्रम के दौरान सार्वजनिक रूप से घोषणा की, कि साहित्य में 2016 के नोबेल पुरस्कार जीतने को लेकर सीधे बॉब डायलन तक पहुँचने में असमर्थ होकर, अपने प्रयासों को छोड़ चुके थे.",
+          "token_idx": 41,
+          "token": "▁के",
+          "head": 1,
+          "target_idx": 43,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 22,
+          "target_group_id": 24
+        },
+        {
+          "sent_id": 4,
+          "text": "डेनियस ने कहा, “फ़िलहाल हम कुछ नहीं कर रहे हैं. मैंने अपने साथ काम करने वाले लोगों को ईमेल भेजे हैं और उसने उनके फ्रेंडली जवाब भेजे हैं. अभी के लिए, बस इतना ही बताना चाहूँगा.” ",
+          "token_idx": 23,
+          "token": "▁भेजे",
+          "head": 1,
+          "target_idx": 25,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 12,
+          "target_group_id": 13
+        },
+        {
+          "sent_id": 7,
+          "text": "सिमिनॉफ़ ने कहा कि 2013 में शार्क टैंक एपिसोड में उनके दिखने के बाद बिक्री में बढ़ोतरी हुई, जहाँ शो पैनल ने स्टार्टअप को पूँजी लगाने से मना कर दिया.",
+          "token_idx": 10,
+          "token": "ार्क",
+          "head": 2,
+          "target_idx": 13,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 4,
+          "target_group_id": 6
+        },
+        {
+          "sent_id": 6,
+          "text": "उन्होंने (जेमी सिमिनॉफ़) कहा, कि उन्होंने एक वाईफ़ाई डोर बेल बनाई है.",
+          "token_idx": 3,
+          "token": "▁सिम",
+          "head": 3,
+          "target_idx": 7,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 2,
+          "target_group_id": 2
+        },
+        {
+          "sent_id": 10,
+          "text": "जबकि एक प्रायोगिक वैक्सीन इबोला से मृत्यु दर में कमी हो सकती है, अब तक, कोई भी ड्रग्स स्पष्ट रूप से संक्रमण का इलाज करने के लिए प्रमाणितनहीं हुआ है.",
+          "token_idx": 4,
+          "token": "▁इ",
+          "head": 1,
+          "target_idx": 6,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 4,
+          "target_group_id": 4
+        },
+        {
+          "sent_id": 13,
+          "text": "अमेरिकी जिमनास्टिक्स, संयुक्त राज्य ओलंपिक समिति के पत्र का समर्थन करता है. साथ ही, सभी एथलीटों को एक सुरक्षित माहौल देने के लिए, ओलंपिक परिवार के होने की अहमियत स्वीकार करता है.",
+          "token_idx": 8,
+          "token": "▁ओलंपिक",
+          "head": 1,
+          "target_idx": 10,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 4,
+          "target_group_id": 5
+        },
+        {
+          "sent_id": 15,
+          "text": "यूएसए जिमनास्टिक्स एक स्वतंत्र जाँच का समर्थन करता है जो इस बात पर प्रकाश डाल सकता है कि लैरी नासर के बचे लोगों द्वारा इतनी हिम्मत से बताए गए प्रपोर्शन का दुरुपयोग इतने लंबे समय तक चल सकता था और किसी भी आवश्यक और उचित परिवर्तन को अपना सकता है.",
+          "token_idx": 24,
+          "token": "▁नास",
+          "head": 1,
+          "target_idx": 26,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 14,
+          "target_group_id": 14
+        },
+        {
+          "sent_id": 15,
+          "text": "यूएसए जिमनास्टिक्स एक स्वतंत्र जाँच का समर्थन करता है जो इस बात पर प्रकाश डाल सकता है कि लैरी नासर के बचे लोगों द्वारा इतनी हिम्मत से बताए गए प्रपोर्शन का दुरुपयोग इतने लंबे समय तक चल सकता था और किसी भी आवश्यक और उचित परिवर्तन को अपना सकता है.",
+          "token_idx": 42,
+          "token": "▁लंबे",
+          "head": 1,
+          "target_idx": 44,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 24,
+          "target_group_id": 25
+        },
+        {
+          "sent_id": 14,
+          "text": "हम USOC के इस कथन से सहमत हैं कि हमारे एथलीटों और क्लबों और उनके खेल, हमारे संगठन के भीतर सार्थक बदलाव के साथ आगे बढ़ कर बेहतर सेवा की जा सकती है ना की विप्रमाणन से |",
+          "token_idx": 6,
+          "token": "▁से",
+          "head": 2,
+          "target_idx": 9,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 3,
+          "target_group_id": 5
+        },
+        {
+          "sent_id": 11,
+          "text": "एक एंटीबॉडी कॉकटेल, ZMapp, ने शुरुआत में इस क्षेत्र में विश्वास दिखाया था, लेकिन औपचारिक अध्ययनों ने संकेत दिया कि मौत को रोकने में प्रत्याशित लाभ की तुलना में इसका लाभ कम था।",
+          "token_idx": 23,
+          "token": "▁संकेत",
+          "head": 3,
+          "target_idx": 27,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 13,
+          "target_group_id": 16
+        }
+      ],
+      "worse": [
+        {
+          "sent_id": 0,
+          "text": "उन्होंने कहा “कि अब हमारे पास 4 महीने उम्र वाले चूहे हैं जिन्हें मधुमेह नहीं है जो मधुमेह के रोगी थे। ”",
+          "token_idx": 16,
+          "token": "▁है",
+          "head": 2,
+          "target_idx": 19,
+          "correct": false,
+          "rank": 2,
+          "group_start": 0,
+          "group_id": 11,
+          "target_group_id": 13
+        },
+        {
+          "sent_id": 1,
+          "text": "डॉ. एहुड उर, नोवा स्कोटिया के हैलिफ़ैक्स में डलहौज़ी विश्वविद्यालय में चिकित्सा के प्रोफ़ेसर और कनाडाई डायबिटीज़ एसोसिएशन के नैदानिक ​​और वैज्ञानिक विभाग के अध्यक्ष ने आगाह किया कि शोध अभी भी अपने शुरुआती दिनों में है.",
+          "token_idx": 19,
+          "token": "▁विश्वविद्यालय",
+          "head": 2,
+          "target_idx": 22,
+          "correct": false,
+          "rank": 4,
+          "group_start": 1,
+          "group_id": 7,
+          "target_group_id": 8
+        },
+        {
+          "sent_id": 2,
+          "text": "कुछ अन्य विशेषज्ञों की तरह, उन्हें इस बात पर संदेह है कि क्या मधुमेह को ठीक किया जा सकता है, यह देखते हुए कि इन निष्कर्षों की उन लोगों के लिए कोई प्रासंगिकता नहीं है जिन्हें पहले से ही टाइप 1 मधुमेह है.",
+          "token_idx": 8,
+          "token": "▁पर",
+          "head": 2,
+          "target_idx": 11,
+          "correct": false,
+          "rank": 2,
+          "group_start": 0,
+          "group_id": 5,
+          "target_group_id": 7
+        },
+        {
+          "sent_id": 4,
+          "text": "डेनियस ने कहा, “फ़िलहाल हम कुछ नहीं कर रहे हैं. मैंने अपने साथ काम करने वाले लोगों को ईमेल भेजे हैं और उसने उनके फ्रेंडली जवाब भेजे हैं. अभी के लिए, बस इतना ही बताना चाहूँगा.” ",
+          "token_idx": 10,
+          "token": "▁नहीं",
+          "head": 2,
+          "target_idx": 13,
+          "correct": false,
+          "rank": 2,
+          "group_start": 1,
+          "group_id": 5,
+          "target_group_id": 5
+        },
+        {
+          "sent_id": 1,
+          "text": "डॉ. एहुड उर, नोवा स्कोटिया के हैलिफ़ैक्स में डलहौज़ी विश्वविद्यालय में चिकित्सा के प्रोफ़ेसर और कनाडाई डायबिटीज़ एसोसिएशन के नैदानिक ​​और वैज्ञानिक विभाग के अध्यक्ष ने आगाह किया कि शोध अभी भी अपने शुरुआती दिनों में है.",
+          "token_idx": 16,
+          "token": "▁डलह",
+          "head": 3,
+          "target_idx": 20,
+          "correct": false,
+          "rank": 2,
+          "group_start": 1,
+          "group_id": 6,
+          "target_group_id": 7
+        }
+      ]
+    }
+  },
+  "examples": null
+}

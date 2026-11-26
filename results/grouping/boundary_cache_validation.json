@@ -1,0 +1,51 @@
+{
+  "local_validation": true,
+  "publication_verified": false,
+  "caches": {
+    "hi_hi_rules_v1_train": {
+      "metadata": {
+        "grouper": "hi_rules_v1",
+        "lang": "hi",
+        "tokenizer": "LingoIITGN/ganga-1b",
+        "max_length": 128,
+        "n_rows": 200000,
+        "words_per_group": 1.406391895055188,
+        "tokens_per_group": 1.5740000794680897,
+        "pct_tokens_group_start": 63.532398317154815
+      },
+      "validated_rows": 200000,
+      "text_sha256": "a62cea058e04ce1f11d6def15501c4199d95765055212dbdd3c22c67236adf40",
+      "all_rows_valid": true
+    },
+    "hi_hi_rules_v1_eval": {
+      "metadata": {
+        "grouper": "hi_rules_v1",
+        "lang": "hi",
+        "tokenizer": "LingoIITGN/ganga-1b",
+        "max_length": 128,
+        "n_rows": 500,
+        "words_per_group": 1.4095528918463152,
+        "tokens_per_group": 1.5686876883839556,
+        "pct_tokens_group_start": 63.74755200827698
+      },
+      "validated_rows": 500,
+      "text_sha256": "643aa02183b2822d01d2681db99732961e0dde8966511f3efd3d5259d79d2c2b",
+      "all_rows_valid": true
+    },
+    "hi_hi_rules_v1_flores": {
+      "metadata": {
+        "grouper": "hi_rules_v1",
+        "lang": "hi",
+        "tokenizer": "LingoIITGN/ganga-1b",
+        "max_length": 128,
+        "n_rows": 1012,
+        "words_per_group": 1.4348142345568486,
+        "tokens_per_group": 1.6877238137869293,
+        "pct_tokens_group_start": 59.25140072273978
+      },
+      "validated_rows": 1012,
+      "text_sha256": "bf080bc4384130a762cb69226c902ced94c3402fd851123babf5c84071f819fe",
+      "all_rows_valid": true
+    }
+  }
+}

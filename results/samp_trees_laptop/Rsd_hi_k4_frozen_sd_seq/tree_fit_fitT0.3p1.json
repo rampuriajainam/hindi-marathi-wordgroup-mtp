@@ -1,0 +1,85 @@
+{
+ "run_name": "Rsd_hi_k4_frozen_sd_seq",
+ "step": 12500,
+ "n_calib_positions": 12200,
+ "n_eval_positions": 6100,
+ "chain": 0.9539344262295082,
+ "rows": [
+  {
+   "max_nodes": 8,
+   "static": 1.310655737704918,
+   "entropy": 1.3457377049180328,
+   "ceiling": 2.6062295081967215,
+   "widths": [
+    4,
+    3,
+    1
+   ]
+  },
+  {
+   "max_nodes": 16,
+   "static": 1.5304918032786885,
+   "entropy": 1.5729508196721311,
+   "ceiling": 2.791967213114754,
+   "widths": [
+    6,
+    6,
+    4
+   ]
+  },
+  {
+   "max_nodes": 32,
+   "static": 1.720327868852459,
+   "entropy": 1.7531147540983607,
+   "ceiling": 2.8808196721311474,
+   "widths": [
+    10,
+    12,
+    10
+   ]
+  },
+  {
+   "max_nodes": 64,
+   "static": 1.8826229508196721,
+   "entropy": 1.9101639344262296,
+   "ceiling": 2.9411475409836068,
+   "widths": [
+    19,
+    26,
+    19
+   ]
+  },
+  {
+   "max_nodes": 128,
+   "static": 2.027540983606557,
+   "entropy": 2.038360655737705,
+   "ceiling": 2.9701639344262296,
+   "widths": [
+    33,
+    52,
+    43
+   ]
+  },
+  {
+   "max_nodes": 256,
+   "static": 2.1573770491803277,
+   "entropy": 2.1401639344262295,
+   "ceiling": 2.9818032786885245,
+   "widths": [
+    50,
+    109,
+    97
+   ]
+  }
+ ],
+ "note": "oracle accepted drafts per step on IndicCorp eval text SAMPLED from head 0 (teacher-forced); ceiling = same fit with head 0's own ranks (a drafter equal to the verifier)",
+ "sample": [
+  0.3,
+  1.0
+ ],
+ "ignore_eos": false,
+ "chain_ceiling": 2.2401639344262296,
+ "compare": {
+  "static_n64": 1.8847540983606557
+ }
+}

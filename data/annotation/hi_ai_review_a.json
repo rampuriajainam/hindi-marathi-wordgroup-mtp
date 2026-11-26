@@ -1,0 +1,1760 @@
+{
+  "reviewed_row_count": 100,
+  "reviewed_ids": [
+    "hi_0001",
+    "hi_0002",
+    "hi_0003",
+    "hi_0004",
+    "hi_0005",
+    "hi_0006",
+    "hi_0007",
+    "hi_0008",
+    "hi_0009",
+    "hi_0010",
+    "hi_0011",
+    "hi_0012",
+    "hi_0013",
+    "hi_0014",
+    "hi_0015",
+    "hi_0016",
+    "hi_0017",
+    "hi_0018",
+    "hi_0019",
+    "hi_0020",
+    "hi_0021",
+    "hi_0022",
+    "hi_0023",
+    "hi_0024",
+    "hi_0025",
+    "hi_0026",
+    "hi_0027",
+    "hi_0028",
+    "hi_0029",
+    "hi_0030",
+    "hi_0031",
+    "hi_0032",
+    "hi_0033",
+    "hi_0034",
+    "hi_0035",
+    "hi_0036",
+    "hi_0037",
+    "hi_0038",
+    "hi_0039",
+    "hi_0040",
+    "hi_0041",
+    "hi_0042",
+    "hi_0043",
+    "hi_0044",
+    "hi_0045",
+    "hi_0046",
+    "hi_0047",
+    "hi_0048",
+    "hi_0049",
+    "hi_0050",
+    "hi_0051",
+    "hi_0052",
+    "hi_0053",
+    "hi_0054",
+    "hi_0055",
+    "hi_0056",
+    "hi_0057",
+    "hi_0058",
+    "hi_0059",
+    "hi_0060",
+    "hi_0061",
+    "hi_0062",
+    "hi_0063",
+    "hi_0064",
+    "hi_0065",
+    "hi_0066",
+    "hi_0067",
+    "hi_0068",
+    "hi_0069",
+    "hi_0070",
+    "hi_0071",
+    "hi_0072",
+    "hi_0073",
+    "hi_0074",
+    "hi_0075",
+    "hi_0076",
+    "hi_0077",
+    "hi_0078",
+    "hi_0079",
+    "hi_0080",
+    "hi_0081",
+    "hi_0082",
+    "hi_0083",
+    "hi_0084",
+    "hi_0085",
+    "hi_0086",
+    "hi_0087",
+    "hi_0088",
+    "hi_0089",
+    "hi_0090",
+    "hi_0091",
+    "hi_0092",
+    "hi_0093",
+    "hi_0094",
+    "hi_0095",
+    "hi_0096",
+    "hi_0097",
+    "hi_0098",
+    "hi_0099",
+    "hi_0100"
+  ],
+  "review_method": "Independent manual second-pass linguistic inspection of every sentence against docs/annotation_guide.md; only source rows 1-100 and this candidate file consulted. No models, parsers, existing gold, rule drafts or other annotations consulted.",
+  "candidate_before_sha256": "4e7bd6ef0a79c32c0cff038b8e8aab15f9f695dbd244f7ac807f18cef527e8f8",
+  "linguistic_correction_count": 1,
+  "corrected_ids": [
+    "hi_0065"
+  ],
+  "corrections": [
+    {
+      "id": "hi_0065",
+      "before": {
+        "groups": [
+          [
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            13,
+            14,
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19
+          ],
+          [
+            20
+          ],
+          [
+            21,
+            22
+          ]
+        ],
+        "types": [
+          "single",
+          "postposition",
+          "single",
+          "compound_postposition",
+          "single",
+          "single",
+          "postposition",
+          "postposition",
+          "light_verb",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain"
+        ]
+      },
+      "after": {
+        "groups": [
+          [
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            13,
+            14,
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19,
+            20
+          ],
+          [
+            21,
+            22
+          ]
+        ],
+        "types": [
+          "single",
+          "postposition",
+          "single",
+          "compound_postposition",
+          "single",
+          "single",
+          "postposition",
+          "postposition",
+          "light_verb",
+          "single",
+          "single",
+          "single",
+          "postposition",
+          "aux_chain"
+        ]
+      },
+      "changed_span": {
+        "before": [
+          {
+            "indices": [
+              19
+            ],
+            "text": "खेलों",
+            "type": "single"
+          },
+          {
+            "indices": [
+              20
+            ],
+            "text": "में",
+            "type": "single"
+          }
+        ],
+        "after": {
+          "indices": [
+            19,
+            20
+          ],
+          "text": "खेलों में",
+          "type": "postposition"
+        }
+      },
+      "reason": "The explicit locative case marker at token 20 attaches to its actual noun host at token 19. The original two singletons omitted this unambiguous case group."
+    }
+  ],
+  "encoding_cleanup_count": 66,
+  "encoding_cleanup": [
+    {
+      "id": "hi_0001",
+      "before_notes": "wala: ???? ???? is a relational modifier; its following noun is separate. The existential copula attaches only to the nearest coordinated predicate noun ????.",
+      "after_notes": "wala: tokens 19-20 form a relational modifier; the following noun remains separate. The existential copula attaches only to the nearest coordinated predicate noun at token 5."
+    },
+    {
+      "id": "hi_0003",
+      "before_notes": "wala: ????????? ???? modifies ?????; coordination is not absorbed. ??? remains separate from ???? ??.",
+      "after_notes": "wala: tokens 12-13 modify the nucleus noun without absorbing coordination. The work noun at token 5 remains separate from the verbal auxiliary chain at 6-7."
+    },
+    {
+      "id": "hi_0005",
+      "before_notes": "Ambiguous aspectual nesting: ???? ???? is a maintenance vector construction; ???? is kept as a separate nominal phase head before ?? ????, following the noun-plus-main-verb restriction.",
+      "after_notes": "Adjudication: the maintenance construction at 15-16 is treated as a light-verb group. The phase noun at 17 remains separate from 18-19 under the noun-plus-main-verb restriction; nesting with the preceding infinitive is not explicitly resolved by the guide."
+    },
+    {
+      "id": "hi_0006",
+      "before_notes": "??????????? is kept separate from ?? ???? ???; the latter contains vector ???? followed by passive ????.",
+      "after_notes": "The lexical predicate modifier at token 9 remains separate from 10-12, which contains a main verb, vector verb and passive auxiliary."
+    },
+    {
+      "id": "hi_0007",
+      "before_notes": "???? ???? ?? contains a passive auxiliary sequence and genitive case; auxiliary precedence is used. The final copula is attached to ??????.",
+      "after_notes": "Tokens 20-22 contain a passive auxiliary sequence followed by genitive case; auxiliary precedence applies. The final copula attaches to the necessity noun at 23."
+    },
+    {
+      "id": "hi_0009",
+      "before_notes": "??????? remains separate from ???? ?? ???; ?? is a completive vector after ???.",
+      "after_notes": "The lexical predicate modifier at 11 remains separate from the infinitive-plus-compound-postposition group at 12-14. The final motion sequence at 19-20 is read as a main verb plus completive vector."
+    },
+    {
+      "id": "hi_0010",
+      "before_notes": "wala: ???? ????. Successful predicate ??? is attached to its copular modal chain at the end.",
+      "after_notes": "wala: tokens 17-18 remain an other group. The final adjective and copular modal chain at 19-22 form an auxiliary group. Adjudication: attachment of the preceding adjective at 16 to the nonfinite copular wala group is not explicitly settled by the guide; current boundaries are retained."
+    },
+    {
+      "id": "hi_0011",
+      "before_notes": "focus particle: ???? ??. ????? ??? is treated as the pronominal form of the compound case expression ?? ???; ??????? remains separate from ????.",
+      "after_notes": "focus particle: tokens 12-13. Tokens 10-11 are the pronominal form of the compound relational expression meaning with. The behavior noun at 14 remains separate from its main verb at 15."
+    },
+    {
+      "id": "hi_0013",
+      "before_notes": "Ambiguous ?????: read predicatively as ????? ??, with ?????? ?? kept as its genitive complement, rather than absorbing the entire phrase as a compound postposition. ??????????? remains separate from ?? ??.",
+      "after_notes": "Adjudication: tokens 19-20 are read as a predicative adjective plus copula, with the genitive complement at 17-18 separate. A compound-postposition reading of 17-19 is also plausible; the guide does not resolve this use of worthy. The response noun at 11 remains separate from 12-13."
+    },
+    {
+      "id": "hi_0014",
+      "before_notes": "wala: ???? ????; ????? is kept separate. Copula ?? after the coordinated letter names attaches only to nearest g.",
+      "after_notes": "wala: tokens 1-2; the attention noun at 0 remains separate. The copula following coordinated letter names attaches only to the nearest letter, g, at 7."
+    },
+    {
+      "id": "hi_0016",
+      "before_notes": "focus particle: ?? is included after ????? ?? with postposition precedence. ???? and ??????? remain separate from their main verbs.",
+      "after_notes": "focus particle: token 14 follows the case expression at 12-13, with postposition precedence. The phase noun at 17 and inspiration noun at 20 remain separate from their main verbs."
+    },
+    {
+      "id": "hi_0019",
+      "before_notes": "focus particle: ?? after ????????? ?? ???; compound precedence. ?? ????????? ?? is retained as a full attributive relational expression.",
+      "after_notes": "focus particle: token 20 follows the compound case expression at 17-19, with compound precedence. Tokens 11-14 retain the entire attributive relational chain."
+    },
+    {
+      "id": "hi_0020",
+      "before_notes": "Ambiguous fixed expression: each ?? ?? ?? is read as the lexical minimum quantifier and grouped as other, not as a literal ?? ?? case phrase. Number and measurement-unit pairs remain separate.",
+      "after_notes": "Adjudication: each minimum quantifier at 8-10 and 18-20 is grouped as the fixed expression other, rather than a literal case phrase. Fixed quantifier grouping is not explicitly specified by the guide. Number and measurement-unit words remain separate."
+    },
+    {
+      "id": "hi_0021",
+      "before_notes": "?????? remains separate from ???? ???, following the noun-plus-main-verb restriction.",
+      "after_notes": "The support noun at 11 remains separate from the verbal auxiliary chain at 12-13 under the noun-plus-main-verb restriction."
+    },
+    {
+      "id": "hi_0022",
+      "before_notes": "??? remains separate from ???? ??.",
+      "after_notes": "The work noun at 12 remains separate from the verbal auxiliary chain at 13-14."
+    },
+    {
+      "id": "hi_0023",
+      "before_notes": "focus particle: ???? ?? and ???-???? ??; ????? ?? is an explicit additional case expression, with the already fused word ????? unchanged.",
+      "after_notes": "focus particle: tokens 12-13 and 18-19. Tokens 10-11 form an additional case expression after an already fused pronominal case form; the fused source token remains intact."
+    },
+    {
+      "id": "hi_0024",
+      "before_notes": "?? ???? ?? is retained as the complete relational expression. ???? is a predicative adjective in the inchoative copular construction ???? ?? ??????.",
+      "after_notes": "Tokens 8-11 retain the complete attributive relational expression. The disappearance adjective at 15 attaches to the inchoative copular construction at 16-17, with light-verb precedence."
+    },
+    {
+      "id": "hi_0027",
+      "before_notes": "focus particle: ???? ??; lexical ???? remains the main verb with its auxiliary.",
+      "after_notes": "focus particle: tokens 10-11. The giving verb at 12 is a main verb followed by its auxiliary; the preceding shade noun remains outside that verbal group."
+    },
+    {
+      "id": "hi_0028",
+      "before_notes": "focus particle: ?? follows the temporal case expression ?????? ????, so postposition precedence applies. ??? remains separate from ?? ????.",
+      "after_notes": "focus particle: token 4 follows the temporal case expression at 2-3, with postposition precedence. The name noun at 9 remains separate from the auxiliary sequence at 10-11."
+    },
+    {
+      "id": "hi_0029",
+      "before_notes": "focus particle: ???? ??. ?????????? ???? ?? is an adjectival copular predicate.",
+      "after_notes": "focus particle: tokens 1-2. Tokens 11-13 are an adjectival copular predicate."
+    },
+    {
+      "id": "hi_0030",
+      "before_notes": "focus particle: ?????? ?? ??? is an existential copular group with auxiliary precedence. ???? and ???? are comparative case markers attached only to their nearest hosts.",
+      "after_notes": "focus particle: token 16 occurs inside the existential copular group at 15-17, with auxiliary precedence. The comparative markers at 3 and 14 attach only to their nearest hosts."
+    },
+    {
+      "id": "hi_0031",
+      "before_notes": "Lexical noun-verb ambiguity: ?????? ???? is left split because ???? is the main verb after a noun, not a vector after a verbal stem.",
+      "after_notes": "Lexical noun-verb ambiguity retained for adjudication: the participation noun at 13 and main verb at 14 remain split under the guide, rather than being treated as a vector-verb group."
+    },
+    {
+      "id": "hi_0032",
+      "before_notes": "wala: ???? ????; the following noun ???? is separate.",
+      "after_notes": "wala: tokens 7-8; the following water noun remains separate and hosts its own case marker."
+    },
+    {
+      "id": "hi_0033",
+      "before_notes": "???????? is kept separate from ???? ???; ??? ?? attaches only to its nearest noun, leaving ?????? separate.",
+      "after_notes": "The lexical predicate modifier at 17 remains separate from the verbal chain at 18-19. The case marker at 12 attaches only to its nearest noun at 11, leaving the adjective at 10 separate."
+    },
+    {
+      "id": "hi_0035",
+      "before_notes": "??? ???? ?? combines passive auxiliaries with case; auxiliary precedence. ???????? ??? ?? is a predicative adjectival auxiliary sequence.",
+      "after_notes": "Tokens 15-17 combine passive auxiliaries with case; auxiliary precedence applies. Tokens 18-20 form an adjectival predicative auxiliary sequence."
+    },
+    {
+      "id": "hi_0038",
+      "before_notes": "wala: ???? ????? is followed by ???; postposition precedence is used for the complete span. Numbers are not merged with ???.",
+      "after_notes": "wala: tokens 0-1 are followed by a case marker at 2; postposition precedence applies to 0-2. Numbers remain separate from the year nouns."
+    },
+    {
+      "id": "hi_0040",
+      "before_notes": "10:08 ??? is a temporal case expression; the time is not merged with any other number or noun.",
+      "after_notes": "Adjudication: tokens 1-2 are retained as a temporal case expression meaning at 10:08. The temporal use of the clock-time word is not explicitly labeled by the guide; no broader date or number phrase is merged."
+    },
+    {
+      "id": "hi_0041",
+      "before_notes": "???? remains separate from ???? ???.",
+      "after_notes": "The service noun at 18 remains separate from the verbal auxiliary chain at 19-20."
+    },
+    {
+      "id": "hi_0042",
+      "before_notes": "negation: ???? ??? is the negative existential predicate; preceding subject ????? is separate. focus particle: ?? follows ?????? ??, with postposition precedence.",
+      "after_notes": "negation: tokens 13-14 form the negative existential predicate; the preceding sign noun remains a separate subject. focus particle: token 5 follows the case expression at 3-4, with postposition precedence."
+    },
+    {
+      "id": "hi_0043",
+      "before_notes": "focus particle: ??? ??. ??????? and ?????????? are predicate adjectives in copular inchoatives ?? ?? ???, classified by vector-verb precedence.",
+      "after_notes": "focus particle: tokens 19-20. The predicate adjectives at 6 and 13 attach to their respective inchoative copular chains, with light-verb precedence."
+    },
+    {
+      "id": "hi_0046",
+      "before_notes": "Ambiguous preposed case expression: ???? ?????? is a contiguous absence phrase. ???? ???? ?? is habitual/continuative auxiliary use of ????.",
+      "after_notes": "Adjudication: tokens 20-21 retain a contiguous preposed absence expression as postposition. The guide gives no explicit convention for preposed case phrases. Tokens 22-24 form a habitual or continuative auxiliary chain."
+    },
+    {
+      "id": "hi_0047",
+      "before_notes": "Preposed ???? is separated from its noun by ????; the smallest contiguous host-plus-case unit ??????? ?? is retained, without absorbing the intervening determiner.",
+      "after_notes": "Adjudication: the preposed absence marker at 15 is separated from its noun by a determiner at 16. The smallest contiguous noun-plus-case expression at 17-18 is retained. The guide does not explicitly settle whether the whole preposed absence construction should form one span."
+    },
+    {
+      "id": "hi_0048",
+      "before_notes": "Ambiguous modified compound case expression: ????? ?? ???? ???? includes the internal degree modifier ????. Lexical noun-verb ambiguity ????? ???? is left split under the noun-plus-main-verb restriction.",
+      "after_notes": "Adjudication: the compound case expression at 6-9 contains an internal degree modifier at 8. The guide does not explicitly settle modified compound postpositions. The lexical visibility noun and main verb at 19 and 20 remain split under the noun-plus-main-verb restriction; lexical analysis can be adjudicated."
+    },
+    {
+      "id": "hi_0051",
+      "before_notes": "????? is a predicative adjective in the inchoative copular construction ????? ?? ???.",
+      "after_notes": "The predicative adjective at 21 attaches to the inchoative copular chain at 22-23, with light-verb precedence."
+    },
+    {
+      "id": "hi_0053",
+      "before_notes": "wala: ????? ????? ?? ??? has compound-postposition precedence. The shared final copula attaches only to the nearest coordinated infinitive ?????; ?????? remains separate from ????.",
+      "after_notes": "wala: tokens 4-5 take the compound case expression at 6-7, with compound-postposition precedence for the whole group. The final shared copula attaches only to the nearest coordinated infinitive at 14. The travel noun at 11 remains separate from its main verb."
+    },
+    {
+      "id": "hi_0054",
+      "before_notes": "The temporal case sequence ????? ?? ?? is grouped with its nearest host ?????; ??? and the number remain separate.",
+      "after_notes": "The temporal host at 13 takes both following case markers at 14-15. The era-name word and number at 12 and 11 remain separate under the smallest-unit convention."
+    },
+    {
+      "id": "hi_0057",
+      "before_notes": "Ambiguous orthographic converb: ??? ?? is read as the source-separated conjunctive form ????? and grouped as other; ?? is not treated as a vector verb. ??? ???? ?? is an auxiliary predicate.",
+      "after_notes": "Adjudication: source-separated tokens 20-21 are read as an orthographic conjunctive participle and grouped as other; the second token is not read as a vector verb. This converb spelling is outside the explicit examples in the guide. Tokens 22-24 form an auxiliary predicate."
+    },
+    {
+      "id": "hi_0058",
+      "before_notes": "Lexical noun-verb ambiguity: ???? ??? and ????? ??? are left split because ????/????? are not independently inflected verbal heads; no noun-plus-main-verb merge is introduced.",
+      "after_notes": "Lexical noun-verb ambiguity retained for adjudication: the theft noun and verb at 4-5 remain split, as do the acquisition predicate modifier and main verb at 10-11. The guide explicitly excludes noun-plus-main-verb merging; the lexical status of the acquisition modifier is less explicit."
+    },
+    {
+      "id": "hi_0064",
+      "before_notes": "?????? ?? ?? is a genitive copular predicate; auxiliary precedence over the embedded simple case marker. The source phrasing is semantically awkward and retained unchanged.",
+      "after_notes": "Tokens 9-11 form a genitive copular predicate; auxiliary precedence applies over the embedded simple case marker. Semantically awkward source phrasing is preserved."
+    },
+    {
+      "id": "hi_0065",
+      "before_notes": "??? remains separate from ???? ?? ???. ?????? is a predicate adjective in the inchoative copular construction ?????? ?? ??.",
+      "after_notes": "The distance predicate modifier at 3 remains separate from the infinitive-plus-compound-postposition group at 4-6. Tokens 13-15 form an adjectival inchoative copular group. Review correction: the sports noun at 19 now hosts the locative case marker at 20."
+    },
+    {
+      "id": "hi_0067",
+      "before_notes": "The source omits ?? in ????????? ???; the attested adjacent host and relational marker are grouped without repairing the text.",
+      "after_notes": "The source omits the genitive linker before the relational marker at 9. The actual adjacent host and marker at 8-9 are grouped without repairing source text."
+    },
+    {
+      "id": "hi_0069",
+      "before_notes": "wala: ???? ????. focus particle: ?? follows ??????? ?? ???? ???, with compound precedence. Lexical predicate ???? ?????? is left split under the smallest-unit convention.",
+      "after_notes": "wala: tokens 13-14. focus particle: token 11 follows the compound case expression at 7-10, with compound precedence. Adjudication: the continuation modifier and main verb at 20-21 remain split under the smallest-unit convention; the guide does not explicitly settle this lexical construction."
+    },
+    {
+      "id": "hi_0072",
+      "before_notes": "focus particle: ?? ??. ??? ?? is the complete partitive case expression; the numeral ??? stays separate.",
+      "after_notes": "focus particle: tokens 13-14. Tokens 7-8 form the complete partitive case expression after the host at 6; the numeral at 5 remains separate."
+    },
+    {
+      "id": "hi_0074",
+      "before_notes": "negation: ???? ????; ???????? is the preceding subject and remains separate. ????? remains separate from ???? ??.",
+      "after_notes": "negation: tokens 14-15; the requirement noun at 13 remains a separate subject. The use noun at 10 remains separate from the case-marked infinitive at 11-12."
+    },
+    {
+      "id": "hi_0077",
+      "before_notes": "wala: ??? ???? is a nominal attributive use; ????? stays separate. ????? ????? is not merged as a noun-adjective expression.",
+      "after_notes": "wala: tokens 11-12 form a nominal attributive expression; the following goods noun remains separate. The duty noun and exempt adjective at 0-1 are also kept separate."
+    },
+    {
+      "id": "hi_0078",
+      "before_notes": "???????? remains separate from ????.",
+      "after_notes": "The use noun at 17 remains separate from the main verb at 18."
+    },
+    {
+      "id": "hi_0079",
+      "before_notes": "focus particle: ?? follows 40,000 ??, with postposition precedence. ????? ?? ?? is a locative copular predicate with auxiliary precedence. The comma inside 40,000 is numeric punctuation, not a clause boundary.",
+      "after_notes": "focus particle: token 16 follows the numeric case expression at 14-15, with postposition precedence. Tokens 8-10 form a locative copular predicate with auxiliary precedence. The comma inside 40,000 is numeric punctuation and does not close the group."
+    },
+    {
+      "id": "hi_0080",
+      "before_notes": "???? ?? ???? takes the smallest verbal host ????, leaving the predicate adjective ???? separate from the compound case span.",
+      "after_notes": "Adjudication: tokens 2-4 retain the smallest infinitival host with its compound case expression, leaving the predicate adjective at 1 separate. Whether this nonfinite copula should also attach its adjective is not explicitly settled by the guide; boundaries are retained."
+    },
+    {
+      "id": "hi_0081",
+      "before_notes": "??? remains separate from ???? ???.",
+      "after_notes": "The presentation predicate modifier at 12 remains separate from the verbal auxiliary chain at 13-14."
+    },
+    {
+      "id": "hi_0082",
+      "before_notes": "wala and focus particle: ???? ???? ?? is kept together as other; the following quantifier and noun remain separate.",
+      "after_notes": "wala and focus particle: tokens 3-5 form an other group; the following quantifier and noun remain separate."
+    },
+    {
+      "id": "hi_0083",
+      "before_notes": "focus particle: ?? follows ???????? ?? ???; compound-postposition precedence applies. Source agreement ???? ??? is preserved.",
+      "after_notes": "focus particle: token 7 follows the compound case expression at 4-6, with compound-postposition precedence. Source verb agreement at 17-18 is preserved."
+    },
+    {
+      "id": "hi_0084",
+      "before_notes": "negation: ????? ???? ?? ??? ?? is a passive modal auxiliary predicate; auxiliary precedence is used.",
+      "after_notes": "negation: tokens 20-24 form a passive modal auxiliary predicate, with auxiliary precedence."
+    },
+    {
+      "id": "hi_0085",
+      "before_notes": "??????????? is the predicate adjective in an inchoative copular group ?? ?? ???; vector-verb precedence. ????? ??? is adjectival copular predication.",
+      "after_notes": "The predicate adjective at 2 attaches to the inchoative copular chain at 3-5, with light-verb precedence. Tokens 11-12 form adjectival copular predication."
+    },
+    {
+      "id": "hi_0086",
+      "before_notes": "???????? remains separate from ???? ??? and ?????? remains separate from ???? ??.",
+      "after_notes": "The explanation noun at 9 remains separate from the case-marked infinitive at 10-11. The encouragement noun at 20 remains separate from the verbal auxiliary chain at 21-22."
+    },
+    {
+      "id": "hi_0087",
+      "before_notes": "???????? remains separate from ???? ??? ??.",
+      "after_notes": "The nomination noun at 18 remains separate from the passive auxiliary chain at 19-21."
+    },
+    {
+      "id": "hi_0088",
+      "before_notes": "??????? remains separate from ???? ?? ???; ??? ???? is an attested motion-plus-vector sequence with original spelling retained.",
+      "after_notes": "The acquisition predicate modifier at 4 remains separate from the infinitive-plus-compound-postposition group at 5-7. Tokens 16-17 retain the attested motion-plus-vector sequence and original spelling."
+    },
+    {
+      "id": "hi_0090",
+      "before_notes": "wala: ????? ????; ????? is left separate from the verbal modifier.",
+      "after_notes": "wala: tokens 6-7; the preceding collision noun at 5 remains separate from the verbal modifier."
+    },
+    {
+      "id": "hi_0091",
+      "before_notes": "???? is kept separate from the passive chain ???? ???? ??; ???? is separate from the case-marked infinitive ???? ??.",
+      "after_notes": "The activation predicate modifier at 8 remains separate from the passive chain at 9-11. Adjudication: the completion adjective at 18 remains separate from the case-marked infinitive at 19-20; whether the nonfinite copula should attach this adjective is not explicitly settled by the guide."
+    },
+    {
+      "id": "hi_0092",
+      "before_notes": "negation: ???? ????? ?? ???? is a passive modal auxiliary chain; auxiliary precedence is used.",
+      "after_notes": "negation: tokens 8-11 form a passive modal auxiliary chain, with auxiliary precedence."
+    },
+    {
+      "id": "hi_0093",
+      "before_notes": "?????? remains separate from ???? ?? ???; ???? ???? expresses obligation, with ???? as main verb.",
+      "after_notes": "The admission noun at 6 remains separate from the infinitive-plus-compound-postposition group at 7-9. Tokens 12-13 express obligation with giving as the main verb."
+    },
+    {
+      "id": "hi_0094",
+      "before_notes": "???? remains separate from ???? ??.",
+      "after_notes": "The difference noun at 7 remains separate from the case-marked infinitive at 8-9."
+    },
+    {
+      "id": "hi_0095",
+      "before_notes": "The case marker ?? attaches to the nearest parenthetical appositive (????????-????), preserving the source spacing. ??? and main verb ?? remain separate.",
+      "after_notes": "The case marker at 14 attaches to the nearest parenthetical appositive at 13, preserving source spacing. The discovery noun and main verb at 15-16 remain separate."
+    },
+    {
+      "id": "hi_0097",
+      "before_notes": "The source ends in a syntactically awkward fragment after ?? ??; ?? and ?? remain separate because the intended following predicate is not adjacent. ??????? remains separate from ?? ???? ??.",
+      "after_notes": "Adjudication: the source has an awkward inverted copula and final fragment at 16-22. The pronoun at 16 and copula at 17 remain separate because the following intended predicate is not adjacent. The acquisition predicate modifier at 3 remains separate from the modal verbal chain at 4-6."
+    },
+    {
+      "id": "hi_0098",
+      "before_notes": "negation: ???? ?? is the negative existential predicate and ????? is a separate subject. focus particles: ???? ??; topic/focus ?? follows ?????? ???, with postposition precedence.",
+      "after_notes": "negation: tokens 21-22 form a negative existential predicate, while the population noun at 20 remains a separate subject. focus particles: tokens 8-9; token 16 follows the case expression at 14-15 with postposition precedence."
+    },
+    {
+      "id": "hi_0099",
+      "before_notes": "????? remains a separate directional adverb before ?? ???.",
+      "after_notes": "The directional adverb at 10 remains separate from the verbal auxiliary chain at 11-12."
+    },
+    {
+      "id": "hi_0100",
+      "before_notes": "?? ??????? is read as an attributive comparative compound case expression attached to ??????; ??? remains separate. ????? is separate from ???? ?? ???.",
+      "after_notes": "Adjudication: tokens 8-10 are retained as an attributive comparative compound case expression, leaving the people noun separate; the guide does not explicitly settle this comparative use. The inclusion adjective at 3 remains separate from the infinitive-plus-compound-postposition group at 4-6; nonfinite copular adjective attachment also needs adjudication."
+    }
+  ],
+  "remaining_uncertain_ids": [
+    "hi_0005",
+    "hi_0010",
+    "hi_0013",
+    "hi_0020",
+    "hi_0031",
+    "hi_0040",
+    "hi_0046",
+    "hi_0047",
+    "hi_0048",
+    "hi_0057",
+    "hi_0058",
+    "hi_0069",
+    "hi_0080",
+    "hi_0091",
+    "hi_0097",
+    "hi_0100"
+  ],
+  "remaining_uncertainties": [
+    {
+      "id": "hi_0005",
+      "reason": "Adjudication: the maintenance construction at 15-16 is treated as a light-verb group. The phase noun at 17 remains separate from 18-19 under the noun-plus-main-verb restriction; nesting with the preceding infinitive is not explicitly resolved by the guide.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "postposition",
+        "light_verb",
+        "single",
+        "light_verb"
+      ]
+    },
+    {
+      "id": "hi_0010",
+      "reason": "wala: tokens 17-18 remain an other group. The final adjective and copular modal chain at 19-22 form an auxiliary group. Adjudication: attachment of the preceding adjective at 16 to the nonfinite copular wala group is not explicitly settled by the guide; current boundaries are retained.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          19,
+          20,
+          21,
+          22
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "compound_postposition",
+        "single",
+        "single",
+        "single",
+        "compound_postposition",
+        "aux_chain",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "other",
+        "aux_chain"
+      ]
+    },
+    {
+      "id": "hi_0013",
+      "reason": "Adjudication: tokens 19-20 are read as a predicative adjective plus copula, with the genitive complement at 17-18 separate. A compound-postposition reading of 17-19 is also plausible; the guide does not resolve this use of worthy. The response noun at 11 remains separate from 12-13.",
+      "retained_groups": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          19,
+          20
+        ]
+      ],
+      "retained_types": [
+        "postposition",
+        "postposition",
+        "postposition",
+        "postposition",
+        "single",
+        "aux_chain",
+        "single",
+        "aux_chain",
+        "single",
+        "single",
+        "single",
+        "postposition",
+        "aux_chain"
+      ]
+    },
+    {
+      "id": "hi_0020",
+      "reason": "Adjudication: each minimum quantifier at 8-10 and 18-20 is grouped as the fixed expression other, rather than a literal case phrase. Fixed quantifier grouping is not explicitly specified by the guide. Number and measurement-unit words remain separate.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19,
+          20
+        ],
+        [
+          21
+        ],
+        [
+          22
+        ],
+        [
+          23,
+          24
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "compound_postposition",
+        "single",
+        "single",
+        "postposition",
+        "other",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "postposition",
+        "other",
+        "single",
+        "single",
+        "aux_chain"
+      ]
+    },
+    {
+      "id": "hi_0031",
+      "reason": "Lexical noun-verb ambiguity retained for adjudication: the participation noun at 13 and main verb at 14 remain split under the guide, rather than being treated as a vector-verb group.",
+      "retained_groups": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ]
+      ],
+      "retained_types": [
+        "postposition",
+        "compound_postposition",
+        "postposition",
+        "postposition",
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "id": "hi_0040",
+      "reason": "Adjudication: tokens 1-2 are retained as a temporal case expression meaning at 10:08. The temporal use of the clock-time word is not explicitly labeled by the guide; no broader date or number phrase is merged.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "postposition",
+        "light_verb"
+      ]
+    },
+    {
+      "id": "hi_0046",
+      "reason": "Adjudication: tokens 20-21 retain a contiguous preposed absence expression as postposition. The guide gives no explicit convention for preposed case phrases. Tokens 22-24 form a habitual or continuative auxiliary chain.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16
+        ],
+        [
+          17
+        ],
+        [
+          18
+        ],
+        [
+          19
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          22,
+          23,
+          24
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "aux_chain",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "postposition",
+        "aux_chain"
+      ]
+    },
+    {
+      "id": "hi_0047",
+      "reason": "Adjudication: the preposed absence marker at 15 is separated from its noun by a determiner at 16. The smallest contiguous noun-plus-case expression at 17-18 is retained. The guide does not explicitly settle whether the whole preposed absence construction should form one span.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          19,
+          20,
+          21
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "aux_chain",
+        "single",
+        "single",
+        "single",
+        "postposition",
+        "postposition",
+        "single",
+        "single",
+        "postposition",
+        "aux_chain"
+      ]
+    },
+    {
+      "id": "hi_0048",
+      "reason": "Adjudication: the compound case expression at 6-9 contains an internal degree modifier at 8. The guide does not explicitly settle modified compound postpositions. The lexical visibility noun and main verb at 19 and 20 remain split under the noun-plus-main-verb restriction; lexical analysis can be adjudicated.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          10,
+          11,
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          17
+        ],
+        [
+          18
+        ],
+        [
+          19
+        ],
+        [
+          20
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "compound_postposition",
+        "light_verb",
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "id": "hi_0057",
+      "reason": "Adjudication: source-separated tokens 20-21 are read as an orthographic conjunctive participle and grouped as other; the second token is not read as a vector verb. This converb spelling is outside the explicit examples in the guide. Tokens 22-24 form an auxiliary predicate.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16
+        ],
+        [
+          17
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          22,
+          23,
+          24
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "single",
+        "aux_chain",
+        "single",
+        "postposition",
+        "single",
+        "light_verb",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "postposition",
+        "other",
+        "aux_chain"
+      ]
+    },
+    {
+      "id": "hi_0058",
+      "reason": "Lexical noun-verb ambiguity retained for adjudication: the theft noun and verb at 4-5 remain split, as do the acquisition predicate modifier and main verb at 10-11. The guide explicitly excludes noun-plus-main-verb merging; the lexical status of the acquisition modifier is less explicit.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "id": "hi_0069",
+      "reason": "wala: tokens 13-14. focus particle: token 11 follows the compound case expression at 7-10, with compound precedence. Adjudication: the continuation modifier and main verb at 20-21 remain split under the smallest-unit convention; the guide does not explicitly settle this lexical construction.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          17
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          20
+        ],
+        [
+          21
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "single",
+        "aux_chain",
+        "single",
+        "single",
+        "compound_postposition",
+        "single",
+        "other",
+        "postposition",
+        "single",
+        "postposition",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "id": "hi_0080",
+      "reason": "Adjudication: tokens 2-4 retain the smallest infinitival host with its compound case expression, leaving the predicate adjective at 1 separate. Whether this nonfinite copula should also attach its adjective is not explicitly settled by the guide; boundaries are retained.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11,
+          12
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "compound_postposition",
+        "postposition",
+        "single",
+        "aux_chain",
+        "compound_postposition",
+        "postposition",
+        "single",
+        "aux_chain"
+      ]
+    },
+    {
+      "id": "hi_0091",
+      "reason": "The activation predicate modifier at 8 remains separate from the passive chain at 9-11. Adjudication: the completion adjective at 18 remains separate from the case-marked infinitive at 19-20; whether the nonfinite copula should attach this adjective is not explicitly settled by the guide.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9,
+          10,
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15
+        ],
+        [
+          16
+        ],
+        [
+          17
+        ],
+        [
+          18
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          21,
+          22
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "aux_chain",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "single",
+        "single",
+        "postposition",
+        "aux_chain"
+      ]
+    },
+    {
+      "id": "hi_0097",
+      "reason": "Adjudication: the source has an awkward inverted copula and final fragment at 16-22. The pronoun at 16 and copula at 17 remain separate because the following intended predicate is not adjacent. The acquisition predicate modifier at 3 remains separate from the modal verbal chain at 4-6.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16
+        ],
+        [
+          17
+        ],
+        [
+          18
+        ],
+        [
+          19
+        ],
+        [
+          20
+        ],
+        [
+          21
+        ],
+        [
+          22
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "single",
+        "single",
+        "single",
+        "aux_chain",
+        "single",
+        "compound_postposition",
+        "single",
+        "single",
+        "aux_chain",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single"
+      ]
+    },
+    {
+      "id": "hi_0100",
+      "reason": "Adjudication: tokens 8-10 are retained as an attributive comparative compound case expression, leaving the people noun separate; the guide does not explicitly settle this comparative use. The inclusion adjective at 3 remains separate from the infinitive-plus-compound-postposition group at 4-6; nonfinite copular adjective attachment also needs adjudication.",
+      "retained_groups": [
+        [
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ]
+      ],
+      "retained_types": [
+        "single",
+        "postposition",
+        "single",
+        "compound_postposition",
+        "single",
+        "compound_postposition",
+        "single",
+        "single",
+        "single"
+      ]
+    }
+  ],
+  "validation": {
+    "source_metadata_and_text_exact": true,
+    "all_source_words_covered_once_in_order": true,
+    "groups_contiguous": true,
+    "singleton_type_single": true,
+    "ai_provenance_preserved": true,
+    "notes_question_mark_substitutions_removed": true,
+    "replacement_characters_absent": true
+  },
+  "status": "AI draft remains needs_review; no human review or gold status claimed."
+}

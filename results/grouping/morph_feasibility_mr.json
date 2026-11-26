@@ -1,0 +1,283 @@
+{
+ "dictionary_words": 61535,
+ "dictionary_multi_morpheme": 58305,
+ "splits": {
+  "eval": {
+   "sentences": 500,
+   "words": 18669,
+   "coverage": 0.33167282661095937,
+   "multi_morpheme_share_of_covered": 0.5490956072351422,
+   "multi_morpheme_share_of_all_words": 0.18212009213134073,
+   "located": 0.9602941176470589,
+   "aligned_with_token_boundary": 0.10137825421133231,
+   "aligned_with_sandhi_tolerance": 0.11546707503828484,
+   "usable_boundaries_per_100_words_tolerant": 2.01939043333869,
+   "internal_token_bounds_that_are_morph": 0.5426229508196722,
+   "tokens_per_word": 1.4536932883389577,
+   "word_internal_token_share": 0.3120969822027341,
+   "usable_boundaries_per_100_words": 1.7729926616315819,
+   "examples": [
+    {
+     "word": "होतो",
+     "morphtok": "हो+तो",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁होतो"
+     ]
+    },
+    {
+     "word": "वापरले",
+     "morphtok": "वापर+ले",
+     "located_cuts": [
+      4
+     ],
+     "tokens": [
+      "▁वापरले"
+     ]
+    },
+    {
+     "word": "घटकाचा",
+     "morphtok": "घटक+चा",
+     "located_cuts": [
+      4
+     ],
+     "tokens": [
+      "▁घट",
+      "काचा"
+     ]
+    },
+    {
+     "word": "पाहणे",
+     "morphtok": "पाह+णे",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁पाहणे"
+     ]
+    },
+    {
+     "word": "औषधांचा",
+     "morphtok": "औषध+ंचा",
+     "located_cuts": [
+      4
+     ],
+     "tokens": [
+      "▁औषध",
+      "ांचा"
+     ]
+    },
+    {
+     "word": "होणारा",
+     "morphtok": "हो+णारा",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁होणारा"
+     ]
+    },
+    {
+     "word": "पाहणे",
+     "morphtok": "पाह+णे",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁पाहणे"
+     ]
+    },
+    {
+     "word": "करणे",
+     "morphtok": "कर+णे",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁करणे"
+     ]
+    },
+    {
+     "word": "झाल्या",
+     "morphtok": "हो+ल्या",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁झाल्या"
+     ]
+    },
+    {
+     "word": "भाजलेल्या",
+     "morphtok": "भाज+लेल्या",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁भाज",
+      "लेल्या"
+     ]
+    },
+    {
+     "word": "केलेली",
+     "morphtok": "कर+लेली",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁केलेली"
+     ]
+    },
+    {
+     "word": "वापरली",
+     "morphtok": "वापर+ली",
+     "located_cuts": [
+      4
+     ],
+     "tokens": [
+      "▁वापरली"
+     ]
+    }
+   ]
+  },
+  "flores": {
+   "sentences": 1012,
+   "words": 19012,
+   "coverage": 0.3672417420576478,
+   "multi_morpheme_share_of_covered": 0.5498424520194787,
+   "multi_morpheme_share_of_all_words": 0.20192509993688196,
+   "located": 0.9648345923417556,
+   "aligned_with_token_boundary": 0.11420086393088554,
+   "aligned_with_sandhi_tolerance": 0.13363930885529157,
+   "usable_boundaries_per_100_words_tolerant": 2.6036187670944666,
+   "internal_token_bounds_that_are_morph": 0.4658590308370044,
+   "tokens_per_word": 1.5003155901535872,
+   "word_internal_token_share": 0.3334735661197588,
+   "usable_boundaries_per_100_words": 2.224910582789817,
+   "examples": [
+    {
+     "word": "महिन्यांचा",
+     "morphtok": "महिना+ंचा",
+     "located_cuts": [
+      7
+     ],
+     "tokens": [
+      "▁महिन",
+      "्यांचा"
+     ]
+    },
+    {
+     "word": "ज्याला",
+     "morphtok": "जो+ला",
+     "located_cuts": [
+      4
+     ],
+     "tokens": [
+      "▁ज्याला"
+     ]
+    },
+    {
+     "word": "ज्याला",
+     "morphtok": "जो+ला",
+     "located_cuts": [
+      4
+     ],
+     "tokens": [
+      "▁ज्याला"
+     ]
+    },
+    {
+     "word": "होण्यासाठी",
+     "morphtok": "हो+ण्यासाठी",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁होण्यासाठी"
+     ]
+    },
+    {
+     "word": "वापरले",
+     "morphtok": "वापर+ले",
+     "located_cuts": [
+      4
+     ],
+     "tokens": [
+      "▁वापरले"
+     ]
+    },
+    {
+     "word": "जाईल",
+     "morphtok": "जा+ेल",
+     "located_cuts": [],
+     "tokens": [
+      "▁जाईल"
+     ]
+    },
+    {
+     "word": "विभागाचे",
+     "morphtok": "विभाग+चे",
+     "located_cuts": [
+      6
+     ],
+     "tokens": [
+      "▁विभागाचे"
+     ]
+    },
+    {
+     "word": "सांगितले",
+     "morphtok": "सांग+ले",
+     "located_cuts": [
+      6
+     ],
+     "tokens": [
+      "▁सांगितले"
+     ]
+    },
+    {
+     "word": "होतो",
+     "morphtok": "हो+तो",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁होतो"
+     ]
+    },
+    {
+     "word": "केली",
+     "morphtok": "कर+ली",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁केली"
+     ]
+    },
+    {
+     "word": "कमिटीने",
+     "morphtok": "कमिटी+ने",
+     "located_cuts": [
+      5
+     ],
+     "tokens": [
+      "▁कमि",
+      "टीने"
+     ]
+    },
+    {
+     "word": "साधू",
+     "morphtok": "साध+ू",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁साधू"
+     ]
+    }
+   ]
+  }
+ }
+}

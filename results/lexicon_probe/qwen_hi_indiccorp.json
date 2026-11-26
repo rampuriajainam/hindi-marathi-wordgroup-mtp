@@ -1,0 +1,42 @@
+{
+ "eval": "results/Rsd_qwen_hi_k4_frozen_sd_seq/eval_indiccorp_eval.json",
+ "tokenizer": "Qwen/Qwen2.5-1.5B",
+ "n_train": 200000,
+ "heads_tok_per_step": 2.9753344968004654,
+ "min2_chains1": {
+  "trie_prefixes": 200187,
+  "vocab_words": 354528,
+  "multi_token_words": 131737,
+  "tok_per_step": 1.7109118886733123,
+  "steps_with_candidate": 0.9704957516558507,
+  "word_internal_share": 0.7949790794979079,
+  "word_internal_top_acc": 0.5468765371372356
+ },
+ "min2_chains4": {
+  "trie_prefixes": 200187,
+  "vocab_words": 354528,
+  "multi_token_words": 131737,
+  "tok_per_step": 2.1181976310776114,
+  "steps_with_candidate": 0.9632237223556697,
+  "word_internal_share": 0.7949790794979079,
+  "word_internal_top_acc": 0.7022626660108214
+ },
+ "min5_chains1": {
+  "trie_prefixes": 88107,
+  "vocab_words": 354528,
+  "multi_token_words": 59716,
+  "tok_per_step": 1.7081691269788257,
+  "steps_with_candidate": 0.9630619197114422,
+  "word_internal_share": 0.7949790794979079,
+  "word_internal_top_acc": 0.5456960157402853
+ },
+ "min5_chains4": {
+  "trie_prefixes": 88107,
+  "vocab_words": 354528,
+  "multi_token_words": 59716,
+  "tok_per_step": 2.1110285619943867,
+  "steps_with_candidate": 0.9555885752022454,
+  "word_internal_share": 0.7949790794979079,
+  "word_internal_top_acc": 0.7001967535661584
+ }
+}

@@ -1,0 +1,799 @@
+{
+  "language": "Marathi",
+  "candidate_file": "data/annotation/mr_ai_redo.jsonl",
+  "reviewed_row_count": 150,
+  "reviewed_ids": [
+    "mr_0001",
+    "mr_0002",
+    "mr_0003",
+    "mr_0004",
+    "mr_0005",
+    "mr_0006",
+    "mr_0007",
+    "mr_0008",
+    "mr_0009",
+    "mr_0010",
+    "mr_0011",
+    "mr_0012",
+    "mr_0013",
+    "mr_0014",
+    "mr_0015",
+    "mr_0016",
+    "mr_0017",
+    "mr_0018",
+    "mr_0019",
+    "mr_0020",
+    "mr_0021",
+    "mr_0022",
+    "mr_0023",
+    "mr_0024",
+    "mr_0025",
+    "mr_0026",
+    "mr_0027",
+    "mr_0028",
+    "mr_0029",
+    "mr_0030",
+    "mr_0031",
+    "mr_0032",
+    "mr_0033",
+    "mr_0034",
+    "mr_0035",
+    "mr_0036",
+    "mr_0037",
+    "mr_0038",
+    "mr_0039",
+    "mr_0040",
+    "mr_0041",
+    "mr_0042",
+    "mr_0043",
+    "mr_0044",
+    "mr_0045",
+    "mr_0046",
+    "mr_0047",
+    "mr_0048",
+    "mr_0049",
+    "mr_0050",
+    "mr_0051",
+    "mr_0052",
+    "mr_0053",
+    "mr_0054",
+    "mr_0055",
+    "mr_0056",
+    "mr_0057",
+    "mr_0058",
+    "mr_0059",
+    "mr_0060",
+    "mr_0061",
+    "mr_0062",
+    "mr_0063",
+    "mr_0064",
+    "mr_0065",
+    "mr_0066",
+    "mr_0067",
+    "mr_0068",
+    "mr_0069",
+    "mr_0070",
+    "mr_0071",
+    "mr_0072",
+    "mr_0073",
+    "mr_0074",
+    "mr_0075",
+    "mr_0076",
+    "mr_0077",
+    "mr_0078",
+    "mr_0079",
+    "mr_0080",
+    "mr_0081",
+    "mr_0082",
+    "mr_0083",
+    "mr_0084",
+    "mr_0085",
+    "mr_0086",
+    "mr_0087",
+    "mr_0088",
+    "mr_0089",
+    "mr_0090",
+    "mr_0091",
+    "mr_0092",
+    "mr_0093",
+    "mr_0094",
+    "mr_0095",
+    "mr_0096",
+    "mr_0097",
+    "mr_0098",
+    "mr_0099",
+    "mr_0100",
+    "mr_0101",
+    "mr_0102",
+    "mr_0103",
+    "mr_0104",
+    "mr_0105",
+    "mr_0106",
+    "mr_0107",
+    "mr_0108",
+    "mr_0109",
+    "mr_0110",
+    "mr_0111",
+    "mr_0112",
+    "mr_0113",
+    "mr_0114",
+    "mr_0115",
+    "mr_0116",
+    "mr_0117",
+    "mr_0118",
+    "mr_0119",
+    "mr_0120",
+    "mr_0121",
+    "mr_0122",
+    "mr_0123",
+    "mr_0124",
+    "mr_0125",
+    "mr_0126",
+    "mr_0127",
+    "mr_0128",
+    "mr_0129",
+    "mr_0130",
+    "mr_0131",
+    "mr_0132",
+    "mr_0133",
+    "mr_0134",
+    "mr_0135",
+    "mr_0136",
+    "mr_0137",
+    "mr_0138",
+    "mr_0139",
+    "mr_0140",
+    "mr_0141",
+    "mr_0142",
+    "mr_0143",
+    "mr_0144",
+    "mr_0145",
+    "mr_0146",
+    "mr_0147",
+    "mr_0148",
+    "mr_0149",
+    "mr_0150"
+  ],
+  "review_method": "Independent second-pass manual linguistic inspection of every sentence and every proposed group against the annotation guide. Only the guide, Marathi source sentences, and candidate Marathi annotations were read. No parsers, model outputs, other annotations, or project results were used.",
+  "correction_count": 3,
+  "corrected_ids": [
+    "mr_0006",
+    "mr_0023",
+    "mr_0132"
+  ],
+  "corrections": [
+    {
+      "id": "mr_0006",
+      "reason": "The additive focus particle immediately scopes over presence; attach it to its written nominal host under the guide focus-particle convention.",
+      "before": {
+        "groups": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            10
+          ],
+          [
+            11
+          ],
+          [
+            12
+          ],
+          [
+            13
+          ],
+          [
+            14
+          ],
+          [
+            15,
+            16
+          ]
+        ],
+        "types": [
+          "single",
+          "single",
+          "postposition",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain"
+        ]
+      },
+      "after": {
+        "groups": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            11
+          ],
+          [
+            12
+          ],
+          [
+            13
+          ],
+          [
+            14
+          ],
+          [
+            15,
+            16
+          ]
+        ],
+        "types": [
+          "single",
+          "single",
+          "postposition",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "other",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain"
+        ]
+      },
+      "changed_spans_before": [
+        {
+          "indices": [
+            9
+          ],
+          "text": "उपस्थिती",
+          "type": "single"
+        },
+        {
+          "indices": [
+            10
+          ],
+          "text": "देखील",
+          "type": "single"
+        }
+      ],
+      "changed_spans_after": [
+        {
+          "indices": [
+            9,
+            10
+          ],
+          "text": "उपस्थिती देखील",
+          "type": "other"
+        }
+      ]
+    },
+    {
+      "id": "mr_0023",
+      "reason": "The additive focus particle scopes over the immediately preceding temporal case phrase. Include it without losing the stronger postposition label.",
+      "before": {
+        "groups": [
+          [
+            0,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            12
+          ],
+          [
+            13
+          ],
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19,
+            20
+          ]
+        ],
+        "types": [
+          "postposition",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain"
+        ]
+      },
+      "after": {
+        "groups": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            12
+          ],
+          [
+            13
+          ],
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17
+          ],
+          [
+            18
+          ],
+          [
+            19,
+            20
+          ]
+        ],
+        "types": [
+          "postposition",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain"
+        ]
+      },
+      "changed_spans_before": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "text": "क्रांती नंतर",
+          "type": "postposition"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "text": "देखील",
+          "type": "single"
+        }
+      ],
+      "changed_spans_after": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "text": "क्रांती नंतर देखील",
+          "type": "postposition"
+        }
+      ]
+    },
+    {
+      "id": "mr_0132",
+      "reason": "The additive focus particle immediately follows and scopes over the buses; attach it to that nominal host.",
+      "before": {
+        "groups": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ],
+          [
+            8
+          ],
+          [
+            9
+          ],
+          [
+            10
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            13
+          ],
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17,
+            18
+          ]
+        ],
+        "types": [
+          "single",
+          "single",
+          "single",
+          "aux_chain",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain"
+        ]
+      },
+      "after": {
+        "groups": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5
+          ],
+          [
+            6
+          ],
+          [
+            7
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            10
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            13
+          ],
+          [
+            14
+          ],
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            17,
+            18
+          ]
+        ],
+        "types": [
+          "single",
+          "single",
+          "single",
+          "aux_chain",
+          "single",
+          "single",
+          "single",
+          "other",
+          "single",
+          "aux_chain",
+          "single",
+          "single",
+          "single",
+          "single",
+          "aux_chain"
+        ]
+      },
+      "changed_spans_before": [
+        {
+          "indices": [
+            8
+          ],
+          "text": "बसेस",
+          "type": "single"
+        },
+        {
+          "indices": [
+            9
+          ],
+          "text": "देखील",
+          "type": "single"
+        }
+      ],
+      "changed_spans_after": [
+        {
+          "indices": [
+            8,
+            9
+          ],
+          "text": "बसेस देखील",
+          "type": "other"
+        }
+      ]
+    }
+  ],
+  "note_only_changes": [
+    {
+      "id": "mr_0001",
+      "before": "",
+      "after": "Second-pass uncertainty: The nonverbal resultative predicate at index 13 followed by main karane at index 14 is left separate under the smallest-unit convention. Adjudicate only if Marathi participial resultatives are to count as a verbal stem plus vector; do not attach the preceding noun at index 12.",
+      "reason": "Record an unresolved linguistic distinction for human adjudication; grouping unchanged."
+    },
+    {
+      "id": "mr_0019",
+      "before": "मनोरंजक is the nearest predicative adjective in होत असले; coordinated सोपे remains outside the minimal group.",
+      "after": "मनोरंजक is the nearest predicative adjective in होत असले; coordinated सोपे remains outside the minimal group. Second-pass uncertainty: The predicative adjective at index 7 precedes hot asale at indices 8-9. A copular reading supports the existing span; an inchoative main-verb reading would leave the adjective separate and retain only the verbal auxiliary chain. The guide does not explicitly settle this Marathi distinction.",
+      "reason": "Record an unresolved linguistic distinction for human adjudication; grouping unchanged."
+    },
+    {
+      "id": "mr_0028",
+      "before": "Source होत is incomplete/nonstandard here; read as a copular predicate with आवश्यकता, without correcting spelling.",
+      "after": "Source होत is incomplete/nonstandard here; read as a copular predicate with आवश्यकता, without correcting spelling. Second-pass uncertainty: Source hot at index 8 is incomplete/nonstandard in this context; interpreting it as a copular predicate with the preceding noun is plausible but not certain. Preserve the source and adjudicate its intended predication.",
+      "reason": "Record an unresolved linguistic distinction for human adjudication; grouping unchanged."
+    },
+    {
+      "id": "mr_0030",
+      "before": "विषयक functions relationally ('concerning safety'); the following इशाऱ्यांकडे remains its own fused-case word.",
+      "after": "विषयक functions relationally ('concerning safety'); the following इशाऱ्यांकडे remains its own fused-case word. Second-pass uncertainty: The opening tari dekhil is a concessive discourse connective. Unlike the nominal additive particles corrected elsewhere, it is uncertain whether the guide focus subtype should merge this lexical connective.",
+      "reason": "Record an unresolved linguistic distinction for human adjudication; grouping unchanged."
+    },
+    {
+      "id": "mr_0077",
+      "before": "",
+      "after": "Second-pass uncertainty: In the exclamation mulaga asava tar asa, the first noun can be the subject with a later predicative demonstrative, or part of an existential/nominal predication. The existing noun-copula group requires human adjudication.",
+      "reason": "Record an unresolved linguistic distinction for human adjudication; grouping unchanged."
+    },
+    {
+      "id": "mr_0101",
+      "before": "खुलून दिसत असते is read as a lexical vector construction ('stands out'), with the following habitual auxiliary included; खुलून could alternatively be an independent manner adjunct and needs adjudication.",
+      "after": "खुलून दिसत असते is read as a lexical vector construction ('stands out'), with the following habitual auxiliary included; खुलून could alternatively be an independent manner adjunct and needs adjudication. Second-pass uncertainty: The expression khulun disat asate can be treated as a lexical verb-plus-vector construction or as a manner conjunctive participle followed by a main verb and habitual auxiliary.",
+      "reason": "Record an unresolved linguistic distinction for human adjudication; grouping unchanged."
+    },
+    {
+      "id": "mr_0113",
+      "before": "ठीकठाक होतंय is a copular predicate. The inverted झालो निवांत is also read copularly ('became relaxed'); the nearest adjective follows the copula, and its final comma closes this group.",
+      "after": "ठीकठाक होतंय is a copular predicate. The inverted झालो निवांत is also read copularly ('became relaxed'); the nearest adjective follows the copula, and its final comma closes this group. Second-pass uncertainty: The groups at indices 2-3 and 6-7 read hone as copular with adjectives, including inverted word order. They could instead use lexical inchoative become; the guide does not explicitly settle the boundary between these and unmerged adjective-plus-main-hone cases.",
+      "reason": "Record an unresolved linguistic distinction for human adjudication; grouping unchanged."
+    }
+  ],
+  "encoding_cleanup": {
+    "note_cleanup_count": 0,
+    "literal_question_mark_corruption_found": false,
+    "replacement_character_corruption_found": false
+  },
+  "remaining_uncertain_ids": [
+    "mr_0001",
+    "mr_0019",
+    "mr_0028",
+    "mr_0030",
+    "mr_0077",
+    "mr_0101",
+    "mr_0113"
+  ],
+  "remaining_uncertainties": [
+    {
+      "id": "mr_0001",
+      "issue": "The nonverbal resultative predicate at index 13 followed by main karane at index 14 is left separate under the smallest-unit convention. Adjudicate only if Marathi participial resultatives are to count as a verbal stem plus vector; do not attach the preceding noun at index 12.",
+      "retained": "Separate indices 12, 13, and 14; the overt auxiliary chain at indices 4-5 is retained."
+    },
+    {
+      "id": "mr_0019",
+      "issue": "The predicative adjective at index 7 precedes hot asale at indices 8-9. A copular reading supports the existing span; an inchoative main-verb reading would leave the adjective separate and retain only the verbal auxiliary chain. The guide does not explicitly settle this Marathi distinction.",
+      "retained": "Indices 7-9 aux_chain."
+    },
+    {
+      "id": "mr_0028",
+      "issue": "Source hot at index 8 is incomplete/nonstandard in this context; interpreting it as a copular predicate with the preceding noun is plausible but not certain. Preserve the source and adjudicate its intended predication.",
+      "retained": "Indices 7-8 aux_chain."
+    },
+    {
+      "id": "mr_0030",
+      "issue": "The opening tari dekhil is a concessive discourse connective. Unlike the nominal additive particles corrected elsewhere, it is uncertain whether the guide focus subtype should merge this lexical connective.",
+      "retained": "Indices 0 and 1 remain separate singletons."
+    },
+    {
+      "id": "mr_0077",
+      "issue": "In the exclamation mulaga asava tar asa, the first noun can be the subject with a later predicative demonstrative, or part of an existential/nominal predication. The existing noun-copula group requires human adjudication.",
+      "retained": "Indices 0-1 aux_chain."
+    },
+    {
+      "id": "mr_0101",
+      "issue": "The expression khulun disat asate can be treated as a lexical verb-plus-vector construction or as a manner conjunctive participle followed by a main verb and habitual auxiliary.",
+      "retained": "Indices 22-24 light_verb; alternative is index 22 single and indices 23-24 aux_chain."
+    },
+    {
+      "id": "mr_0113",
+      "issue": "The groups at indices 2-3 and 6-7 read hone as copular with adjectives, including inverted word order. They could instead use lexical inchoative become; the guide does not explicitly settle the boundary between these and unmerged adjective-plus-main-hone cases.",
+      "retained": "Indices 2-3 and 6-7 aux_chain."
+    }
+  ],
+  "validation": {
+    "row_count": 150,
+    "unique_ids": true,
+    "source_metadata_and_exact_text_preserved": true,
+    "complete_ordered_whitespace_word_coverage": true,
+    "types_match_groups": true,
+    "all_singletons_type_single": true,
+    "ai_draft_needs_review_preserved": true,
+    "note_encoding_intact": true
+  },
+  "provenance_notice": "This is an AI draft QA pass. No row is marked human reviewed."
+}

@@ -1,0 +1,45 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Table 4: draft policies and tree decoding (Kaggle T4)}
+\label{tab:table4_decoding}
+\begin{tabular}{lrrrrrr}
+\toprule
+model & draft policy & nodes / step & IndicCorp tok/step & speed-up & FLORES tok/step & speed-up \\
+\midrule
+R2 & fixed k & 3 & 1.39 & $\times$1.15 & 1.36 & $\times$1.12 \\
+R2 & confidence cut & ≤3 & 1.10 & $\times$0.94 & 1.07 & $\times$0.91 \\
+Rsd & fixed k & 3 & 1.67 & $\times$1.36 & 1.60 & $\times$1.32 \\
+Rsd & confidence cut & ≤3 & 1.36 & $\times$1.14 & 1.30 & $\times$1.09 \\
+Rsd & tree entropy n40 & 39 & 2.42 & $\times$1.74 & 2.33 & $\times$1.68 \\
+Rsd & tree static n64 & 62 & 2.50 & $\times$1.73 & 2.39 & $\times$1.68 \\
+Rsd & fixed k+fast & 3 & 1.67 & $\times$1.56 & 1.60 & $\times$1.49 \\
+Rsd & tree static n64+fast & 62 & 2.50 & $\times$2.13 & 2.39 & $\times$2.02 \\
+Rsd & tree static n64+pld4x6+fast & 64 & 3.10 & $\times$2.59 & 3.20 & $\times$2.64 \\
+Rsd & tree entropy n40+pld4x6 & 40 & 3.01 & $\times$2.12 & 3.14 & $\times$2.23 \\
+Rsd & tree static n64+pld4x6 & 64 & 3.10 & $\times$2.11 & 3.20 & $\times$2.20 \\
+Rsd\_k6 & fixed k & 5 & 1.71 & $\times$1.28 & 1.63 & $\times$1.21 \\
+Rsd\_k6 & tree entropy n40 & 39 & 2.45 & $\times$1.56 & 2.34 & $\times$1.50 \\
+Rsd\_seq & fixed k & 3 & 2.00 & $\times$1.61 & 1.89 & $\times$1.52 \\
+Rsd\_seq & confidence cut & ≤3 & 1.60 & $\times$1.32 & 1.51 & $\times$1.23 \\
+Rsd\_seq & tree entropy n40 & 39 & 2.82 & $\times$1.79 & 2.70 & $\times$1.71 \\
+Rsd\_seq & tree static n40 & 39 & 2.79 & $\times$2.02 & 2.67 & $\times$1.94 \\
+Rsd\_seq & tree static n64 & 62 & 2.89 & $\times$2.01 & 2.78 & $\times$1.92 \\
+Rsd\_seq & fixed k+fast & 3 & 2.00 & $\times$1.82 & 1.89 & $\times$1.71 \\
+Rsd\_seq & tree static n64+fast & 62 & 2.89 & $\times$2.39 & 2.78 & $\times$2.27 \\
+Rsd\_seq & tree static n64+pld4x6+fast & 64 & 3.49 & $\times$2.64 & 3.63 & $\times$2.70 \\
+Rsd\_seq & tree static n64+pld4x6 & 64 & 3.49 & $\times$2.11 & 3.63 & $\times$2.19 \\
+Rsd\_seq & tree entropy n40+pld4x6 & 40 & 3.40 & $\times$2.12 & 3.56 & $\times$2.22 \\
+Rsd\_seq & tree static n40+pld4x6 & 40 & 3.36 & $\times$2.11 & 3.53 & $\times$2.22 \\
+Rsd\_r8\_seq & fixed k & 3 & 1.81 & $\times$1.44 & 1.77 & $\times$1.44 \\
+Rsd\_r8\_seq & tree static n40 & 39 & 2.41 & $\times$1.77 & 2.36 & $\times$1.75 \\
+Rsd\_r8\_seq & tree static n64 & 62 & 2.48 & $\times$1.74 & 2.44 & $\times$1.73 \\
+Rsd\_r8\_seq & fixed k+fast & 3 & 1.80 & $\times$1.66 & 1.77 & $\times$1.61 \\
+Rsd\_r8\_seq & tree static n64+fast & 62 & 2.47 & $\times$2.11 & 2.43 & $\times$2.07 \\
+Rsd\_r8\_seq & tree static n64+pld4x6+fast & 65 & 3.95 & $\times$3.01 & 3.88 & $\times$2.94 \\
+Rsd\_r8\_seq & tree static n40+pld4x6 & 42 & 3.87 & $\times$2.35 & 3.77 & $\times$2.33 \\
+Rsd\_r8\_seq & tree entropy n40+pld4x6 & 41 & 3.88 & $\times$2.35 & 3.81 & $\times$2.34 \\
+Rsd\_r8\_seq & tree static n64+pld4x6 & 65 & 3.96 & $\times$2.33 & 3.87 & $\times$2.31 \\
+\bottomrule
+\end{tabular}
+\end{table}

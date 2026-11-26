@@ -1,0 +1,101 @@
+{
+ "paper": {
+  "words": 25643,
+  "groups": 18980
+ },
+ "flores_words": 25643,
+ "sentences": 1012,
+ "variants": {
+  "ours (all rules, comp=all)": {
+   "groups": 16069,
+   "words_per_group": 1.5958055884000248,
+   "vs_paper_groups": -0.1533719704952582,
+   "joins_by_rule": {
+    "PSP": 5002,
+    "NNC": 1133,
+    "compound": 1068,
+    "RP": 364,
+    "VAUX": 2007
+   }
+  },
+  "comp=paper (pof + pof_cn only)": {
+   "groups": 16204,
+   "words_per_group": 1.5825104912367316,
+   "vs_paper_groups": -0.14625922023182292,
+   "joins_by_rule": {
+    "PSP": 5002,
+    "NNC": 1133,
+    "pof": 933,
+    "RP": 364,
+    "VAUX": 2007
+   }
+  },
+  "comp=nnc (pof_cn only)": {
+   "groups": 17137,
+   "words_per_group": 1.4963529205811985,
+   "vs_paper_groups": -0.09710221285563747,
+   "joins_by_rule": {
+    "PSP": 5002,
+    "NNC": 1133,
+    "RP": 364,
+    "VAUX": 2007
+   }
+  },
+  "comp=none": {
+   "groups": 18270,
+   "words_per_group": 1.4035577449370553,
+   "vs_paper_groups": -0.03740779768177027,
+   "joins_by_rule": {
+    "PSP": 5002,
+    "RP": 364,
+    "VAUX": 2007
+   }
+  },
+  "no head extension": {
+   "groups": 17960,
+   "words_per_group": 1.4277839643652561,
+   "vs_paper_groups": -0.05374077976817704,
+   "joins_by_rule": {
+    "PSP": 4176,
+    "NNC": 874,
+    "compound": 999,
+    "RP": 231,
+    "VAUX": 1403
+   }
+  },
+  "comp=paper, no head extension": {
+   "groups": 18026,
+   "words_per_group": 1.4225563075557528,
+   "vs_paper_groups": -0.05026343519494203,
+   "joins_by_rule": {
+    "PSP": 4176,
+    "NNC": 874,
+    "pof": 933,
+    "RP": 231,
+    "VAUX": 1403
+   }
+  },
+  "no RP": {
+   "groups": 16432,
+   "words_per_group": 1.5605525803310614,
+   "vs_paper_groups": -0.13424657534246576,
+   "joins_by_rule": {
+    "PSP": 5002,
+    "NNC": 1133,
+    "compound": 1069,
+    "VAUX": 2007
+   }
+  },
+  "comp=paper, no RP": {
+   "groups": 16568,
+   "words_per_group": 1.5477426364075326,
+   "vs_paper_groups": -0.12708113804004217,
+   "joins_by_rule": {
+    "PSP": 5002,
+    "NNC": 1133,
+    "pof": 933,
+    "VAUX": 2007
+   }
+  }
+ }
+}

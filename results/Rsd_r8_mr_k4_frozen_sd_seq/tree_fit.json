@@ -1,0 +1,20 @@
+{
+ "run_name": "Rsd_r8_mr_k4_frozen_sd_seq",
+ "step": 12500,
+ "n_calib_positions": 18243,
+ "n_eval_positions": 12139,
+ "chain": 1.0977016228684406,
+ "rows": [
+  {
+   "max_nodes": 40,
+   "static": 1.7476727901804103,
+   "entropy": 1.7741988631683006
+  },
+  {
+   "max_nodes": 64,
+   "static": 1.8361479528791498,
+   "entropy": 1.853365186588681
+  }
+ ],
+ "note": "oracle accepted drafts per step on IndicCorp eval greedy text (teacher-forced)"
+}

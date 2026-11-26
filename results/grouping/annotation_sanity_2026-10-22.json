@@ -1,0 +1,56 @@
+{
+  "annotation_approval": "approved",
+  "languages": {
+    "hi": {
+      "sentences": 200,
+      "annotation_status_counts": {
+        "approved": 200
+      },
+      "sha256": "4b633a2d10209aef44f729589765cb77cb6e6b8bc35e10e6c91ec2a1c27bbaa0",
+      "source_text_issue_ids": [
+        "hi_0173"
+      ],
+      "human_reviewed": 0
+    },
+    "mr": {
+      "sentences": 150,
+      "annotation_status_counts": {
+        "approved": 150
+      },
+      "sha256": "4dc2e9a6f98decafeeb481344e016dcedbd1552bf32f28657fb358800f2243dc",
+      "source_text_issue_ids": [
+        "mr_0058"
+      ],
+      "human_reviewed": 0
+    }
+  },
+  "separate_ai_review_coverage": 350,
+  "protected_files_unchanged": true,
+  "om_output_created": false,
+  "sample_file": "results/grouping/annotation_review_sample_2026-10-22.json",
+  "checks_passed": true,
+  "approval_details": {
+    "status": "approved",
+    "date": "2026-10-22",
+    "approved_by": "jai",
+    "scope": "provisional_dataset_publication_after_eight_sentence_spot_check",
+    "review_required": true,
+    "user_instruction": "these seem fine for now, however need to be reviewed once more; push for now",
+    "sample_ids": [
+      "hi_0093",
+      "hi_0027",
+      "hi_0198",
+      "hi_0117",
+      "mr_0017",
+      "mr_0015",
+      "mr_0088",
+      "mr_0080"
+    ]
+  },
+  "review_required": true,
+  "tests": {
+    "passed": 148,
+    "scope": "offline data, annotation, grouping, metrics, cache, and utility tests",
+    "production_model_runs": "not run; deferred to Jainam per handoff"
+  }
+}

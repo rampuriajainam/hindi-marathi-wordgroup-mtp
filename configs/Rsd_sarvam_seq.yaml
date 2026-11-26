@@ -1,0 +1,27 @@
+# Rsd_sarvam_seq: = Rsd_seq on sarvamai/sarvam-1 (Llama, 2.5B, Indic SentencePiece, ~1.42 tokens per Hindi word, adds <s>).
+# Same recipe: frozen backbone, sequential heads, self-distilled text (gen_selfdistill --model_name sarvamai/sarvam-1
+# --max_new_tokens 80). Budgets are TEXT-matched to Rsd_seq (docs/plan/SECOND_MODEL.md §2): max_new_tokens 80
+# (64 x 1.42 / 1.12); training texts are ~1 + 17 + 80 tokens, so max_length 128 still holds them.
+# Fields that differ from Rsd_seq and why:
+#   data.cache_dir null   the boundary cache holds ganga token ids (train.py would refuse it: tokenizer mismatch)
+#   optim.batch_size 4 + grad_accum 2   same 8 texts per step; the fp32 backbone alone is 10.1 GB on a 15 GB T4
+run_name: Rsd_sarvam_hi_k4_frozen_sd_seq
+lang: hi
+model_name: sarvamai/sarvam-1
+num_heads: 4
+head_type: seq
+head_layers: 1
+freeze_backbone: true   # Medusa-1: LoRA frozen, head 0 = base model exactly
+head_backbone_grad: 0.1
+lora: {r: 8, alpha: 16, dropout: 0.05, targets: [q_proj, v_proj]}
+optim: {lr: 2.0e-4, batch_size: 4, grad_clip: 1.0, max_steps: 12500, grad_accum: 2, weight_decay: 0.01}
+data: {cache_dir: null, grouper: hi_rules_v0, max_length: 128, eval_split: eval, eval_n: 1000, train_file: /kaggle/working/sd/sarvam_hi_sd.jsonl}  # grouper only labels the logged eval split
+losses:
+  structural: {enabled: false, variant: null, weight: 1.0}
+  contrastive: {enabled: false, weight: 0.05, temperature: 0.1}
+weighting: {scheme: fixed, head_decay: 0.8}
+log_every: 20
+eval_every: 1000
+save_every: 500
+seed: 42
+dtype: auto

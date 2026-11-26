@@ -1,0 +1,1945 @@
+{
+  "grouper": "hi_rules_v1",
+  "tokenizer": "LingoIITGN/ganga-1b",
+  "max_length": 128,
+  "baseline": "R2",
+  "inputs": {
+    "R2": {
+      "filename": "tokens_indiccorp_eval.jsonl",
+      "sha256": "3d68f2c015cfe4fec3b64de3b9db2c3be3d8bcac1027ce1bb57dccb57fb76c61"
+    },
+    "R3": {
+      "filename": "tokens_indiccorp_eval.jsonl",
+      "sha256": "bb5862a29a6a5edf9580dbdc9baa56f63bfc4e244b79e63603c19c705a94089d"
+    },
+    "R6a": {
+      "filename": "tokens_indiccorp_eval.jsonl",
+      "sha256": "c36c423dfecea46889779bfbfb168b6f7b35e7634e19759089c0416be26ebfc5"
+    }
+  },
+  "runs": {
+    "R2": [
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1356,
+        "top1": 0.5073746312684366
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1362,
+        "top1": 0.591042584434655
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 695,
+        "top1": 0.6863309352517986
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 1.0
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 364,
+        "top1": 0.32142857142857145
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 374,
+        "top1": 0.7352941176470589
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 500,
+        "top1": 0.564
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.5384615384615384
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.6043956043956044
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.8285714285714286
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 4016,
+        "top1": 0.33441235059760954
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 4139,
+        "top1": 0.541435129258275
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 814,
+        "top1": 0.6351351351351351
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.0
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "first",
+        "n": 1136,
+        "top1": 0.17253521126760563
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "last",
+        "n": 1207,
+        "top1": 0.6188898094449047
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "middle",
+        "n": 559,
+        "top1": 0.47942754919499103
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "single",
+        "n": 9783,
+        "top1": 0.3215782479811919
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1350,
+        "top1": 0.16962962962962963
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1357,
+        "top1": 0.3456153279292557
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 694,
+        "top1": 0.3256484149855908
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 0.0
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 359,
+        "top1": 0.06685236768802229
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 374,
+        "top1": 0.42780748663101603
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 490,
+        "top1": 0.2612244897959184
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.32967032967032966
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.45054945054945056
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.5714285714285714
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3924,
+        "top1": 0.08154943934760449
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 4050,
+        "top1": 0.23753086419753086
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 780,
+        "top1": 0.07692307692307693
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.2
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "first",
+        "n": 1116,
+        "top1": 0.03046594982078853
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "last",
+        "n": 1165,
+        "top1": 0.06094420600858369
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "middle",
+        "n": 530,
+        "top1": 0.022641509433962263
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "single",
+        "n": 9616,
+        "top1": 0.1127287853577371
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1338,
+        "top1": 0.08221225710014948
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1352,
+        "top1": 0.257396449704142
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 692,
+        "top1": 0.15606936416184972
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 0.0
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 352,
+        "top1": 0.02556818181818182
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 366,
+        "top1": 0.14207650273224043
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 483,
+        "top1": 0.2153209109730849
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.16483516483516483
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.31868131868131866
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.4
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3834,
+        "top1": 0.03051643192488263
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3948,
+        "top1": 0.15577507598784193
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 756,
+        "top1": 0.047619047619047616
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.0
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "first",
+        "n": 1096,
+        "top1": 0.010948905109489052
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "last",
+        "n": 1136,
+        "top1": 0.028169014084507043
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "middle",
+        "n": 510,
+        "top1": 0.00196078431372549
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "single",
+        "n": 9442,
+        "top1": 0.049248040669349714
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1323,
+        "top1": 0.03476946334089191
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1342,
+        "top1": 0.1736214605067064
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 688,
+        "top1": 0.07267441860465117
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 346,
+        "top1": 0.008670520231213872
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 359,
+        "top1": 0.06685236768802229
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 476,
+        "top1": 0.19957983193277312
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.06593406593406594
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.18681318681318682
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.32857142857142857
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3760,
+        "top1": 0.017287234042553192
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3855,
+        "top1": 0.12399481193255513
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 735,
+        "top1": 0.024489795918367346
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "first",
+        "n": 1061,
+        "top1": 0.005655042412818096
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "last",
+        "n": 1110,
+        "top1": 0.014414414414414415
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "middle",
+        "n": 496,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "single",
+        "n": 9254,
+        "top1": 0.026691160579208992
+      }
+    ],
+    "R3": [
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1356,
+        "top1": 0.5073746312684366
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1362,
+        "top1": 0.591776798825257
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 695,
+        "top1": 0.6892086330935252
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 1.0
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 364,
+        "top1": 0.32142857142857145
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 374,
+        "top1": 0.7406417112299465
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 500,
+        "top1": 0.562
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.5274725274725275
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.6043956043956044
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.8285714285714286
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 4016,
+        "top1": 0.33117529880478086
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 4139,
+        "top1": 0.541435129258275
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 814,
+        "top1": 0.6314496314496314
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.0
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "first",
+        "n": 1136,
+        "top1": 0.17517605633802816
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "last",
+        "n": 1207,
+        "top1": 0.6213753106876554
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "middle",
+        "n": 559,
+        "top1": 0.47584973166368516
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "single",
+        "n": 9783,
+        "top1": 0.3186139221097823
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1350,
+        "top1": 0.15777777777777777
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1357,
+        "top1": 0.37730287398673545
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 694,
+        "top1": 0.3400576368876081
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 0.0
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 359,
+        "top1": 0.0584958217270195
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 374,
+        "top1": 0.4304812834224599
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 490,
+        "top1": 0.2897959183673469
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.32967032967032966
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.46153846153846156
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.5714285714285714
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3924,
+        "top1": 0.07390417940876656
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 4050,
+        "top1": 0.2725925925925926
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 780,
+        "top1": 0.09358974358974359
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.2
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "first",
+        "n": 1116,
+        "top1": 0.026881720430107527
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "last",
+        "n": 1165,
+        "top1": 0.08412017167381974
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "middle",
+        "n": 530,
+        "top1": 0.03207547169811321
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "single",
+        "n": 9616,
+        "top1": 0.10638519134775375
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1338,
+        "top1": 0.07399103139013453
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1352,
+        "top1": 0.28476331360946744
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 692,
+        "top1": 0.13583815028901733
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 0.0
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 352,
+        "top1": 0.017045454545454544
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 366,
+        "top1": 0.12021857923497267
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 483,
+        "top1": 0.2484472049689441
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.15384615384615385
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.3076923076923077
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.38571428571428573
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3834,
+        "top1": 0.024517475221700575
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3948,
+        "top1": 0.17907801418439717
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 756,
+        "top1": 0.05026455026455026
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.0
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "first",
+        "n": 1096,
+        "top1": 0.010036496350364963
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "last",
+        "n": 1136,
+        "top1": 0.04225352112676056
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "middle",
+        "n": 510,
+        "top1": 0.00392156862745098
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "single",
+        "n": 9442,
+        "top1": 0.04575301842829909
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1323,
+        "top1": 0.026455026455026454
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1342,
+        "top1": 0.20864381520119224
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 688,
+        "top1": 0.07267441860465117
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 346,
+        "top1": 0.005780346820809248
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 359,
+        "top1": 0.04456824512534819
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 476,
+        "top1": 0.28781512605042014
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.04395604395604396
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.1978021978021978
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.2571428571428571
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3760,
+        "top1": 0.013829787234042552
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3855,
+        "top1": 0.1297016861219196
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 735,
+        "top1": 0.02857142857142857
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "first",
+        "n": 1061,
+        "top1": 0.008482563619227144
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "last",
+        "n": 1110,
+        "top1": 0.026126126126126126
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "middle",
+        "n": 496,
+        "top1": 0.0020161290322580645
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "single",
+        "n": 9254,
+        "top1": 0.022584828182407608
+      }
+    ],
+    "R6a": [
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1356,
+        "top1": 0.5073746312684366
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1362,
+        "top1": 0.593245227606461
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 695,
+        "top1": 0.6906474820143885
+      },
+      {
+        "head": 0,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 1.0
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 364,
+        "top1": 0.31868131868131866
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 374,
+        "top1": 0.7433155080213903
+      },
+      {
+        "head": 0,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 500,
+        "top1": 0.566
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.5274725274725275
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.6043956043956044
+      },
+      {
+        "head": 0,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.8285714285714286
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 4016,
+        "top1": 0.3304282868525896
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 4139,
+        "top1": 0.5407103165015704
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 814,
+        "top1": 0.6339066339066339
+      },
+      {
+        "head": 0,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.0
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "first",
+        "n": 1136,
+        "top1": 0.1742957746478873
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "last",
+        "n": 1207,
+        "top1": 0.623860811930406
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "middle",
+        "n": 559,
+        "top1": 0.4776386404293381
+      },
+      {
+        "head": 0,
+        "group_type": "single",
+        "position": "single",
+        "n": 9783,
+        "top1": 0.3184094858427885
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1350,
+        "top1": 0.18222222222222223
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1357,
+        "top1": 0.3522476050110538
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 694,
+        "top1": 0.33429394812680113
+      },
+      {
+        "head": 1,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 0.0
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 359,
+        "top1": 0.06685236768802229
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 374,
+        "top1": 0.44385026737967914
+      },
+      {
+        "head": 1,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 490,
+        "top1": 0.25918367346938775
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.31868131868131866
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.43956043956043955
+      },
+      {
+        "head": 1,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.5714285714285714
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3924,
+        "top1": 0.08384301732925586
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 4050,
+        "top1": 0.24790123456790122
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 780,
+        "top1": 0.08846153846153847
+      },
+      {
+        "head": 1,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.2
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "first",
+        "n": 1116,
+        "top1": 0.03136200716845878
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "last",
+        "n": 1165,
+        "top1": 0.08412017167381974
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "middle",
+        "n": 530,
+        "top1": 0.03018867924528302
+      },
+      {
+        "head": 1,
+        "group_type": "single",
+        "position": "single",
+        "n": 9616,
+        "top1": 0.11324875207986689
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1338,
+        "top1": 0.08968609865470852
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1352,
+        "top1": 0.2529585798816568
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 692,
+        "top1": 0.14884393063583815
+      },
+      {
+        "head": 2,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 0.0
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 352,
+        "top1": 0.019886363636363636
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 366,
+        "top1": 0.1366120218579235
+      },
+      {
+        "head": 2,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 483,
+        "top1": 0.2111801242236025
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.15384615384615385
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.31868131868131866
+      },
+      {
+        "head": 2,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.45714285714285713
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3834,
+        "top1": 0.030777256129368807
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3948,
+        "top1": 0.16540020263424518
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 756,
+        "top1": 0.051587301587301584
+      },
+      {
+        "head": 2,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.0
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "first",
+        "n": 1096,
+        "top1": 0.010036496350364963
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "last",
+        "n": 1136,
+        "top1": 0.04225352112676056
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "middle",
+        "n": 510,
+        "top1": 0.00392156862745098
+      },
+      {
+        "head": 2,
+        "group_type": "single",
+        "position": "single",
+        "n": 9442,
+        "top1": 0.050413048083033256
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "first",
+        "n": 1323,
+        "top1": 0.03552532123960695
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "last",
+        "n": 1342,
+        "top1": 0.1780923994038748
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "middle",
+        "n": 688,
+        "top1": 0.07848837209302326
+      },
+      {
+        "head": 3,
+        "group_type": "aux_chain",
+        "position": "single",
+        "n": 1,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "first",
+        "n": 346,
+        "top1": 0.005780346820809248
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "last",
+        "n": 359,
+        "top1": 0.06685236768802229
+      },
+      {
+        "head": 3,
+        "group_type": "compound_postposition",
+        "position": "middle",
+        "n": 476,
+        "top1": 0.25840336134453784
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "first",
+        "n": 91,
+        "top1": 0.054945054945054944
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "last",
+        "n": 91,
+        "top1": 0.18681318681318682
+      },
+      {
+        "head": 3,
+        "group_type": "light_verb",
+        "position": "middle",
+        "n": 70,
+        "top1": 0.3
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "first",
+        "n": 3760,
+        "top1": 0.020478723404255317
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "last",
+        "n": 3855,
+        "top1": 0.1245136186770428
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "middle",
+        "n": 735,
+        "top1": 0.0326530612244898
+      },
+      {
+        "head": 3,
+        "group_type": "postposition",
+        "position": "single",
+        "n": 5,
+        "top1": 0.0
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "first",
+        "n": 1061,
+        "top1": 0.005655042412818096
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "last",
+        "n": 1110,
+        "top1": 0.023423423423423424
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "middle",
+        "n": 496,
+        "top1": 0.0020161290322580645
+      },
+      {
+        "head": 3,
+        "group_type": "single",
+        "position": "single",
+        "n": 9254,
+        "top1": 0.024637994380808298
+      }
+    ]
+  },
+  "comparisons": {
+    "R3": {
+      "improved": [
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 90,
+          "token": "▁जंग",
+          "head": 1,
+          "target_idx": 92,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 59,
+          "target_group_id": 60
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 125,
+          "token": "▁उनकी",
+          "head": 1,
+          "target_idx": 127,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 82,
+          "target_group_id": 83
+        },
+        {
+          "sent_id": 4,
+          "text": "यह पूछने पर कि इस बड़े मैच से पहले उनकी नींद गायब हुई तो बाबर ने कहा, \"हम काफी टूर्नामेंट खेल चुके हैं, हमने चैम्पियंस ट्राफी में भी अच्छा किया था. हम इसे जितना सरल रखेंगे, उतना ही बेहतर होगा. इसमें सिर्फ बेसिक्स पर अडिग रहना होगा और साथ ही शांत चित्त बने रहना होगा. हमारी तैयारी हमारे हाथों में हैं और हमने अपना शत प्रतिशत दिया है. हमें मैच के दिन अच्छी क्रिकेट खेलने की उम्मीद है.\"",
+          "token_idx": 77,
+          "token": "▁क्रिकेट",
+          "head": 1,
+          "target_idx": 79,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 54,
+          "target_group_id": 55
+        },
+        {
+          "sent_id": 7,
+          "text": "बुधवार सुबह 10.30 बजे बड़ी संख्या में एबीवीपी के छात्र नेता कॉलेज के छात्रों को लेकर कलेक्टोरेट पहुंचे और जमकर नारेबाजी करने लगे। छात्र कलेक्टर से बात करने के लिए अड़े रहे, लेकिन कलेक्टर ने चेंबर में प्रतिनिधि मंडल से मुलाकात कर चर्चा करने की बात कही। इस बात से छात्र भड़क गए और जिला प्रशासन मुर्दाबाद के नारे लगाने लगे। मौके पर पहुंचे एसडीएम ने छात्रों को समझाने की कोशिश की, लेकिन छात्र मानने को तैयार नहीं थे। करीब दो घंटे तक कलेक्टोरेट के गेट पर धरने पर बैठे छात्रों ने आखिरकार प्रतिनिधिमंडल के रूप में जाकर कलेक्टर धनंजय देवांगन से मिलकर अपनी समस्याओं से अवगत कराया।",
+          "token_idx": 26,
+          "token": "▁बात",
+          "head": 1,
+          "target_idx": 28,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 20,
+          "target_group_id": 21
+        },
+        {
+          "sent_id": 7,
+          "text": "बुधवार सुबह 10.30 बजे बड़ी संख्या में एबीवीपी के छात्र नेता कॉलेज के छात्रों को लेकर कलेक्टोरेट पहुंचे और जमकर नारेबाजी करने लगे। छात्र कलेक्टर से बात करने के लिए अड़े रहे, लेकिन कलेक्टर ने चेंबर में प्रतिनिधि मंडल से मुलाकात कर चर्चा करने की बात कही। इस बात से छात्र भड़क गए और जिला प्रशासन मुर्दाबाद के नारे लगाने लगे। मौके पर पहुंचे एसडीएम ने छात्रों को समझाने की कोशिश की, लेकिन छात्र मानने को तैयार नहीं थे। करीब दो घंटे तक कलेक्टोरेट के गेट पर धरने पर बैठे छात्रों ने आखिरकार प्रतिनिधिमंडल के रूप में जाकर कलेक्टर धनंजय देवांगन से मिलकर अपनी समस्याओं से अवगत कराया।",
+          "token_idx": 56,
+          "token": "▁मुर्",
+          "head": 1,
+          "target_idx": 58,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 41,
+          "target_group_id": 41
+        },
+        {
+          "sent_id": 7,
+          "text": "बुधवार सुबह 10.30 बजे बड़ी संख्या में एबीवीपी के छात्र नेता कॉलेज के छात्रों को लेकर कलेक्टोरेट पहुंचे और जमकर नारेबाजी करने लगे। छात्र कलेक्टर से बात करने के लिए अड़े रहे, लेकिन कलेक्टर ने चेंबर में प्रतिनिधि मंडल से मुलाकात कर चर्चा करने की बात कही। इस बात से छात्र भड़क गए और जिला प्रशासन मुर्दाबाद के नारे लगाने लगे। मौके पर पहुंचे एसडीएम ने छात्रों को समझाने की कोशिश की, लेकिन छात्र मानने को तैयार नहीं थे। करीब दो घंटे तक कलेक्टोरेट के गेट पर धरने पर बैठे छात्रों ने आखिरकार प्रतिनिधिमंडल के रूप में जाकर कलेक्टर धनंजय देवांगन से मिलकर अपनी समस्याओं से अवगत कराया।",
+          "token_idx": 66,
+          "token": "▁ने",
+          "head": 1,
+          "target_idx": 68,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 47,
+          "target_group_id": 48
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 15,
+          "token": "प्रधानमंत्री",
+          "head": 2,
+          "target_idx": 18,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 9,
+          "target_group_id": 10
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 61,
+          "token": "▁उप",
+          "head": 2,
+          "target_idx": 64,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 37,
+          "target_group_id": 38
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 81,
+          "token": "▁के",
+          "head": 2,
+          "target_idx": 84,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 52,
+          "target_group_id": 54
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 97,
+          "token": "▁में",
+          "head": 2,
+          "target_idx": 100,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 62,
+          "target_group_id": 63
+        }
+      ],
+      "worse": [
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 36,
+          "token": "▁की",
+          "head": 1,
+          "target_idx": 38,
+          "correct": false,
+          "rank": 3,
+          "group_start": 0,
+          "group_id": 23,
+          "target_group_id": 25
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 98,
+          "token": "▁देवी",
+          "head": 1,
+          "target_idx": 100,
+          "correct": false,
+          "rank": 2,
+          "group_start": 1,
+          "group_id": 63,
+          "target_group_id": 63
+        },
+        {
+          "sent_id": 4,
+          "text": "यह पूछने पर कि इस बड़े मैच से पहले उनकी नींद गायब हुई तो बाबर ने कहा, \"हम काफी टूर्नामेंट खेल चुके हैं, हमने चैम्पियंस ट्राफी में भी अच्छा किया था. हम इसे जितना सरल रखेंगे, उतना ही बेहतर होगा. इसमें सिर्फ बेसिक्स पर अडिग रहना होगा और साथ ही शांत चित्त बने रहना होगा. हमारी तैयारी हमारे हाथों में हैं और हमने अपना शत प्रतिशत दिया है. हमें मैच के दिन अच्छी क्रिकेट खेलने की उम्मीद है.\"",
+          "token_idx": 36,
+          "token": "▁रख",
+          "head": 1,
+          "target_idx": 38,
+          "correct": false,
+          "rank": 2,
+          "group_start": 1,
+          "group_id": 27,
+          "target_group_id": 28
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 113,
+          "token": "▁दी",
+          "head": 2,
+          "target_idx": 116,
+          "correct": false,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 73,
+          "target_group_id": 75
+        },
+        {
+          "sent_id": 4,
+          "text": "यह पूछने पर कि इस बड़े मैच से पहले उनकी नींद गायब हुई तो बाबर ने कहा, \"हम काफी टूर्नामेंट खेल चुके हैं, हमने चैम्पियंस ट्राफी में भी अच्छा किया था. हम इसे जितना सरल रखेंगे, उतना ही बेहतर होगा. इसमें सिर्फ बेसिक्स पर अडिग रहना होगा और साथ ही शांत चित्त बने रहना होगा. हमारी तैयारी हमारे हाथों में हैं और हमने अपना शत प्रतिशत दिया है. हमें मैच के दिन अच्छी क्रिकेट खेलने की उम्मीद है.\"",
+          "token_idx": 68,
+          "token": "▁शत",
+          "head": 2,
+          "target_idx": 71,
+          "correct": false,
+          "rank": 2,
+          "group_start": 1,
+          "group_id": 47,
+          "target_group_id": 49
+        }
+      ]
+    },
+    "R6a": {
+      "improved": [
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 8,
+          "token": "राहे",
+          "head": 1,
+          "target_idx": 10,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 5,
+          "target_group_id": 6
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 54,
+          "token": "▁में",
+          "head": 1,
+          "target_idx": 56,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 33,
+          "target_group_id": 34
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 90,
+          "token": "▁जंग",
+          "head": 1,
+          "target_idx": 92,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 59,
+          "target_group_id": 60
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 125,
+          "token": "▁उनकी",
+          "head": 1,
+          "target_idx": 127,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 82,
+          "target_group_id": 83
+        },
+        {
+          "sent_id": 4,
+          "text": "यह पूछने पर कि इस बड़े मैच से पहले उनकी नींद गायब हुई तो बाबर ने कहा, \"हम काफी टूर्नामेंट खेल चुके हैं, हमने चैम्पियंस ट्राफी में भी अच्छा किया था. हम इसे जितना सरल रखेंगे, उतना ही बेहतर होगा. इसमें सिर्फ बेसिक्स पर अडिग रहना होगा और साथ ही शांत चित्त बने रहना होगा. हमारी तैयारी हमारे हाथों में हैं और हमने अपना शत प्रतिशत दिया है. हमें मैच के दिन अच्छी क्रिकेट खेलने की उम्मीद है.\"",
+          "token_idx": 77,
+          "token": "▁क्रिकेट",
+          "head": 1,
+          "target_idx": 79,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 54,
+          "target_group_id": 55
+        },
+        {
+          "sent_id": 5,
+          "text": "समाचार एजेंसी 'डीपीए' के अनुसार, उप गृह मंत्री पैट्रीकियो रोसेंडे ने कहा कि 76 लोगों के मरने की पुष्टि हो चुकी है। पिछले कई सालों से हमने इतना बड़ा हादसा नहीं देखा।",
+          "token_idx": 17,
+          "token": "डे",
+          "head": 1,
+          "target_idx": 19,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 7,
+          "target_group_id": 8
+        },
+        {
+          "sent_id": 7,
+          "text": "बुधवार सुबह 10.30 बजे बड़ी संख्या में एबीवीपी के छात्र नेता कॉलेज के छात्रों को लेकर कलेक्टोरेट पहुंचे और जमकर नारेबाजी करने लगे। छात्र कलेक्टर से बात करने के लिए अड़े रहे, लेकिन कलेक्टर ने चेंबर में प्रतिनिधि मंडल से मुलाकात कर चर्चा करने की बात कही। इस बात से छात्र भड़क गए और जिला प्रशासन मुर्दाबाद के नारे लगाने लगे। मौके पर पहुंचे एसडीएम ने छात्रों को समझाने की कोशिश की, लेकिन छात्र मानने को तैयार नहीं थे। करीब दो घंटे तक कलेक्टोरेट के गेट पर धरने पर बैठे छात्रों ने आखिरकार प्रतिनिधिमंडल के रूप में जाकर कलेक्टर धनंजय देवांगन से मिलकर अपनी समस्याओं से अवगत कराया।",
+          "token_idx": 26,
+          "token": "▁बात",
+          "head": 1,
+          "target_idx": 28,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 20,
+          "target_group_id": 21
+        },
+        {
+          "sent_id": 7,
+          "text": "बुधवार सुबह 10.30 बजे बड़ी संख्या में एबीवीपी के छात्र नेता कॉलेज के छात्रों को लेकर कलेक्टोरेट पहुंचे और जमकर नारेबाजी करने लगे। छात्र कलेक्टर से बात करने के लिए अड़े रहे, लेकिन कलेक्टर ने चेंबर में प्रतिनिधि मंडल से मुलाकात कर चर्चा करने की बात कही। इस बात से छात्र भड़क गए और जिला प्रशासन मुर्दाबाद के नारे लगाने लगे। मौके पर पहुंचे एसडीएम ने छात्रों को समझाने की कोशिश की, लेकिन छात्र मानने को तैयार नहीं थे। करीब दो घंटे तक कलेक्टोरेट के गेट पर धरने पर बैठे छात्रों ने आखिरकार प्रतिनिधिमंडल के रूप में जाकर कलेक्टर धनंजय देवांगन से मिलकर अपनी समस्याओं से अवगत कराया।",
+          "token_idx": 28,
+          "token": "▁के",
+          "head": 1,
+          "target_idx": 30,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 21,
+          "target_group_id": 22
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 61,
+          "token": "▁उप",
+          "head": 2,
+          "target_idx": 64,
+          "correct": true,
+          "rank": 1,
+          "group_start": 1,
+          "group_id": 37,
+          "target_group_id": 38
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 97,
+          "token": "▁में",
+          "head": 2,
+          "target_idx": 100,
+          "correct": true,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 62,
+          "target_group_id": 63
+        }
+      ],
+      "worse": [
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 36,
+          "token": "▁की",
+          "head": 1,
+          "target_idx": 38,
+          "correct": false,
+          "rank": 2,
+          "group_start": 0,
+          "group_id": 23,
+          "target_group_id": 25
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 56,
+          "token": "▁हो",
+          "head": 1,
+          "target_idx": 58,
+          "correct": false,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 34,
+          "target_group_id": 34
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 51,
+          "token": "▁केन्द्र",
+          "head": 2,
+          "target_idx": 54,
+          "correct": false,
+          "rank": 2,
+          "group_start": 1,
+          "group_id": 32,
+          "target_group_id": 33
+        },
+        {
+          "sent_id": 1,
+          "text": "इनेलो 1987 में उस वक्त ऐसे ही दोराहे पर खड़ी थी, जब पूर्व उपप्रधानमंत्री देवीलाल ने अपने पुत्र ओमप्रकाश चौटाला को अपना राजनीतिक उत्तराधिकारी घोषित किया था। हालांकि तब पार्टी पर देवीलाल की मजबूत पकड़ के चलते पार्टी टूटने से बच गई थी। 1989 में देवीलाल केन्द्र की राजनीति में सक्रिय हो गए थे और उनके उपप्रधानमंत्री बनने के पश्चात् उनके तीन बेटों जगदीश सिंह, रणजीत सिंह और ओमप्रकाश चौटाला में से रणजीत और ओमप्रकाश के बीच हरियाणा में उनकी राजनीतिक विरासत को लेकर जंग शुरू हो गई थी। उन परिस्थितियों में देवीलाल ने कड़ा निर्णय लेते हुए पार्टी की बागडोर ओमप्रकाश चौटाला के हवाले कर दी थी, जिसके बाद रणजीत की बगावत का असर पार्टी, संगठन और उनकी सरकार पर भी पड़ा था। उस समय रणजीत की नाराजगी के चलते उनके समर्थन में कई कैबिनेट मंत्रियों ने इस्तीफे दे दिए थे किन्तु तब पार्टी सुप्रीमो चौ. देवीलाल की हरियाणा की जनता पर इतनी मजबूत पकड़ थी कि ओमप्रकाश चौटाला को उत्तराधिकारी बनाने के उनके फैसले का जनता के बीच कोई खास विरोध नहीं हुआ था लेकिन आज स्थिति बिल्कुल विपरीत है। ओमप्रकाश चौटाला पिछले काफी समय से जेल में हैं और जेल में रहते पार्टी के साथ-साथ परिवार पर भी उनकी पकड़ काफी ढ़ीली हो गई है, इसी कारण उनमें अब देवीलाल जैसा वो सामर्थ्य नजर नहीं आता कि वे अपने फैसलों को बगैर किसी प्रतिरोध के लागू करा सकें।",
+          "token_idx": 94,
+          "token": "▁थी।",
+          "head": 2,
+          "target_idx": 97,
+          "correct": false,
+          "rank": 1,
+          "group_start": 0,
+          "group_id": 60,
+          "target_group_id": 62
+        },
+        {
+          "sent_id": 3,
+          "text": "इसके बाद केंद्र की ओर से प्रदेश सरकार को पीएमजीएसवाई में 200 करोड़ रुपये की राशि उपलब्ध करा दी गई। भाजपा के मीडिया प्रभारी दिवाकर सिंह ने शनिवार को बताया कि केंद्र ने प्रदेश सरकार को 200 करोड़ रुपये भेजा है।",
+          "token_idx": 33,
+          "token": "▁केंद्र",
+          "head": 2,
+          "target_idx": 36,
+          "correct": false,
+          "rank": 2,
+          "group_start": 1,
+          "group_id": 20,
+          "target_group_id": 22
+        }
+      ]
+    }
+  },
+  "examples": null
+}

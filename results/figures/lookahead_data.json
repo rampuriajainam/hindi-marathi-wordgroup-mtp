@@ -1,0 +1,79 @@
+{
+ "run": "R7s",
+ "dataset": "indiccorp_eval",
+ "sent_id": 46,
+ "text": "इन पदों के लिए आवेदन की प्रक्रिया 5 दिसंबर से शुरू हो गई है।",
+ "tokens": [
+  {
+   "tok": "▁इन",
+   "ahead": null,
+   "group": 0
+  },
+  {
+   "tok": "▁पदों",
+   "ahead": 0,
+   "group": 1
+  },
+  {
+   "tok": "▁के",
+   "ahead": 0,
+   "group": 1
+  },
+  {
+   "tok": "▁लिए",
+   "ahead": 2,
+   "group": 2
+  },
+  {
+   "tok": "▁आवेदन",
+   "ahead": 3,
+   "group": 3
+  },
+  {
+   "tok": "▁की",
+   "ahead": 0,
+   "group": 3
+  },
+  {
+   "tok": "▁प्रक्रिया",
+   "ahead": 1,
+   "group": 4
+  },
+  {
+   "tok": "▁5",
+   "ahead": 0,
+   "group": 5
+  },
+  {
+   "tok": "▁दिसंबर",
+   "ahead": 0,
+   "group": 6
+  },
+  {
+   "tok": "▁से",
+   "ahead": 3,
+   "group": 6
+  },
+  {
+   "tok": "▁शुरू",
+   "ahead": 3,
+   "group": 7
+  },
+  {
+   "tok": "▁हो",
+   "ahead": 2,
+   "group": 7
+  },
+  {
+   "tok": "▁गई",
+   "ahead": 3,
+   "group": 7
+  },
+  {
+   "tok": "▁है।",
+   "ahead": 4,
+   "group": 7
+  }
+ ],
+ "rule": "sentence of 14-22 tokens with the highest share predicted >= 2 ahead"
+}

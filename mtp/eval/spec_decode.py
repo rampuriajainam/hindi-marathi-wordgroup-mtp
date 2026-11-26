@@ -1,0 +1,509 @@
+"""
+Self-speculative decoding with the MTP heads (OM-6, INTERFACES §11).
+
+Every step, at the last position of the sequence so far:
+  1. head 0's argmax is the next greedy token t0 (always kept);
+  2. heads 1..n propose drafts d1..dn (greedy argmax), n chosen by the draft policy;
+  3. ONE forward pass over [t0, d1..dn] (with the KV cache: only those tokens);
+  4. head 0 verifies left to right: d_i is accepted while head 0's argmax after the previous
+     token equals it. Accepted tokens are emitted, the cache is rolled back past the rejected
+     ones, and the logits at the last accepted token seed the next step.
+Every emitted token is head 0's greedy choice, so the output is identical to greedy decoding
+with head 0 (tested exactly); only the number of forward passes changes. Exception: a policy with
+`accept_eps` (mtp/eval/typical.py) accepts drafts head 0 finds plausible, not only its argmax (lossy).
+
+Greedy reference = the base LM alone (model.base_model) with a KV cache, so its timing does not
+pay for the extra heads.
+
+Group Integrity: of the accepted spans with >= 2 tokens, the share that end on a word-group
+boundary (the next token starts a new group). Spans that end the generation are not counted.
+"""
+
+import contextlib
+import random
+import time
+
+import torch
+
+from mtp.data.grouping.align import _group_start_chars, _labels
+
+
+def _sync(device):
+    if device.type == "cuda":
+        torch.cuda.synchronize(device)
+
+
+def _crop(cache, n_remove):
+    """Drop the last n_remove positions. Negative = "remove n" in every transformers version
+    (in 5.18 a positive value is the deprecated "final length")."""
+    if n_remove > 0:
+        cache.crop(-n_remove)
+
+
+def context_cache(model, hidden_rows):
+    """A ContextCache filled with `hidden_rows` [T, H] for models with context attention (seq_ctx), else None."""
+    if not getattr(model, "uses_context", False):
+        return None
+    from mtp.model.ctx_heads import ContextCache
+
+    cache = ContextCache()
+    cache.append(*model.ctx_project(hidden_rows))
+    return cache
+
+
+def _step_state(out, pos, tokenizer, grouper, step):
+    bl = out.aux.get("boundary_logits")
+    return {"boundary_logits": [float(b[0, pos]) for b in bl] if bl is not None else None,
+            "tokenizer": tokenizer, "grouper": grouper, "step": step}
+
+
+def _no_eos(logits, eos):
+    """logits with the EOS column at -inf (ignore_eos), else unchanged; works on [V] and [n, V]."""
+    if eos is None:
+        return logits
+    logits = logits.clone()
+    logits[..., eos] = float("-inf")
+    return logits
+
+
+@torch.no_grad()
+def generate(model, tokenizer, prompt_ids, max_new_tokens, policy, grouper=None, *, use_cache=True, amp=None,
+             ignore_eos=False):
+    """Returns (generated ids, stats). Output == greedy decoding with head 0.
+    ignore_eos: head 0 never picks EOS (masked in the verifier as in greedy_generate), so decoding runs
+    to max_new_tokens: for models that stop after one sentence (frozen instruct Misal-1B).
+
+    stats: tokens, forward_passes (incl. the prompt pass), steps, mean_accepted_len (tokens/step),
+    proposed / accepted per extra head, seconds, tokens_per_sec, gi_hits / gi_spans (Group
+    Integrity counts; 0/0 without a grouper), spans (tokens emitted per step)."""
+    device = next(model.parameters()).device
+    amp = amp or contextlib.nullcontext
+    k = model.num_heads
+    ban = tokenizer.eos_token_id if ignore_eos else None
+    eos = None if ignore_eos else tokenizer.eos_token_id      # None: never stop early
+    seq_heads = getattr(model, "head_type", None) == "seq"   # drafts from draft_chain; verify passes skip the heads
+    fwd = {"extra_heads": False} if seq_heads else {}
+    seq = [int(t) for t in prompt_ids]
+    new, spans = [], []
+    proposed, accepted = [0] * (k - 1), [0] * (k - 1)
+    passes = steps = 0
+    eps = getattr(policy, "accept_eps", None)              # set: typical acceptance (lossy)
+    if eps is not None:
+        from mtp.eval.typical import typical_accepts
+
+    _sync(device)
+    t_start = time.perf_counter()
+    with amp():
+        out = model(torch.tensor([seq], device=device), use_cache=use_cache, **fwd)
+        passes += 1
+        cache = out.aux.get("past_key_values")
+        ctx = context_cache(model, out.hidden[0])         # seq_ctx heads: projected hidden states of the context
+        pos = -1                                   # index (in out's positions) of the last emitted token
+        while len(new) < max_new_tokens:
+            last = [lg[0, pos] for lg in out.logits]
+            t0 = int(_no_eos(last[0], ban).argmax())
+            if seq_heads:
+                chain, chain_logits = model.draft_chain(out.hidden[0, pos], t0, k - 1, return_logits=True,
+                                                        **({"ctx": ctx} if ctx is not None else {}))
+                last = last[:1] + chain_logits
+            n = policy.num_draft_tokens(last, torch.tensor(seq), _step_state(out, pos, tokenizer, grouper, steps))
+            n = max(0, min(int(n), k - 1, max_new_tokens - len(new) - 1))
+            if t0 == eos:
+                n = 0
+            drafts = chain[:n] if seq_heads else [int(last[d].argmax()) for d in range(1, n + 1)]
+            block = [t0] + drafts
+
+            if n == 0 and (t0 == eos or len(new) + 1 >= max_new_tokens):
+                new.append(t0)                     # last token: no verification pass needed
+                spans.append(1)
+                steps += 1
+                break
+
+            inp = block if use_cache else seq + block
+            out = model(torch.tensor([inp], device=device), past_key_values=cache, use_cache=use_cache, **fwd)
+            passes += 1
+            head0 = _no_eos(out.logits[0][0, -len(block):], ban)  # row i predicts the token after block[i]
+            j = 0
+            if eps is None:
+                while j < n and int(head0[j].argmax()) == drafts[j]:
+                    j += 1
+            else:                                  # typical acceptance (lossy, mtp/eval/typical.py)
+                while j < n and typical_accepts(head0[j], drafts[j], eps, getattr(policy, "accept_delta", None)):
+                    j += 1
+            for d in range(n):
+                proposed[d] += 1
+                accepted[d] += d < j
+            emitted = block[: 1 + j]
+            if eos in emitted:
+                emitted = emitted[: emitted.index(eos) + 1]
+            if ctx is not None:
+                ctx.append(*model.ctx_project(out.hidden[0, -len(block):][: len(emitted)]))
+            seq += emitted
+            new += emitted
+            spans.append(len(emitted))
+            steps += 1
+            pos = -len(block) + j
+            if use_cache:
+                cache = out.aux["past_key_values"]
+                _crop(cache, n - j)
+            if new[-1] == eos:
+                break
+    _sync(device)
+    seconds = time.perf_counter() - t_start
+
+    gi_hits, gi_spans = group_integrity_counts(prompt_ids, new, spans, tokenizer, grouper)
+    return new, {
+        "tokens": len(new), "forward_passes": passes, "steps": steps,
+        "mean_accepted_len": len(new) / max(steps, 1),
+        "proposed": proposed, "accepted": accepted,
+        "seconds": seconds, "tokens_per_sec": len(new) / seconds if seconds > 0 else 0.0,
+        "gi_hits": gi_hits, "gi_spans": gi_spans, "spans": spans,
+    }
+
+
+@torch.no_grad()
+def greedy_generate(model, tokenizer, prompt_ids, max_new_tokens, *, use_cache=True, amp=None, ignore_eos=False,
+                    sample=None, sample_seed=0, penalty=None):
+    """Plain greedy decoding with head 0 = the base LM (model.base_model). Returns (ids, stats);
+    stats["margins"][i] = top-1 minus top-2 logit when token i was chosen (small = a near-tie).
+    ignore_eos: EOS is masked, so the output always has max_new_tokens tokens.
+    sample = (temperature, top_p): plain sampling instead, token i drawn with the i-th uniform of
+    sample_seed (mtp/eval/sampling.py): the reference for generate_tree's sampling mode.
+    penalty = r: repetition-penalised greedy (mtp/eval/penalty.py), the reference for its tree mode."""
+    if sample is not None and penalty is not None:
+        raise ValueError("greedy_generate: sample and penalty cannot be combined")
+    device = next(model.parameters()).device
+    amp = amp or contextlib.nullcontext
+    base = model.base_model
+    ban = tokenizer.eos_token_id if ignore_eos else None
+    eos = None if ignore_eos else tokenizer.eos_token_id
+    seq = [int(t) for t in prompt_ids]
+    new, margins, passes = [], [], 0
+    if sample is not None:
+        from mtp.eval.sampling import position_uniforms, sample_token
+
+        u = position_uniforms(sample_seed, max_new_tokens)
+    _sync(device)
+    t_start = time.perf_counter()
+    with amp():
+        out = base(input_ids=torch.tensor([seq], device=device), use_cache=use_cache)
+        passes += 1
+        while True:
+            logits = _no_eos(out.logits[0, -1].float(), ban)
+            if penalty is not None:
+                from mtp.eval.penalty import apply_penalty
+
+                logits = apply_penalty(logits, seq, penalty)
+            top2 = logits.topk(2)
+            t = int(top2.indices[0]) if sample is None else sample_token(logits, u[len(new)], *sample)
+            margins.append(float(top2.values[0] - top2.values[1]))
+            new.append(t)
+            seq.append(t)
+            if t == eos or len(new) >= max_new_tokens:
+                break
+            inp = [t] if use_cache else seq
+            out = base(input_ids=torch.tensor([inp], device=device),
+                       past_key_values=out.past_key_values if use_cache else None, use_cache=use_cache)
+            passes += 1
+    _sync(device)
+    seconds = time.perf_counter() - t_start
+    return new, {"tokens": len(new), "forward_passes": passes, "seconds": seconds,
+                 "tokens_per_sec": len(new) / seconds if seconds > 0 else 0.0, "margins": margins}
+
+
+def token_group_ids(ids, tokenizer, grouper):
+    """Word-group id per token of `ids`, grouping the decoded text exactly as align.py does.
+
+    Token char spans come from re-tokenizing the decoded text when that gives back the same ids
+    (the training path: offset_mapping); otherwise from incremental decoding (a '▁word' span then
+    also includes its leading space)."""
+    ids = [int(t) for t in ids]
+    text = tokenizer.decode(ids, skip_special_tokens=True)
+    if not text.split():
+        return [-1] * len(ids)
+    enc = tokenizer(text, return_offsets_mapping=True)
+    if list(enc["input_ids"]) == ids:
+        offsets = [tuple(o) for o in enc["offset_mapping"]]
+    else:
+        ends = [len(tokenizer.decode(ids[: i + 1], skip_special_tokens=True)) for i in range(len(ids))]
+        offsets = [(ends[i - 1] if i else 0, ends[i]) for i in range(len(ids))]
+    return _labels(offsets, _group_start_chars(text, grouper))[1]
+
+
+def group_integrity_counts(prompt_ids, new, spans, tokenizer, grouper):
+    """(spans of >= 2 accepted tokens that end on a group boundary, such spans counted)."""
+    if grouper is None:
+        return 0, 0
+    full = [int(t) for t in prompt_ids] + list(new)
+    gid = token_group_ids(full, tokenizer, grouper)
+    hits = total = 0
+    i = len(prompt_ids)
+    for s in spans:
+        end = i + s                        # index of the token after the span
+        if s >= 2 and end < len(full):     # spans that end the generation are not judged
+            last, nxt = gid[end - 1], gid[end]
+            if last >= 0 and nxt >= 0:
+                total += 1
+                hits += nxt != last
+        i = end
+    return hits, total
+
+
+def rescore_group_integrity(entry, tokenizer, grouper):
+    """Group Integrity of a §10 spec_decode entry re-scored with another grouper, from its stored
+    per_prompt prompt_ids / ids / spans (no decoding). Returns {"group_integrity", "gi_hits", "gi_spans"}
+    with per-prompt lists, in the same layout as the entry's own per_prompt."""
+    pp = entry["per_prompt"]
+    hits, spans = [], []
+    for prompt_ids, ids, sp in zip(pp["prompt_ids"], pp["ids"], pp["spans"]):
+        h, n = group_integrity_counts(prompt_ids, ids, sp, tokenizer, grouper)
+        hits.append(h)
+        spans.append(n)
+    return {"group_integrity": sum(hits) / sum(spans) if sum(spans) else None, "gi_hits": hits, "gi_spans": spans}
+
+
+def make_prompts(texts, tokenizer, n=200, min_words=8, max_words=16, seed=0):
+    """Prompts = the first 8-16 words (seeded per sentence) of the first n sentences that are long
+    enough to leave a continuation. Returns token id lists."""
+    rng = random.Random(seed)
+    prompts = []
+    for text in texts:
+        words = text.split()
+        w = rng.randint(min_words, max_words)
+        if len(words) <= w:
+            continue
+        prompts.append(list(tokenizer(" ".join(words[:w]))["input_ids"]))
+        if len(prompts) >= n:
+            break
+    return prompts
+
+
+def first_divergence(a, b):
+    """Index of the first position where token lists a and b differ (None if identical)."""
+    for i, (x, y) in enumerate(zip(a, b)):
+        if x != y:
+            return i
+    return None if len(a) == len(b) else min(len(a), len(b))
+
+
+def evaluate_spec_decode(model, tokenizer, prompts, policies, max_new_tokens=64, grouper=None,
+                         use_cache=True, amp=None, warmup=1, log_every=0, fp32_check_n=20, ignore_eos=False):
+    """One INTERFACES §10 spec_decode entry per policy, over the same prompts. Greedy runs once.
+
+    Besides outputs_match_greedy (every prompt identical), each entry reports match_rate (share of
+    prompts identical) and max_mismatch_margin (largest greedy top-2 logit margin at a point where
+    the outputs diverged: tiny values mean low-precision rounding flipped a near-tie). With amp
+    (e.g. fp16 autocast over fp32 weights, Kaggle T4), fp32_check re-runs the first fp32_check_n
+    prompts with amp off; there the outputs must be identical, or the engine has a bug.
+    per_prompt holds each prompt's tokens, steps, gi_hits, gi_spans and match (same order as prompts),
+    so accepted length and Group Integrity can be bootstrapped over prompts (paired across runs: the
+    prompts are the same for every run on a dataset), plus prompt_ids, the generated ids and the
+    accepted span lengths, so GI can be re-scored with any grouper (rescore_group_integrity).
+    log_every > 0 prints progress every that many prompts (long Kaggle runs). ignore_eos masks EOS
+    for head 0 in greedy and in every policy (see generate).
+    A sampling-mode tree policy (policy.sample, SampledTree) is compared with plain sampling of the same
+    (T, top_p), seed = prompt index, instead of greedy: match / match_rate / fp32_check / greedy_tokens_per_sec
+    / speedup then refer to that reference (entry field "baseline": "sample_<T>_<top_p>"; it runs once per
+    setting; max_mismatch_margin is null there). Lossy tree policies (accept_eps) also get lossy_accepts,
+    the accepted drafts that were not head 0's argmax."""
+    t_start = time.perf_counter()
+
+    def progress(what, i):
+        if log_every and (i % log_every == 0 or i == len(prompts)):
+            print(f"  [{time.perf_counter() - t_start:7.0f}s] {what}: {i}/{len(prompts)} prompts", flush=True)
+
+    model.eval()
+    for p in prompts[:warmup]:                      # CUDA kernels / allocator warm-up, not timed
+        greedy_generate(model, tokenizer, p, 8, use_cache=use_cache, amp=amp, ignore_eos=ignore_eos)
+    check_prompts = prompts[:fp32_check_n] if amp is not None else []
+    refs, walls = {}, {}        # walls: epoch-time window of each timed loop (to align an external power log)
+
+    def reference(sample):
+        """(ids, margins, tokens/s, fp32 check refs) of plain decoding: greedy (sample None), plain
+        sampling with that (T, top_p) and seed = prompt index, or ("rp", r) = repetition-penalised greedy.
+        Each runs once, shared by its policies."""
+        if sample not in refs:
+            if sample is None:
+                kw = lambda i: {}
+            elif sample[0] == "rp":
+                kw = lambda i: {"penalty": sample[1]}
+            else:
+                kw = lambda i: {"sample": sample, "sample_seed": i}
+            ref_ids, margins, n_tok, secs = [], [], 0, 0.0
+            walls[sample] = [time.time(), None]
+            for i, p in enumerate(prompts, 1):
+                ids, st = greedy_generate(model, tokenizer, p, max_new_tokens, use_cache=use_cache, amp=amp,
+                                          ignore_eos=ignore_eos, **kw(i - 1))
+                progress(baseline_name(sample), i)
+                ref_ids.append(ids)
+                margins.append(st["margins"] if sample is None or sample[0] == "rp" else [])   # none for sampling
+                n_tok += st["tokens"]
+                secs += st["seconds"]
+            walls[sample][1] = time.time()
+            check = [greedy_generate(model, tokenizer, p, max_new_tokens, use_cache=use_cache, ignore_eos=ignore_eos,
+                                     **kw(i)) for i, p in enumerate(check_prompts)]
+            refs[sample] = ref_ids, margins, n_tok / secs if secs > 0 else 0.0, check
+        return refs[sample]
+
+    reference(None)                                 # greedy first, as before (timing order)
+
+    results = []
+    k = model.num_heads
+    from mtp.eval.tree_decode import generate_tree
+
+    for policy in policies:
+        decode = generate_tree if hasattr(policy, "tree") else generate   # TreePolicy -> tree verification
+        sample = getattr(policy, "sample", None)    # sampling mode: the reference is plain sampling, not greedy
+        if getattr(policy, "penalty", None) is not None:
+            sample = ("rp", policy.penalty)         # penalty mode: the reference is penalised greedy
+        greedy_ids, greedy_margins, greedy_tps, check_ref = reference(sample)
+        seed = (lambda i: {"sample_seed": i}) if sample is not None and sample[0] != "rp" else (lambda i: {})
+        lossy = 0
+        tree_nodes = []
+        tokens = steps = hits = spans = n_match = 0
+        secs = 0.0
+        prop, acc = [0] * (k - 1), [0] * (k - 1)
+        div_margins = []
+        per_prompt = {"tokens": [], "steps": [], "gi_hits": [], "gi_spans": [], "match": [],
+                      "prompt_ids": [], "ids": [], "spans": []}
+        wall0 = time.time()
+        for i, (p, ref) in enumerate(zip(prompts, greedy_ids), 1):
+            ids, st = decode(model, tokenizer, p, max_new_tokens, policy, grouper, use_cache=use_cache, amp=amp,
+                               ignore_eos=ignore_eos, **seed(i - 1))
+            progress(policy.name, i)
+            d = first_divergence(ids, ref)
+            if d is None:
+                n_match += 1
+            elif d < len(greedy_margins[i - 1]):
+                div_margins.append(greedy_margins[i - 1][d])
+            lossy += st.get("lossy_accepts", 0)
+            tokens += st["tokens"]
+            steps += st["steps"]
+            secs += st["seconds"]
+            hits += st["gi_hits"]
+            spans += st["gi_spans"]
+            prop = [a + b for a, b in zip(prop, st["proposed"])]
+            acc = [a + b for a, b in zip(acc, st["accepted"])]
+            for key in ("tokens", "steps", "gi_hits", "gi_spans"):
+                per_prompt[key].append(int(st[key]))
+            per_prompt["match"].append(d is None)
+            per_prompt["prompt_ids"].append([int(t) for t in p])
+            per_prompt["ids"].append([int(t) for t in ids])
+            per_prompt["spans"].append([int(x) for x in st["spans"]])
+            tree_nodes += st.get("nodes", [])
+        wall = [wall0, time.time()]
+        fp32_check = None
+        if check_prompts:
+            same, check_margins = 0, []
+            for i, (p, (ref, ref_st)) in enumerate(zip(check_prompts, check_ref)):
+                d = first_divergence(decode(model, tokenizer, p, max_new_tokens, policy, grouper,
+                                              use_cache=use_cache, ignore_eos=ignore_eos, **seed(i))[0], ref)
+                if d is None:
+                    same += 1
+                elif (sample is None or sample[0] == "rp") and d < len(ref_st["margins"]):
+                    check_margins.append(ref_st["margins"][d])
+            fp32_check = {"n_prompts": len(check_prompts), "match_rate": same / len(check_prompts),
+                          "outputs_match_greedy": same == len(check_prompts),
+                          "max_mismatch_margin": max(check_margins) if check_margins else None}
+        tps = tokens / secs if secs > 0 else 0.0
+        results.append({
+            "policy": policy.name,
+            "mean_accepted_len": tokens / max(steps, 1),
+            "accept_rate_per_head": [a / q if q else None for a, q in zip(acc, prop)],
+            "tokens_per_sec": tps, "greedy_tokens_per_sec": greedy_tps,
+            "speedup": tps / greedy_tps if greedy_tps > 0 else None,
+            "outputs_match_greedy": n_match == len(prompts),
+            "match_rate": n_match / len(prompts) if prompts else None,
+            "max_mismatch_margin": max(div_margins) if div_margins else None,
+            "fp32_check": fp32_check,
+            "group_integrity": hits / spans if spans else None,
+            "n_prompts": len(prompts),
+            "mean_new_tokens": tokens / len(prompts) if prompts else None,
+            "ignore_eos": bool(ignore_eos),
+            "wall": wall, "greedy_wall": walls.get(sample),
+            "per_prompt": per_prompt,
+            **({"mean_tree_nodes": sum(tree_nodes) / len(tree_nodes) if tree_nodes else 0.0} if hasattr(policy, "tree") else {}),
+            **({"lossy_accepts": lossy} if hasattr(policy, "tree") and getattr(policy, "accept_eps", None) is not None else {}),
+            **({"baseline": baseline_name(sample)} if sample is not None else {}),
+        })
+    return results
+
+
+def baseline_name(sample):
+    """The plain-decoding reference of a spec_decode entry: "greedy", "sample_<T>_<top_p>" for sampling mode, or
+    "greedy_rp<r>" for the repetition-penalty mode."""
+    if sample is None:
+        return "greedy"
+    if sample[0] == "rp":
+        return f"greedy_rp{sample[1]:g}"
+    return f"sample_{sample[0]:g}_{sample[1]:g}"
+
+
+@torch.no_grad()
+def bench_verify_pass(model, prefix_ids, sizes=(1, 4, 8, 16, 25, 32, 64), repeats=20, warmup=3, amp=None, seed=0):
+    """Wall-clock of ONE verification pass as a function of how many new positions it scores
+    (chain drafts or tree nodes), on top of a cached prefix: the full MTPModel forward (all heads),
+    then the cache is rolled back. Also times greedy's single-token base-LM pass for reference.
+
+    Returns {"prefix_len", "greedy_ms", "passes": [{"positions", "ms", "ms_p90", "x_greedy"}], "head_type",
+    "draft_ms"}, medians over `repeats`. A tree pass also needs a custom attention mask; its cost is close
+    to the causal one. Sequential heads (head_type "seq") verify with head 0 only (extra_heads=False, as
+    generate() does) and draft separately: draft_ms = one draft_chain of k-1 steps, so a decoding step
+    costs about ms + draft_ms (draft_ms is None for parallel heads, whose drafts come with the pass)."""
+    device = next(model.parameters()).device
+    amp = amp or contextlib.nullcontext
+    gen = torch.Generator().manual_seed(seed)
+    vocab = model.base_model.get_output_embeddings().out_features
+    prefix = torch.tensor([list(prefix_ids)], device=device)
+    seq_heads = getattr(model, "head_type", None) == "seq"
+    fwd = {"extra_heads": False} if seq_heads else {}
+
+    def timed(fn, n_rep):
+        times = []
+        for _ in range(n_rep):
+            _sync(device)
+            t0 = time.perf_counter()
+            fn()
+            _sync(device)
+            times.append(1000 * (time.perf_counter() - t0))
+        times.sort()
+        return times[len(times) // 2], times[min(len(times) - 1, int(0.9 * len(times)))]
+
+    with amp():
+        out = model(prefix, use_cache=True, **fwd)
+        cache = out.aux["past_key_values"]
+        base_out = model.base_model(input_ids=prefix, use_cache=True)
+        base_cache = base_out.past_key_values
+
+        def greedy_pass():
+            tok = torch.randint(0, vocab, (1, 1), generator=gen).to(device)
+            model.base_model(input_ids=tok, past_key_values=base_cache, use_cache=True)
+            _crop(base_cache, 1)
+
+        timed(greedy_pass, warmup)
+        greedy_ms, _ = timed(greedy_pass, repeats)
+
+        passes = []
+        for n in sizes:
+            def verify_pass(n=n):
+                toks = torch.randint(0, vocab, (1, n), generator=gen).to(device)
+                model(toks, past_key_values=cache, use_cache=True, **fwd)
+                _crop(cache, n)
+
+            timed(verify_pass, warmup)
+            ms, p90 = timed(verify_pass, repeats)
+            passes.append({"positions": n, "ms": ms, "ms_p90": p90, "x_greedy": ms / greedy_ms if greedy_ms else None})
+
+        draft_ms = None
+        if seq_heads:
+            h = out.hidden[0, -1]
+            bench_ctx = context_cache(model, out.hidden[0])
+
+            def draft():
+                model.draft_chain(h, int(torch.randint(0, vocab, (1,), generator=gen)), model.num_heads - 1,
+                                  **({"ctx": bench_ctx} if bench_ctx is not None else {}))
+
+            timed(draft, warmup)
+            draft_ms, _ = timed(draft, repeats)
+    return {"prefix_len": prefix.shape[1], "greedy_ms": greedy_ms, "passes": passes,
+            "head_type": getattr(model, "head_type", None), "draft_ms": draft_ms}

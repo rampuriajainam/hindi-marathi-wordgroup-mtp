@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Lookahead heatmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600&display=block" rel="stylesheet">
+<style>
+@page { size: 180mm 48mm; margin: 0 }
+body { margin: 6mm 5mm; background:#ffffff; font-family:'Noto Sans Devanagari','Nirmala UI',sans-serif; color:#0b0b0b }
+.sent { display:flex; flex-wrap:wrap; align-items:flex-end; row-gap:10px; column-gap:7px; font-size:15px }
+.g { display:inline-flex; gap:2px; padding-top:7px; position:relative }
+.grp { border-top:2px solid #52514e }
+.grp::before, .grp::after { content:''; position:absolute; top:-2px; width:2px; height:6px; background:#52514e }
+.grp::before { left:0 } .grp::after { right:0 }
+.tok { padding:2px 5px; border-radius:4px; line-height:1.5 }
+.gap { margin-left:5px }
+.legend { margin-top:12px; font: 10px 'Noto Sans','Segoe UI',sans-serif; color:#52514e; display:flex; gap:14px; flex-wrap:wrap }
+.lg { display:inline-flex; align-items:center; gap:5px }
+.sw { width:12px; height:12px; border-radius:3px; display:inline-block }
+.cap { font: 9.5px 'Noto Sans','Segoe UI',sans-serif; color:#52514e; margin-top:6px }
+</style></head><body>
+<div class="sent"><span class="g"><span class="tok" style="background:#fcfcfb;border:1.5px dashed #a5a49e;color:#52514e" title="context (first token)">इन</span></span><span class="g grp"><span class="tok" style="background:#fcfcfb;border:1.5px solid #c9c8c2;color:#52514e" title="not predicted">पदों</span><span class="tok gap" style="background:#fcfcfb;border:1.5px solid #c9c8c2;color:#52514e" title="not predicted">के</span></span><span class="g"><span class="tok" style="background:#3987e5;color:#ffffff;border:1.5px solid #3987e5" title="predicted 2 ahead">लिए</span></span><span class="g grp"><span class="tok" style="background:#1c5cab;color:#ffffff;border:1.5px solid #1c5cab" title="predicted 3 ahead">आवेदन</span><span class="tok gap" style="background:#fcfcfb;border:1.5px solid #c9c8c2;color:#52514e" title="not predicted">की</span></span><span class="g"><span class="tok" style="background:#86b6ef;color:#0b0b0b;border:1.5px solid #86b6ef" title="predicted 1 ahead">प्रक्रिया</span></span><span class="g"><span class="tok" style="background:#fcfcfb;border:1.5px solid #c9c8c2;color:#52514e" title="not predicted">5</span></span><span class="g grp"><span class="tok" style="background:#fcfcfb;border:1.5px solid #c9c8c2;color:#52514e" title="not predicted">दिसंबर</span><span class="tok gap" style="background:#1c5cab;color:#ffffff;border:1.5px solid #1c5cab" title="predicted 3 ahead">से</span></span><span class="g grp"><span class="tok" style="background:#1c5cab;color:#ffffff;border:1.5px solid #1c5cab" title="predicted 3 ahead">शुरू</span><span class="tok gap" style="background:#3987e5;color:#ffffff;border:1.5px solid #3987e5" title="predicted 2 ahead">हो</span><span class="tok gap" style="background:#1c5cab;color:#ffffff;border:1.5px solid #1c5cab" title="predicted 3 ahead">गई</span><span class="tok gap" style="background:#0d366b;color:#ffffff;border:1.5px solid #0d366b" title="predicted 4 ahead">है।</span></span></div>
+<div class="legend"><span class="lg"><span class="sw" style="background:#86b6ef"></span>1 ahead</span><span class="lg"><span class="sw" style="background:#3987e5"></span>2 ahead</span><span class="lg"><span class="sw" style="background:#1c5cab"></span>3 ahead</span><span class="lg"><span class="sw" style="background:#0d366b"></span>4 ahead</span><span class="lg"><span class="sw" style="background:#fcfcfb;border:1.5px solid #c9c8c2"></span>not predicted</span><span class="lg">┌─┐ word group</span></div>
+<div class="cap">R7s, IndicCorp eval sentence 46 (sentence of 14-22 tokens with the highest share predicted >= 2 ahead). Colour = how many tokens in
+advance the token was first predicted correctly (head d at position t-d-1 = d+1 ahead).</div>
+</body></html>

@@ -1,0 +1,258 @@
+{
+ "tokenizer": "Qwen/Qwen2.5-1.5B",
+ "lang": "hi",
+ "base": "tree_static_n64+pld4x6+lex4e2x12",
+ "n_train": 100000,
+ "chains": 4,
+ "note": "estimate: inside a base step the base is assumed to reach that step's end",
+ "evals": {
+  "results/lexicon/Rsd_qwen_hi_k4_frozen_sd_seq/eval_indiccorp_eval.json": {
+   "base_reported": 6.022845030617051,
+   "base_replayed": 6.022845030617051,
+   "tables": {
+    "groups:hi_rules_v1@10000": {
+     "entries": 10000,
+     "min_count": 19,
+     "words_per_entry": {
+      "2": 8662,
+      "3": 1218,
+      "4": 119,
+      "5": 1
+     },
+     "table_only_tok_per_step": 1.891074465725061,
+     "combined_tok_per_step": 6.058516939113954,
+     "gain_tok_per_step": 0.03567190849690238,
+     "steps_table_wins": 0.03695806680881308,
+     "extra_tokens_share": 0.0142728659132679
+    },
+    "groups:karthika@10000": {
+     "entries": 10000,
+     "min_count": 14,
+     "words_per_entry": {
+      "2": 7990,
+      "3": 1713,
+      "4": 271,
+      "5": 26
+     },
+     "table_only_tok_per_step": 2.0660042010017774,
+     "combined_tok_per_step": 6.054214015151516,
+     "gain_tok_per_step": 0.03136898453446424,
+     "steps_table_wins": 0.03551136363636364,
+     "extra_tokens_share": 0.012513197513001994
+    },
+    "ngrams@10000": {
+     "entries": 10000,
+     "min_count": 323,
+     "words_per_entry": {
+      "2": 8662,
+      "3": 1218,
+      "4": 119,
+      "5": 1
+     },
+     "table_only_tok_per_step": 2.229360997297533,
+     "combined_tok_per_step": 6.049917198959073,
+     "gain_tok_per_step": 0.02707216834202164,
+     "steps_table_wins": 0.04281996687958363,
+     "extra_tokens_share": 0.014429280882180425
+    },
+    "random:random_hi_v1@10000": {
+     "entries": 10000,
+     "min_count": 12,
+     "words_per_entry": {
+      "2": 9835,
+      "3": 165
+     },
+     "table_only_tok_per_step": 2.249164467897977,
+     "combined_tok_per_step": 6.037063267233239,
+     "gain_tok_per_step": 0.014218236616187596,
+     "steps_table_wins": 0.032813975448536356,
+     "extra_tokens_share": 0.010518906659367302
+    },
+    "groups:hi_rules_v1@50000": {
+     "entries": 50000,
+     "min_count": 3,
+     "words_per_entry": {
+      "2": 40702,
+      "3": 7953,
+      "4": 1320,
+      "5": 25
+     },
+     "table_only_tok_per_step": 2.0845288555591783,
+     "combined_tok_per_step": 6.059952606635071,
+     "gain_tok_per_step": 0.03710757601801973,
+     "steps_table_wins": 0.037203791469194315,
+     "extra_tokens_share": 0.014429280882180425
+    },
+    "groups:karthika@50000": {
+     "entries": 50000,
+     "min_count": 3,
+     "words_per_entry": {
+      "2": 34218,
+      "3": 12827,
+      "4": 2673,
+      "5": 277,
+      "6": 5
+     },
+     "table_only_tok_per_step": 2.2612963126713237,
+     "combined_tok_per_step": 6.059952606635071,
+     "gain_tok_per_step": 0.03710757601801973,
+     "steps_table_wins": 0.04075829383886256,
+     "extra_tokens_share": 0.014781214562233606
+    },
+    "ngrams@50000": {
+     "entries": 50000,
+     "min_count": 80,
+     "words_per_entry": {
+      "2": 40702,
+      "3": 7953,
+      "4": 1320,
+      "5": 25
+     },
+     "table_only_tok_per_step": 2.6084251325989394,
+     "combined_tok_per_step": 6.0642636945696,
+     "gain_tok_per_step": 0.04141866395254823,
+     "steps_table_wins": 0.05050984111927911,
+     "extra_tokens_share": 0.017283854064834004
+    },
+    "random:random_hi_v1@50000": {
+     "entries": 50000,
+     "min_count": 3,
+     "words_per_entry": {
+      "2": 47836,
+      "3": 2152,
+      "4": 12
+     },
+     "table_only_tok_per_step": 2.5287254029467023,
+     "combined_tok_per_step": 6.037063267233239,
+     "gain_tok_per_step": 0.014218236616187596,
+     "steps_table_wins": 0.032813975448536356,
+     "extra_tokens_share": 0.009971454268173464
+    }
+   }
+  },
+  "results/lexicon/Rsd_qwen_hi_k4_frozen_sd_seq/eval_flores_hi.json": {
+   "base_reported": 6.050438077196306,
+   "base_replayed": 6.050438077196306,
+   "tables": {
+    "groups:hi_rules_v1@10000": {
+     "entries": 10000,
+     "min_count": 19,
+     "words_per_entry": {
+      "2": 8662,
+      "3": 1218,
+      "4": 119,
+      "5": 1
+     },
+     "table_only_tok_per_step": 1.7633540372670808,
+     "combined_tok_per_step": 6.076337693222355,
+     "gain_tok_per_step": 0.025899616026048733,
+     "steps_table_wins": 0.02211652794292509,
+     "extra_tokens_share": 0.00872764275370827
+    },
+    "groups:karthika@10000": {
+     "entries": 10000,
+     "min_count": 14,
+     "words_per_entry": {
+      "2": 7990,
+      "3": 1713,
+      "4": 271,
+      "5": 26
+     },
+     "table_only_tok_per_step": 1.908927904370564,
+     "combined_tok_per_step": 6.090822407628129,
+     "gain_tok_per_step": 0.04038433043182277,
+     "steps_table_wins": 0.02407628128724672,
+     "extra_tokens_share": 0.010567101091933779
+    },
+    "ngrams@10000": {
+     "entries": 10000,
+     "min_count": 323,
+     "words_per_entry": {
+      "2": 8662,
+      "3": 1218,
+      "4": 119,
+      "5": 1
+     },
+     "table_only_tok_per_step": 2.085795918367347,
+     "combined_tok_per_step": 6.080675868633984,
+     "gain_tok_per_step": 0.030237791437677686,
+     "steps_table_wins": 0.032603522132317944,
+     "extra_tokens_share": 0.012250009784352863
+    },
+    "random:random_hi_v1@10000": {
+     "entries": 10000,
+     "min_count": 12,
+     "words_per_entry": {
+      "2": 9835,
+      "3": 165
+     },
+     "table_only_tok_per_step": 2.1258840169731257,
+     "combined_tok_per_step": 6.061921708185054,
+     "gain_tok_per_step": 0.011483630988747606,
+     "steps_table_wins": 0.022775800711743774,
+     "extra_tokens_share": 0.007279558529998826
+    },
+    "groups:hi_rules_v1@50000": {
+     "entries": 50000,
+     "min_count": 3,
+     "words_per_entry": {
+      "2": 40702,
+      "3": 7953,
+      "4": 1320,
+      "5": 25
+     },
+     "table_only_tok_per_step": 1.9936797752808988,
+     "combined_tok_per_step": 6.080675868633984,
+     "gain_tok_per_step": 0.030237791437677686,
+     "steps_table_wins": 0.02641599238457877,
+     "extra_tokens_share": 0.010136589565966107
+    },
+    "groups:karthika@50000": {
+     "entries": 50000,
+     "min_count": 3,
+     "words_per_entry": {
+      "2": 34218,
+      "3": 12827,
+      "4": 2673,
+      "5": 277,
+      "6": 5
+     },
+     "table_only_tok_per_step": 2.1723346369665024,
+     "combined_tok_per_step": 6.092274678111588,
+     "gain_tok_per_step": 0.04183660091528196,
+     "steps_table_wins": 0.03195040534096328,
+     "extra_tokens_share": 0.012876208367578568
+    },
+    "ngrams@50000": {
+     "entries": 50000,
+     "min_count": 80,
+     "words_per_entry": {
+      "2": 40702,
+      "3": 7953,
+      "4": 1320,
+      "5": 25
+     },
+     "table_only_tok_per_step": 2.422125319935539,
+     "combined_tok_per_step": 6.098090692124105,
+     "gain_tok_per_step": 0.04765261492779871,
+     "steps_table_wins": 0.04224343675417661,
+     "extra_tokens_share": 0.01628116316386834
+    },
+    "random:random_hi_v1@50000": {
+     "entries": 50000,
+     "min_count": 3,
+     "words_per_entry": {
+      "2": 47836,
+      "3": 2152,
+      "4": 12
+     },
+     "table_only_tok_per_step": 2.3733048485974364,
+     "combined_tok_per_step": 6.0734490135488475,
+     "gain_tok_per_step": 0.023010936352541478,
+     "steps_table_wins": 0.028761587829807464,
+     "extra_tokens_share": 0.00974521545145004
+    }
+   }
+  }
+ }
+}

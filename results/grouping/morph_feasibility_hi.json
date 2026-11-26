@@ -1,0 +1,276 @@
+{
+ "dictionary_words": 69962,
+ "dictionary_multi_morpheme": 53621,
+ "splits": {
+  "eval": {
+   "sentences": 500,
+   "words": 30841,
+   "coverage": 0.6748808404396744,
+   "multi_morpheme_share_of_covered": 0.19472470452579993,
+   "multi_morpheme_share_of_all_words": 0.13141597224473914,
+   "located": 0.8383720930232558,
+   "aligned_with_token_boundary": 0.030790568654646324,
+   "aligned_with_sandhi_tolerance": 0.03217753120665742,
+   "usable_boundaries_per_100_words_tolerant": 0.3761226938166726,
+   "internal_token_bounds_that_are_morph": 0.511520737327189,
+   "tokens_per_word": 1.1003210012645503,
+   "word_internal_token_share": 0.09117430381611905,
+   "usable_boundaries_per_100_words": 0.3599105087383678,
+   "examples": [
+    {
+     "word": "सुविधा",
+     "morphtok": "सु+विधा",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁सुविधा"
+     ]
+    },
+    {
+     "word": "देना",
+     "morphtok": "दे+ना",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁देना"
+     ]
+    },
+    {
+     "word": "उनका",
+     "morphtok": "उन+का",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁उनका"
+     ]
+    },
+    {
+     "word": "उत्तराधिकारी",
+     "morphtok": "उत्तर+अधि+कारी",
+     "located_cuts": [
+      8
+     ],
+     "tokens": [
+      "▁उत्तराधिकारी"
+     ]
+    },
+    {
+     "word": "चलते",
+     "morphtok": "चल+ते",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁चलते"
+     ]
+    },
+    {
+     "word": "टूटने",
+     "morphtok": "टूट+ने",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁टूटने"
+     ]
+    },
+    {
+     "word": "सक्रिय",
+     "morphtok": "स+क्रिय",
+     "located_cuts": [
+      1
+     ],
+     "tokens": [
+      "▁सक्रिय"
+     ]
+    },
+    {
+     "word": "उनके",
+     "morphtok": "उन+के",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁उनके"
+     ]
+    },
+    {
+     "word": "बनने",
+     "morphtok": "बन+ने",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁बनने"
+     ]
+    },
+    {
+     "word": "उनके",
+     "morphtok": "उन+के",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁उनके"
+     ]
+    },
+    {
+     "word": "जगदीश",
+     "morphtok": "जगत्+ईश",
+     "located_cuts": [],
+     "tokens": [
+      "▁जगदीश"
+     ]
+    },
+    {
+     "word": "रणजीत",
+     "morphtok": "रण+जीत",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁रणजीत"
+     ]
+    }
+   ]
+  },
+  "flores": {
+   "sentences": 1012,
+   "words": 25610,
+   "coverage": 0.6818820773135494,
+   "multi_morpheme_share_of_covered": 0.19435377655614727,
+   "multi_morpheme_share_of_all_words": 0.13252635689183911,
+   "located": 0.830456570155902,
+   "aligned_with_token_boundary": 0.0372108615487764,
+   "aligned_with_sandhi_tolerance": 0.03922225947033188,
+   "usable_boundaries_per_100_words_tolerant": 0.45685279187817257,
+   "internal_token_bounds_that_are_morph": 0.5186915887850467,
+   "tokens_per_word": 1.1557594689574384,
+   "word_internal_token_share": 0.13476806648873274,
+   "usable_boundaries_per_100_words": 0.4334244435767278,
+   "examples": [
+    {
+     "word": "कहा",
+     "morphtok": "कह+ा",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁कहा"
+     ]
+    },
+    {
+     "word": "मधुमेह",
+     "morphtok": "मधु+मेह",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁मधुमेह"
+     ]
+    },
+    {
+     "word": "मधुमेह",
+     "morphtok": "मधु+मेह",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁मधुमेह"
+     ]
+    },
+    {
+     "word": "विश्वविद्यालय",
+     "morphtok": "विश्व+विद्‍या+आलय",
+     "located_cuts": [],
+     "tokens": [
+      "▁विश्वविद्यालय"
+     ]
+    },
+    {
+     "word": "दिनों",
+     "morphtok": "दिन+ों",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁दिनों"
+     ]
+    },
+    {
+     "word": "उन्हें",
+     "morphtok": "उन+हें",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁उन्हें"
+     ]
+    },
+    {
+     "word": "मधुमेह",
+     "morphtok": "मधु+मेह",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁मधुमेह"
+     ]
+    },
+    {
+     "word": "सकता",
+     "morphtok": "सक+ता",
+     "located_cuts": [
+      2
+     ],
+     "tokens": [
+      "▁सकता"
+     ]
+    },
+    {
+     "word": "देखते",
+     "morphtok": "देख+ते",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁देखते"
+     ]
+    },
+    {
+     "word": "मधुमेह",
+     "morphtok": "मधु+मेह",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁मधुमेह"
+     ]
+    },
+    {
+     "word": "सोमवार",
+     "morphtok": "सोम+वार",
+     "located_cuts": [
+      3
+     ],
+     "tokens": [
+      "▁सोमवार"
+     ]
+    },
+    {
+     "word": "कार्यक्रम",
+     "morphtok": "कार्य+क्रम",
+     "located_cuts": [
+      5
+     ],
+     "tokens": [
+      "▁कार्यक्रम"
+     ]
+    }
+   ]
+  }
+ }
+}

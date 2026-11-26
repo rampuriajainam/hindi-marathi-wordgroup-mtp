@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Table 1: Hindi (ganga-1b)}
+\label{tab:table1_main_hi}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+run & setup & h0 ppl & top-1 h1 & h2 & h3 & in-group h1 & h2 & h3 & FixedK tok/step (speed-up), IndicCorp & FLORES \\
+\midrule
+R0 & NTP & 17.0 & -- & -- & -- & -- & -- & -- & -- & -- \\
+R1 & 1 linear head & 17.6 & 15.4 & -- & -- & 28.7 & -- & -- & 1.31 ($\times$1.25) & 1.28 ($\times$1.23) \\
+R2 & 3 resblock heads & 17.1 & 15.0 & 8.1 & 5.3 & 23.4 & 19.0 & 17.5 & 1.39 ($\times$1.15) & 1.36 ($\times$1.12) \\
+R3 & + group loss (rules) & 17.3 & 15.5 & 8.4 & 5.5 & 25.8 & 24.1 & 22.2 & 1.39 ($\times$1.15) & 1.35 ($\times$1.11) \\
+R4 & + group loss + contrastive & 17.3 & 15.5 & 8.4 & 5.6 & 26.1 & 24.1 & 24.0 & 1.40 ($\times$1.14) & 1.36 ($\times$1.13) \\
+R7s & + group loss (parser) & 17.3 & 15.6 & 8.3 & 5.4 & 25.5 & 22.8 & 19.9 & 1.39 ($\times$1.14) & 1.36 ($\times$1.12) \\
+Rsd & frozen + self-distill & 17.6 & 13.9 & 7.1 & 4.5 & 19.9 & 13.1 & 13.5 & 1.67 ($\times$1.36) & 1.60 ($\times$1.32) \\
+Rsd\_seq & Rsd + sequential heads & 17.6 & 21.2 & 17.3 & 15.8 & 23.6 & 20.3 & 24.6 & 2.00 ($\times$1.61) & 1.89 ($\times$1.52) \\
+\bottomrule
+\end{tabular}
+\end{table}

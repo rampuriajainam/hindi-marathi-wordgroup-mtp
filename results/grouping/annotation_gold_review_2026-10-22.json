@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-22",
+  "reviewed_by": "jai",
+  "review_basis": "User states they reviewed the annotations and found them correct; review was not independently observed by the assistant.",
+  "user_statement": "i have reviewed your annotations and they are right.",
+  "dataset_role": "gold",
+  "annotation_status": "human_reviewed",
+  "ai_origin_preserved": true,
+  "previous_commit": "561ba52a7d9b0bb5d5c6a1eebc648de6bea3447e",
+  "om_annotations_created_or_modified": false,
+  "agreement_available": false,
+  "languages": {
+    "hi": {
+      "sentences": 200,
+      "before_sha256": "4b633a2d10209aef44f729589765cb77cb6e6b8bc35e10e6c91ec2a1c27bbaa0",
+      "after_sha256": "22a5bc9f8abfc67468f3c36ba48b089d3f4f11a52c21c2eb7a0c8797a694db21",
+      "annotation_content_unchanged": true
+    },
+    "mr": {
+      "sentences": 150,
+      "before_sha256": "4dc2e9a6f98decafeeb481344e016dcedbd1552bf32f28657fb358800f2243dc",
+      "after_sha256": "bf718385deb59ba1c796c06b94cd0a2ba77b2fdcbe9437106765f97ef967577e",
+      "annotation_content_unchanged": true
+    }
+  }
+}

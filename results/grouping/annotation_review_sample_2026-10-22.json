@@ -1,0 +1,604 @@
+{
+  "random_seed": 3092195019159583651,
+  "sampling": "Two random rows from each language/source stratum; eight rows total; no cherry-picking.",
+  "approval": "approved",
+  "sentences": [
+    {
+      "id": "hi_0093",
+      "source": "flores_devtest",
+      "source_id": "916",
+      "text": "आमतौर पर इन शैक्षणिक कार्यक्रमों में दाखिला लेने के लिए शिक्षण शुल्क देना होगा.",
+      "groups": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7,
+          8,
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "types": [
+        "postposition",
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "compound_postposition",
+        "single",
+        "single",
+        "aux_chain"
+      ],
+      "annotator": "ai_draft",
+      "annotation_status": "needs_review",
+      "annotation_method": "fresh_context_language_annotation",
+      "notes": "The admission noun at 6 remains separate from the infinitive-plus-compound-postposition group at 7-9. Tokens 12-13 express obligation with giving as the main verb.",
+      "display_groups": "आमतौर पर / इन / शैक्षणिक / कार्यक्रमों में / दाखिला / लेने के लिए / शिक्षण / शुल्क / देना होगा.",
+      "merged_group_labels": [
+        {
+          "text": "आमतौर पर",
+          "type": "postposition"
+        },
+        {
+          "text": "कार्यक्रमों में",
+          "type": "postposition"
+        },
+        {
+          "text": "लेने के लिए",
+          "type": "compound_postposition"
+        },
+        {
+          "text": "देना होगा.",
+          "type": "aux_chain"
+        }
+      ]
+    },
+    {
+      "id": "hi_0027",
+      "source": "flores_devtest",
+      "source_id": "379",
+      "text": "पौधे फ़ोटोसिंथेसिस द्वारा सूर्य से अपना भोजन बनाते हैं. वह छाया भी देते हैं.",
+      "groups": [
+        [
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "types": [
+        "single",
+        "postposition",
+        "postposition",
+        "single",
+        "single",
+        "aux_chain",
+        "single",
+        "other",
+        "aux_chain"
+      ],
+      "annotator": "ai_draft",
+      "annotation_status": "needs_review",
+      "annotation_method": "fresh_context_language_annotation",
+      "notes": "focus particle: tokens 10-11. The giving verb at 12 is a main verb followed by its auxiliary; the preceding shade noun remains outside that verbal group.",
+      "display_groups": "पौधे / फ़ोटोसिंथेसिस द्वारा / सूर्य से / अपना / भोजन / बनाते हैं. / वह / छाया भी / देते हैं.",
+      "merged_group_labels": [
+        {
+          "text": "फ़ोटोसिंथेसिस द्वारा",
+          "type": "postposition"
+        },
+        {
+          "text": "सूर्य से",
+          "type": "postposition"
+        },
+        {
+          "text": "बनाते हैं.",
+          "type": "aux_chain"
+        },
+        {
+          "text": "छाया भी",
+          "type": "other"
+        },
+        {
+          "text": "देते हैं.",
+          "type": "aux_chain"
+        }
+      ]
+    },
+    {
+      "id": "hi_0198",
+      "source": "indiccorp_train",
+      "source_id": "1150",
+      "text": "यह भी पढ़ें:- PUBG में आया एक नया जंगल मोड, जानिए इसकी खास बातें",
+      "groups": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ]
+      ],
+      "types": [
+        "other",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single"
+      ],
+      "annotator": "ai_draft",
+      "annotation_status": "needs_review",
+      "annotation_method": "fresh_context_language_annotation",
+      "notes": "focus particle: tokens 0-1. The new adjective and jungle noun remain separate from the mode noun.",
+      "display_groups": "यह भी / पढ़ें:- / PUBG में / आया / एक / नया / जंगल / मोड, / जानिए / इसकी / खास / बातें",
+      "merged_group_labels": [
+        {
+          "text": "यह भी",
+          "type": "other"
+        },
+        {
+          "text": "PUBG में",
+          "type": "postposition"
+        }
+      ]
+    },
+    {
+      "id": "hi_0117",
+      "source": "indiccorp_train",
+      "source_id": "4140",
+      "text": "2- वुहान समेत पूरे हुवेई प्रांत में 6 करोड़ लोगों को घरों में कैद कर दिया",
+      "groups": [
+        [
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "types": [
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "postposition",
+        "single",
+        "single",
+        "postposition",
+        "postposition",
+        "single",
+        "light_verb"
+      ],
+      "annotator": "ai_draft",
+      "annotation_status": "needs_review",
+      "annotation_method": "fresh_context_language_annotation",
+      "notes": "The nominal predicate meaning confinement at token 13 remains separate from the light-verb chain at 14-15.",
+      "display_groups": "2- / वुहान समेत / पूरे / हुवेई / प्रांत में / 6 / करोड़ / लोगों को / घरों में / कैद / कर दिया",
+      "merged_group_labels": [
+        {
+          "text": "वुहान समेत",
+          "type": "postposition"
+        },
+        {
+          "text": "प्रांत में",
+          "type": "postposition"
+        },
+        {
+          "text": "लोगों को",
+          "type": "postposition"
+        },
+        {
+          "text": "घरों में",
+          "type": "postposition"
+        },
+        {
+          "text": "कर दिया",
+          "type": "light_verb"
+        }
+      ]
+    },
+    {
+      "id": "mr_0017",
+      "source": "flores_devtest",
+      "source_id": "173",
+      "text": "बिश्केकच्या रस्त्यावर कायदा अंमलबजावणी करणारे अधिकारी उपस्थित नसल्याने रात्रभर मोठ्याप्रमाणावर लूट सुरू होती.",
+      "groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10
+        ],
+        [
+          11,
+          12
+        ]
+      ],
+      "types": [
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "other",
+        "single",
+        "single",
+        "single",
+        "aux_chain"
+      ],
+      "annotator": "ai_draft",
+      "annotation_status": "needs_review",
+      "annotation_method": "fresh_context_language_annotation",
+      "notes": "negation: उपस्थित नसल्याने contains the fused negative copula; attach it to its predicative adjective. सुरू होती is treated as an adjectival copular predicate, keeping लूट separate.",
+      "display_groups": "बिश्केकच्या / रस्त्यावर / कायदा / अंमलबजावणी / करणारे / अधिकारी / उपस्थित नसल्याने / रात्रभर / मोठ्याप्रमाणावर / लूट / सुरू होती.",
+      "merged_group_labels": [
+        {
+          "text": "उपस्थित नसल्याने",
+          "type": "other"
+        },
+        {
+          "text": "सुरू होती.",
+          "type": "aux_chain"
+        }
+      ]
+    },
+    {
+      "id": "mr_0015",
+      "source": "flores_devtest",
+      "source_id": "980",
+      "text": "हे सांगण्याची आवश्यकता नाही की, जर तुम्हाला रोमन भाषा येत असेल तर तुमच्यासाठी पोर्तुगीज शिकणे सोपे होईल.",
+      "groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11
+        ],
+        [
+          12
+        ],
+        [
+          13
+        ],
+        [
+          14
+        ],
+        [
+          15,
+          16
+        ]
+      ],
+      "types": [
+        "single",
+        "single",
+        "other",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "aux_chain",
+        "single",
+        "single",
+        "single",
+        "single",
+        "aux_chain"
+      ],
+      "annotator": "ai_draft",
+      "annotation_status": "needs_review",
+      "annotation_method": "fresh_context_language_annotation",
+      "notes": "negation: आवश्यकता नाही is a negative nominal copular predicate; no separate positive auxiliary is present.",
+      "display_groups": "हे / सांगण्याची / आवश्यकता नाही / की, / जर / तुम्हाला / रोमन / भाषा / येत असेल / तर / तुमच्यासाठी / पोर्तुगीज / शिकणे / सोपे होईल.",
+      "merged_group_labels": [
+        {
+          "text": "आवश्यकता नाही",
+          "type": "other"
+        },
+        {
+          "text": "येत असेल",
+          "type": "aux_chain"
+        },
+        {
+          "text": "सोपे होईल.",
+          "type": "aux_chain"
+        }
+      ]
+    },
+    {
+      "id": "mr_0088",
+      "source": "indiccorp_train",
+      "source_id": "1800",
+      "text": "स्मार्टफोन आणि इंटरनेट - नवं खाणं",
+      "groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "types": [
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single"
+      ],
+      "annotator": "ai_draft",
+      "annotation_status": "needs_review",
+      "annotation_method": "fresh_context_language_annotation",
+      "notes": "",
+      "display_groups": "स्मार्टफोन / आणि / इंटरनेट / - / नवं / खाणं",
+      "merged_group_labels": []
+    },
+    {
+      "id": "mr_0080",
+      "source": "indiccorp_train",
+      "source_id": "2434",
+      "text": "यासंदर्भात डोनाल्ड ट्रम्प आणि इंडोनेशियाचे राष्ट्राध्यक्ष जोकोवि यांच्यामध्ये गुप्त चर्चासुद्धा झाली आहे.",
+      "groups": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "types": [
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "single",
+        "aux_chain"
+      ],
+      "annotator": "ai_draft",
+      "annotation_status": "needs_review",
+      "annotation_method": "fresh_context_language_annotation",
+      "notes": "यांच्यामध्ये refers to both coordinated participants, so it is kept as a resumptive pronoun rather than attached only to जोकोवि.",
+      "display_groups": "यासंदर्भात / डोनाल्ड / ट्रम्प / आणि / इंडोनेशियाचे / राष्ट्राध्यक्ष / जोकोवि / यांच्यामध्ये / गुप्त / चर्चासुद्धा / झाली आहे.",
+      "merged_group_labels": [
+        {
+          "text": "झाली आहे.",
+          "type": "aux_chain"
+        }
+      ]
+    }
+  ],
+  "approval_details": {
+    "status": "approved",
+    "date": "2026-10-22",
+    "approved_by": "jai",
+    "scope": "provisional_dataset_publication_after_eight_sentence_spot_check",
+    "review_required": true,
+    "user_instruction": "these seem fine for now, however need to be reviewed once more; push for now",
+    "sample_ids": [
+      "hi_0093",
+      "hi_0027",
+      "hi_0198",
+      "hi_0117",
+      "mr_0017",
+      "mr_0015",
+      "mr_0088",
+      "mr_0080"
+    ]
+  },
+  "review_required": true
+}

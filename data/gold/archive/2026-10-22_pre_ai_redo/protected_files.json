@@ -1,0 +1,37 @@
+﻿[
+    {
+        "path":  "data\\annotation\\hi_om50_text_only.jsonl",
+        "sha256":  "d21d31e7307739cb9fadad3d8be140b6feb3f591b98405ef2235d21f8ec74b53",
+        "bytes":  12397
+    },
+    {
+        "path":  "data\\gold\\mr_gold_reviewed_55.jsonl",
+        "sha256":  "d831e5baa02585d2d3df8cac9d57e97599f515b4fc92e04af13eed577dd74fad",
+        "bytes":  42386
+    },
+    {
+        "path":  "data\\gold\\mr_progress_original_90.jsonl",
+        "sha256":  "b3bbd28672e565ee96ca535d879e281e8544c1b128d47711ccea62de29e7bb22",
+        "bytes":  68158
+    },
+    {
+        "path":  "data\\annotation\\hi_sentences.jsonl",
+        "sha256":  "cfee73a313f426f812e7e5413bd68e19983a4e3a216261bc300d2555ea040acd",
+        "bytes":  59030
+    },
+    {
+        "path":  "data\\annotation\\mr_sentences.jsonl",
+        "sha256":  "d6983998954884b4f8f84605e83b461587c4ae9f09bbc2e29bad3351fa58fed9",
+        "bytes":  51739
+    },
+    {
+        "path":  "data\\annotation\\hi_draft.jsonl",
+        "sha256":  "392df2134aa10874540f8434f4847f1c2f3a60f2a7d828ddd682b8b0875efb3a",
+        "bytes":  131469
+    },
+    {
+        "path":  "data\\annotation\\mr_draft.jsonl",
+        "sha256":  "6050d73a94e375024df1cb88a1490ea0b846fca6bb67974629b2c9901b7829d8",
+        "bytes":  105782
+    }
+]
